@@ -1,0 +1,743 @@
+# multi-step problems 2
+
+More problems that combine several ideas. As before, try each part on your own first, and only then open the two boxes below it: the **setup** (starting point, goal and conversion information) and the **computation**.
+
+## digging for digital gold
+
+Bitcoin (BTC) is a digital currency. One bitcoin can be split into a hundred million smaller units, called **satoshis** (sat), after Satoshi Nakamoto, the person (or group) who invented Bitcoin.
+
+New bitcoins are created in a process called **mining**, in analogy to gold mining. To mine, computers all over the world repeat a huge number of computations, called **hashes** (we abbreviate a single hash calculation as H). Mining is a competition, and every ten minutes the winner is rewarded with newly created bitcoins.
+
+Here is the data we'll need (all of it is correct for October 10, 2020):
+
+* $1 \text{ BTC}$ is worth $38{,}300 \text{ NIS}$ (new Israeli shekels), and $1 \text{ BTC} = 10^8 \text{ sat}$.
+* All the computers in the world that are mining bitcoin, together, calculate $140 \cdot 10^{12}$ hashes per second.
+* As a result, $6.25$ new bitcoins are created every $10$ minutes.
+* Experts estimate that the electricity used by the mining of bitcoin is about $65 \text{ TWh}$ per year. For comparison, the electricity consumption of Israel in 2018 was $69 \text{ TWh}$.
+* The price of one kilowatt-hour of electricity is $0.05 \text{ USD}$.
+* $1 \text{ USD} = 3.4 \text{ NIS}$.
+
+### a. how many hashes for one satoshi? {.unnumbered}
+
+::: {.card-success}
+In the process of mining bitcoin, how many hash calculations (H) are needed, on average, to create one satoshi?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We know how many hashes are calculated every second, and how many bitcoins are created in ten minutes. Time is the bridge between the two.
+
+* **Starting point:** $140 \cdot 10^{12}$ hashes every second.
+* **Goal:** hashes per satoshi.
+* **Conversion information:**
+  $$
+  6.25 \text{ BTC} \longleftrightarrow 10 \text{ min} = 600 \text{ s} \\
+  1 \text{ BTC} = 10^8 \text{ sat}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&140 \cdot 10^{12} \frac{\text{H}}{\ccancel{red}{s}}
+\left( \frac{600 \ccancel{red}{s}}{6.25 \ccancel{blue}{BTC}} \right)
+\left( \frac{1 \ccancel{blue}{BTC}}{10^8 \text{ sat}} \right) \\
+&= \frac{140 \cdot 10^{12} \cdot 600}{6.25 \cdot 10^8} \frac{\text{H}}{\text{sat}} \\
+&\approx \boxed{1.3 \cdot 10^{8} \frac{\text{H}}{\text{sat}}}
+\end{align*}
+
+About a hundred and thirty million hash calculations for every satoshi.
+:::
+
+### b. how much is created in a day? {.unnumbered}
+
+::: {.card-success}
+What is the value, in millions of shekels, of all the bitcoins that are created in one day?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $1$ day.
+* **Goal:** the value in NIS (and then in millions of NIS).
+* **Conversion information:**
+  $$
+  1 \text{ day} = 24 \text{ h} \\
+  1 \text{ h} = 60 \text{ min} \\
+  6.25 \text{ BTC} \longleftrightarrow 10 \text{ min} \\
+  1 \text{ BTC} \longleftrightarrow 38{,}300 \text{ NIS}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&1 \ccancel{red}{day}
+\left( \frac{24 \ccancel{blue}{h}}{1 \ccancel{red}{day}} \right)
+\left( \frac{60 \ccancel{green}{min}}{1 \ccancel{blue}{h}} \right)
+\left( \frac{6.25 \ccancel{purple}{BTC}}{10 \ccancel{green}{min}} \right)
+\left( \frac{38{,}300 \text{ NIS}}{1 \ccancel{purple}{BTC}} \right) \\
+&= \frac{24 \cdot 60 \cdot 6.25 \cdot 38{,}300}{10} \text{ NIS} \\
+&\approx \boxed{3.4 \cdot 10^{7} \text{ NIS}}
+\end{align*}
+
+That's about $34$ million shekels of new bitcoin, every single day. It also means that $900$ new bitcoins are created every day (the chain says $24 \cdot 60 \cdot 6.25/10 = 900$).
+:::
+
+### c. the electricity bill {.unnumbered}
+
+::: {.card-success}
+How much money, in dollars, did the electricity for bitcoin mining cost the whole world in one year?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+The energy is given in terawatt-hours, but the price is per kilowatt-hour, so we need to convert. A watt-hour is a unit of *energy*: it's a power (watts) multiplied by a time (hours).
+
+* **Starting point:** $65 \text{ TWh}$.
+* **Goal:** the cost in USD.
+* **Conversion information:**
+  $$
+  1 \text{ TWh} = 10^{12} \text{ Wh} \quad (\text{tera means } 10^{12}) \\
+  1 \text{ kWh} = 10^3 \text{ Wh} \quad (\text{kilo means } 10^{3}) \\
+  1 \text{ kWh} \longleftrightarrow 0.05 \text{ USD}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&65 \ccancel{red}{TWh}
+\left( \frac{10^{12} \ccancel{blue}{Wh}}{1 \ccancel{red}{TWh}} \right)
+\left( \frac{1 \ccancel{green}{kWh}}{10^3 \ccancel{blue}{Wh}} \right)
+\left( \frac{0.05 \text{ USD}}{1 \ccancel{green}{kWh}} \right) \\
+&= \frac{65 \cdot 10^{12} \cdot 0.05}{10^3} \text{ USD} \\
+&\approx \boxed{3.3 \cdot 10^{9} \text{ USD}}
+\end{align*}
+
+The electricity for bitcoin costs more than three billion dollars a year.
+:::
+
+### d. how much is created in a year? {.unnumbered}
+
+::: {.card-success}
+What is the value, in dollars, of all the bitcoins created in one year? Assume that $1 \text{ USD} = 3.4 \text{ NIS}$.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We already know the value created in one day, from part b. We only need to turn days into a year, and shekels into dollars.
+
+* **Starting point:** $1$ year.
+* **Goal:** the value in USD.
+* **Conversion information:**
+  $$
+  1 \text{ year} = 365 \text{ days} \\
+  1 \text{ day} \longleftrightarrow 3.4 \cdot 10^7 \text{ NIS} \quad (\text{part b}) \\
+  1 \text{ USD} = 3.4 \text{ NIS}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&1 \ccancel{red}{year}
+\left( \frac{365 \ccancel{blue}{days}}{1 \ccancel{red}{year}} \right)
+\left( \frac{3.447 \cdot 10^7 \ccancel{green}{NIS}}{1 \ccancel{blue}{day}} \right)
+\left( \frac{1 \text{ USD}}{3.4 \ccancel{green}{NIS}} \right) \\
+&= \frac{365 \cdot 3.447 \cdot 10^7}{3.4} \text{ USD} \\
+&\approx \boxed{3.7 \cdot 10^{9} \text{ USD}}
+\end{align*}
+
+About $3.7$ billion dollars of new bitcoin are created every year.
+:::
+
+### e. how much goes to electricity? {.unnumbered}
+
+::: {.card-success}
+What percentage of the value of the newly created bitcoins is spent on electricity alone?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+This is a ratio of two amounts of money that we already know, both per year: the cost of the electricity (part c) and the value that is created (part d). We must make sure that they are in the same unit, dollars, which they are.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+$$
+\frac{3.25 \cdot 10^{9} \ccancel{gray}{USD}}{3.70 \cdot 10^{9} \ccancel{gray}{USD}} \approx 0.88 \quad\Longrightarrow\quad \boxed{88\%}
+$$
+
+Almost nine out of every ten dollars of new bitcoin go to paying for electricity. And this is *only* the electricity. It doesn't include the cost of the computers themselves, or of the buildings that hold them.
+:::
+
+## galileo's breath
+
+Galileo, the father of modern physics, died in 1642 at the age of $78$. Every time we breathe in, we take in some air molecules that were once in Galileo's lungs. But how many? Let's find out. We'll assume that:
+
+* A person breathes $16$ times per minute, on average.
+* The average volume of a breath is $0.5 \text{ L}$.
+* One liter of air contains $2.7 \cdot 10^{22}$ molecules.
+* The atmosphere contains $1.0 \cdot 10^{44}$ molecules (mostly nitrogen and oxygen).
+* Galileo always breathed in fresh air that had never been in his lungs, and over the centuries, all the air that he breathed out spread evenly over the entire atmosphere. Also, the molecules that Galileo breathed out did not break down or take part in any chemical reactions.
+
+All these assumptions are unrealistic, but they make the calculation much simpler, and we're only after the order of magnitude.
+
+### a. galileo's breaths {.unnumbered}
+
+::: {.card-success}
+How many molecules did Galileo breathe out during his life?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We start from his age and go step by step: from years to minutes, then from minutes to breaths, then from breaths to liters of air, and finally from liters to molecules.
+
+* **Starting point:** $78$ years.
+* **Goal:** the number of molecules.
+* **Conversion information:**
+  $$
+  1 \text{ year} = 365 \text{ days} \\
+  1 \text{ day} = 24 \text{ h} \\
+  1 \text{ h} = 60 \text{ min} \\
+  16 \text{ breaths} \longleftrightarrow 1 \text{ min} \\
+  1 \text{ breath} \longleftrightarrow 0.5 \text{ L of air} \\
+  1 \text{ L of air} \longleftrightarrow 2.7 \cdot 10^{22} \text{ molecules}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&78 \ccancel{red}{years}
+\left( \frac{365 \ccancel{blue}{days}}{1 \ccancel{red}{year}} \right)
+\left( \frac{24 \ccancel{green}{h}}{1 \ccancel{blue}{day}} \right)
+\left( \frac{60 \ccancel{purple}{min}}{1 \ccancel{green}{h}} \right)
+\left( \frac{16 \ccancel{orange}{breaths}}{1 \ccancel{purple}{min}} \right)
+\left( \frac{0.5 \ccancel{gray}{L}}{1 \ccancel{orange}{breath}} \right)
+\left( \frac{2.7 \cdot 10^{22} \text{ molecules}}{1 \ccancel{gray}{L}} \right) \\
+&= 78 \cdot 365 \cdot 24 \cdot 60 \cdot 16 \cdot 0.5 \cdot 2.7 \cdot 10^{22} \text{ molecules} \\
+&\approx \boxed{8.9 \cdot 10^{30} \text{ molecules}}
+\end{align*}
+
+Along the way, this is about $6.6 \cdot 10^8$ breaths (more than half a billion!), which is about $3.3 \cdot 10^8 \text{ L}$ of air.
+:::
+
+### b. galileo's share of the atmosphere {.unnumbered}
+
+::: {.card-success}
+What fraction of the molecules in the atmosphere are molecules that Galileo breathed out?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+A fraction is the part divided by the whole. The part is the number of molecules from part a, and the whole is the number of molecules in the atmosphere. Both are just numbers of molecules, so the units cancel out and the result has no units.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+$$
+f = \frac{8.9 \cdot 10^{30} \ccancel{gray}{molecules}}{1.0 \cdot 10^{44} \ccancel{gray}{molecules}} = \boxed{8.9 \cdot 10^{-14}}
+$$
+
+That's a tiny number: less than one in ten trillion. In the language of [concentration](/basic_concepts/concentration.en.html), it's about $0.09$ parts per trillion.
+:::
+
+### c. a breath of galileo {.unnumbered}
+
+::: {.card-success}
+You take one breath (an average one). How many of the molecules that you now have in your lungs were once in Galileo's lungs?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+Because the air is evenly mixed, every sample of air has the same fraction of Galileo's molecules: the fraction that we found in part b. So we count how many molecules there are in one breath, and then we take the fraction of Galileo's.
+
+* **Starting point:** $1$ breath.
+* **Goal:** the number of Galileo's molecules in it.
+* **Conversion information:**
+  $$
+  1 \text{ breath} \longleftrightarrow 0.5 \text{ L of air} \\
+  1 \text{ L of air} \longleftrightarrow 2.7 \cdot 10^{22} \text{ molecules} \\
+  \text{a fraction } 8.9 \cdot 10^{-14} \text{ of the molecules are Galileo's}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&1 \ccancel{red}{breath}
+\left( \frac{0.5 \ccancel{blue}{L}}{1 \ccancel{red}{breath}} \right)
+\left( \frac{2.7 \cdot 10^{22} \text{ molecules}}{1 \ccancel{blue}{L}} \right)
+\left( 8.9 \cdot 10^{-14} \right) \\
+&= 0.5 \cdot 2.7 \cdot 10^{22} \cdot 8.9 \cdot 10^{-14} \text{ molecules} \\
+&\approx \boxed{1.2 \cdot 10^{9} \text{ molecules}}
+\end{align*}
+
+So in every breath that you take, there are about **a billion** molecules that Galileo once breathed out. Notice the two sides of this result: a billion is a huge number, but a single breath has $1.35 \cdot 10^{22}$ molecules, so Galileo's molecules are only about one in ten trillion of them.
+
+The fraction $8.9 \cdot 10^{-14}$ has no units, so multiplying by it changes the number of molecules, but not the unit.
+:::
+
+## the sverdrup
+
+The **sverdrup** (Sv) is a unit of *flow rate*, named after the Norwegian oceanographer Harald Ulrik Sverdrup. It is used mainly to talk about ocean currents, and it is defined as one million cubic meters of water per second:
+
+$$
+1 \text{ Sv} = 10^6 \text{ m}^3 \text{ s}^{-1}
+$$
+
+A flow rate tells us what *volume* of water passes through a section of the current or pipe in every second. For example, the flow of the Gulf Stream as it leaves the Gulf of Mexico is $30 \text{ Sv}$, while all the rivers of the world together bring to the seas only $1.2 \text{ Sv}$.
+
+### a. water in a pipe {.unnumbered}
+
+::: {.card-success}
+Water flows at a speed of $0.5 \text{ m/s}$ in a cylindrical pipe with a radius of $3 \text{ cm}$. What is the flow rate? Give the answer in sverdrups.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+A speed of $0.5 \text{ m/s}$ means that in every second the water advances $0.5 \text{ m}$ along the pipe. How much water is in $1 \text{ m}$ of pipe? That's a cylinder of length $1 \text{ m}$ and radius $3 \text{ cm}$. This is our conversion factor from length of pipe to volume of water.
+
+* **Starting point:** $0.5 \text{ m}$ of pipe every second.
+* **Goal:** flow rate in Sv.
+* **Conversion information:**
+  $$
+  1 \text{ m of pipe} \longleftrightarrow \pi r^2 \cdot 1 \text{ m} = \pi \left( 0.03 \text{ m} \right)^2 \cdot 1 \text{ m} \approx 2.83 \cdot 10^{-3} \text{ m}^3 \text{ of water} \\
+  1 \text{ Sv} = 10^6 \text{ m}^3/\text{s}
+  $$
+
+Notice that the radius is given in centimeters, and we converted it to meters before using it: $3 \text{ cm} = 0.03 \text{ m}$.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&0.5 \frac{\ccancel{red}{m of pipe}}{\text{s}}
+\left( \frac{2.83 \cdot 10^{-3} \text{ m}^3}{1 \ccancel{red}{m of pipe}} \right)
+\approx 1.41 \cdot 10^{-3} \ccancel{blue}{m$^3$/s} \\
+&1.41 \cdot 10^{-3} \ccancel{blue}{m$^3$/s}
+\left( \frac{1 \text{ Sv}}{10^6 \ccancel{blue}{m$^3$/s}} \right)
+\approx \boxed{1.4 \cdot 10^{-9} \text{ Sv}}
+\end{align*}
+
+A pipe of this size carries only about a billionth of a sverdrup.
+
+In general, this is how the flow rate is calculated: it is the cross-section area of the flow multiplied by its speed,
+
+$$
+Q = A v
+$$
+
+which is the same idea as $\Delta x = v \Delta t$, with the area turning a length into a volume.
+:::
+
+### b. filling the oceans with rivers {.unnumbered}
+
+::: {.card-success}
+How many years would we have to wait in order to collect, from all the rivers of the world, a volume of water equal to the volume of all the oceans? The volume of the oceans is $1.3$ billion cubic kilometers.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $1.3 \cdot 10^{9} \text{ km}^3$ of water.
+* **Goal:** time, in years.
+* **Conversion information:**
+  $$
+  1 \text{ km}^3 = 10^9 \text{ m}^3 \\
+  1.2 \cdot 10^6 \text{ m}^3 \longleftrightarrow 1 \text{ s} \quad (\text{all rivers, } 1.2 \text{ Sv}) \\
+  1 \text{ year} = 365 \cdot 24 \cdot 3600 \text{ s} \approx 3.15 \cdot 10^7 \text{ s}
+  $$
+
+The first line needs care: a cubic kilometer is a cube with sides of $1 \text{ km} = 10^3 \text{ m}$, so its volume is $(10^3 \text{ m})^3 = 10^9 \text{ m}^3$.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&1.3 \cdot 10^{9} \ccancel{red}{km$^3$}
+\left( \frac{10^9 \ccancel{blue}{m$^3$}}{1 \ccancel{red}{km$^3$}} \right)
+\left( \frac{1 \ccancel{green}{s}}{1.2 \cdot 10^6 \ccancel{blue}{m$^3$}} \right)
+\left( \frac{1 \text{ year}}{3.15 \cdot 10^7 \ccancel{green}{s}} \right) \\
+&= \frac{1.3 \cdot 10^{9} \cdot 10^9}{1.2 \cdot 10^6 \cdot 3.15 \cdot 10^7} \text{ years} \\
+&\approx \boxed{3.4 \cdot 10^{4} \text{ years}}
+\end{align*}
+
+We'd have to wait about $34{,}000$ years. For comparison, the Gulf Stream, at $30 \text{ Sv}$, is $25$ times stronger than all the rivers together, and would fill the oceans in about $1400$ years.
+:::
+
+### c. how fast is the gulf stream? {.unnumbered}
+
+::: {.card-success}
+What is the average speed of the Gulf Stream as it flows between Florida and Cuba? Assume that its width is $100 \text{ km}$ and its depth is $1000 \text{ m}$. Give the answer in meters per second.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We use $Q = A v$ from part a, but this time we know the flow rate and want the speed: $v = Q/A$. The area $A$ is the cross-section of the current, a rectangle with a width and a depth. We need to bring everything to meters.
+
+* **Flow rate:** $Q = 30 \text{ Sv}$.
+* **Area:** $A = \text{width} \times \text{depth} = 100 \text{ km} \times 1000 \text{ m}$.
+* **Goal:** the speed in m/s.
+* **Conversion information:**
+  $$
+  1 \text{ Sv} = 10^6 \text{ m}^3/\text{s} \\
+  1 \text{ km} = 10^3 \text{ m}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**Flow rate in SI units:**
+
+$$
+30 \ccancel{red}{Sv} \left( \frac{10^6 \text{ m}^3/\text{s}}{1 \ccancel{red}{Sv}} \right) = 3 \cdot 10^7 \text{ m}^3/\text{s}
+$$
+
+**Cross-section area:**
+
+$$
+A = 100 \ccancel{red}{km} \left( \frac{10^3 \text{ m}}{1 \ccancel{red}{km}} \right) \cdot 1000 \text{ m} = 10^5 \text{ m} \cdot 10^3 \text{ m} = 10^8 \text{ m}^2
+$$
+
+**Speed:**
+
+$$
+v = \frac{Q}{A} = \frac{3 \cdot 10^7 \ccancel{gray}{m$^3$}/\text{s}}{10^8 \ccancel{gray}{m$^2$}} = \boxed{0.3 \text{ m/s}}
+$$
+
+That's about $1 \text{ km/h}$, slower than a walk. It seems slow for such a famous current, but this is the average over the whole cross-section. In reality, the current is much faster in its core and much slower near the edges and at the bottom.
+:::
+
+## the world's energy bill
+
+In 2019, the energy consumption of the whole world was $580 \cdot 10^{18} \text{ J} = 5.8 \cdot 10^{20} \text{ J}$. That's a big number, but how big? In this exercise we'll compare it with some familiar things. Each part comes with the extra information that you need.
+
+### a. hiroshima bombs {.unnumbered}
+
+::: {.card-success}
+The atomic bomb dropped on Hiroshima in 1945 had a power of $15$ kilotons of TNT. A ton of TNT is a unit of energy, equal to $4.184 \cdot 10^9 \text{ J}$. In terms of energy, how many Hiroshima bombs is the energy that the world consumed in 2019?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $5.8 \cdot 10^{20} \text{ J}$.
+* **Goal:** the number of bombs.
+* **Conversion information:**
+  $$
+  1 \text{ ton of TNT} = 4.184 \cdot 10^9 \text{ J} \\
+  1 \text{ kiloton} = 10^3 \text{ tons} \\
+  1 \text{ bomb} \longleftrightarrow 15 \text{ kilotons of TNT}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&5.8 \cdot 10^{20} \ccancel{red}{J}
+\left( \frac{1 \ccancel{blue}{ton}}{4.184 \cdot 10^9 \ccancel{red}{J}} \right)
+\left( \frac{1 \ccancel{green}{kt}}{10^3 \ccancel{blue}{tons}} \right)
+\left( \frac{1 \text{ bomb}}{15 \ccancel{green}{kt}} \right) \\
+&= \frac{5.8 \cdot 10^{20}}{4.184 \cdot 10^9 \cdot 10^3 \cdot 15} \text{ bombs} \\
+&\approx \boxed{9.2 \cdot 10^{6} \text{ bombs}}
+\end{align*}
+
+That's more than nine million Hiroshima bombs in a year. In other words, the world consumes the energy of one Hiroshima bomb about every $3.4$ seconds.
+:::
+
+### b. around the world in a jumbo jet {.unnumbered}
+
+::: {.card-success}
+One liter of jet fuel contains $30 \text{ MJ}$ of energy. A Boeing 747 flies at a speed of $933 \text{ km/h}$, and burns $4 \text{ L}$ of fuel every second. How many times could a Boeing 747 fly around the Earth, using an amount of energy equal to the world's energy consumption in 2019? The radius of the Earth is $6371 \text{ km}$.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+The plane burns fuel, and fuel carries energy, so the energy is our bridge to a distance: energy, then liters of fuel, then time, then distance, and finally the number of laps.
+
+* **Starting point:** $5.8 \cdot 10^{20} \text{ J}$.
+* **Goal:** the number of times around the Earth.
+* **Conversion information:**
+  $$
+  30 \text{ MJ} = 3 \cdot 10^{7} \text{ J} \longleftrightarrow 1 \text{ L of fuel} \\
+  4 \text{ L of fuel} \longleftrightarrow 1 \text{ s} \\
+  933 \text{ km} \longleftrightarrow 1 \text{ h} = 3600 \text{ s} \\
+  1 \text{ lap} \longleftrightarrow 2\pi R = 2 \pi \cdot 6371 \text{ km} \approx 40{,}030 \text{ km}
+  $$
+
+Mega means $10^6$. The last line is the circumference of a circle with the radius of the Earth.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&5.8 \cdot 10^{20} \ccancel{red}{J}
+\left( \frac{1 \ccancel{blue}{L}}{3 \cdot 10^7 \ccancel{red}{J}} \right)
+\left( \frac{1 \ccancel{green}{s}}{4 \ccancel{blue}{L}} \right)
+\left( \frac{933 \ccancel{purple}{km}}{3600 \ccancel{green}{s}} \right)
+\left( \frac{1 \text{ lap}}{40{,}030 \ccancel{purple}{km}} \right) \\
+&= \frac{5.8 \cdot 10^{20} \cdot 933}{3 \cdot 10^7 \cdot 4 \cdot 3600 \cdot 40{,}030} \text{ laps} \\
+&\approx \boxed{3.1 \cdot 10^{7} \text{ laps}}
+\end{align*}
+
+About thirty one million laps around the Earth. To do this, the plane would need to fly non-stop for about $1.5 \cdot 10^5$ years, that's about a hundred and fifty thousand years!
+:::
+
+### c. a solar solution {.unnumbered}
+
+::: {.card-success}
+On average, every square meter of the surface of the Earth receives $342 \text{ J}$ of solar radiation every second. This is the average over the whole planet, both the lit side and the dark side. What area would we need to cover with solar panels, in order to collect the energy that the world consumed in 2019 within one year? Assume that the panels absorb $100\%$ of the energy that reaches them. Express the area also as a multiple of the area of Israel, which is about $22{,}000 \text{ km}^2$.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We do it in two steps. First we find how much energy one square meter of panel collects in a year. Then we find how many square meters are needed to collect $5.8 \cdot 10^{20} \text{ J}$.
+
+**Energy collected by $1 \text{ m}^2$ in a year**
+
+* **Starting point:** $1$ year.
+* **Goal:** the energy that one $\text{m}^2$ collects, in J.
+* **Conversion information:**
+  $$
+  1 \text{ year} = 365 \cdot 24 \cdot 3600 \text{ s} \approx 3.15 \cdot 10^7 \text{ s} \\
+  342 \text{ J} \longleftrightarrow 1 \text{ s} \quad (\text{for } 1 \text{ m}^2)
+  $$
+
+**Area needed**
+
+* **Starting point:** $5.8 \cdot 10^{20} \text{ J}$.
+* **Goal:** the area, in $\text{km}^2$, and in multiples of Israel.
+* **Conversion information:**
+  $$
+  1 \text{ m}^2 \longleftrightarrow \text{the energy from the first step, per year} \\
+  1 \text{ km}^2 = 10^6 \text{ m}^2 \\
+  1 \text{ Israel} \longleftrightarrow 22{,}000 \text{ km}^2
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**Energy per square meter in a year:**
+
+$$
+1 \ccancel{red}{year} \left( \frac{3.15 \cdot 10^7 \ccancel{blue}{s}}{1 \ccancel{red}{year}} \right) \left( \frac{342 \text{ J}}{1 \ccancel{blue}{s}} \right) \approx 1.08 \cdot 10^{10} \text{ J} \quad (\text{for each m}^2)
+$$
+
+**Area:**
+
+\begin{align*}
+&5.8 \cdot 10^{20} \ccancel{red}{J}
+\left( \frac{1 \ccancel{blue}{m$^2$}}{1.08 \cdot 10^{10} \ccancel{red}{J}} \right)
+\left( \frac{1 \ccancel{green}{km$^2$}}{10^6 \ccancel{blue}{m$^2$}} \right)
+\left( \frac{1 \text{ Israel}}{22{,}000 \ccancel{green}{km$^2$}} \right) \\
+&= \frac{5.8 \cdot 10^{20}}{1.08 \cdot 10^{10} \cdot 10^6 \cdot 22{,}000} \text{ Israels} \\
+&\approx \boxed{2.4 \text{ times the area of Israel}}
+\end{align*}
+
+In square kilometers, that's about $5.4 \cdot 10^4 \text{ km}^2$.
+
+That's smaller than one might expect. But remember our assumptions: the panels absorb *all* the energy that reaches them, and they are placed where the average sunlight is like the average of the whole planet. Real solar panels convert only about a fifth of the light into electricity, and the sunlight that reaches the ground is affected by clouds and the atmosphere, so the real area would be several times larger. Still, it's a small fraction of the land area of the Earth.
+:::
+
+## how heavy is a cloud?
+
+A cloud looks light and fluffy, but it is made of water, and water has mass. How much? Let's find out. Here is the data we'll need:
+
+* One cubic centimeter of a typical cumulus cloud contains between $50$ and $500$ water droplets, and the typical radius of a droplet is $10 \, \mu\text{m}$.
+* The volume of a sphere with radius $r$ is $V = \frac{4}{3}\pi r^3$, and the volume of a cylinder with radius $R$ and height $h$ is $V = \pi R^2 h$.
+* The density of water is $1000 \text{ kg/m}^3$.
+
+Our cloud is a cylinder, $3.0 \text{ km}$ tall and with a radius of $1.0 \text{ km}$. Since the number of droplets is given as a range, our answers will also be ranges: a smaller value, for $50$ droplets per $\text{cm}^3$, and a larger value, for $500$.
+
+### a. one droplet {.unnumbered}
+
+::: {.card-success}
+What is the volume of a single water droplet, in $\text{cm}^3$?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** the radius of the droplet, $10 \, \mu\text{m}$.
+* **Goal:** the volume of the droplet in $\text{cm}^3$.
+* **Conversion information:**
+  $$
+  1 \, \mu\text{m} = 10^{-6} \text{ m} \\
+  1 \text{ m} = 10^2 \text{ cm}
+  $$
+
+First we convert the radius to centimeters, and then we use the formula for the volume of a sphere. Remember that the radius is cubed in the formula, so a small change in the radius has a big effect.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**Radius in cm:**
+
+$$
+10 \ccancel{red}{$\mu$m} \left( \frac{10^{-6} \ccancel{blue}{m}}{1 \ccancel{red}{$\mu$m}} \right) \left( \frac{10^{2} \text{ cm}}{1 \ccancel{blue}{m}} \right) = 10^{-3} \text{ cm}
+$$
+
+**Volume:**
+
+$$
+V = \frac{4}{3} \pi r^3 = \frac{4}{3} \pi \left( 10^{-3} \text{ cm} \right)^3 \approx \boxed{4.2 \cdot 10^{-9} \text{ cm}^3}
+$$
+:::
+
+### b. water in every cubic meter {.unnumbered}
+
+::: {.card-success}
+How many $\text{cm}^3$ of liquid water are there in every cubic meter of cloud?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We know the number of droplets in a $\text{cm}^3$ of cloud, and the volume of each droplet. We multiply them, and then convert from a $\text{cm}^3$ of cloud to a $\text{m}^3$ of cloud.
+
+* **Starting point:** $50$ droplets (or $500$) in $1 \text{ cm}^3$ of cloud.
+* **Goal:** $\text{cm}^3$ of water in $1 \text{ m}^3$ of cloud.
+* **Conversion information:**
+  $$
+  1 \text{ droplet} \longleftrightarrow 4.2 \cdot 10^{-9} \text{ cm}^3 \text{ of water} \\
+  1 \text{ m}^3 = 10^6 \text{ cm}^3
+  $$
+
+The last line comes from $1 \text{ m}^3 = (100 \text{ cm})^3 = 10^6 \text{ cm}^3$.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**With 50 droplets per $\text{cm}^3$:**
+
+\begin{align*}
+&\frac{50 \ccancel{red}{droplets}}{1 \ccancel{green}{cm$^3$ cloud}}
+\left( \frac{4.2 \cdot 10^{-9} \text{ cm}^3 \text{ water}}{1 \ccancel{red}{droplet}} \right)
+\left( \frac{10^6 \ccancel{green}{cm$^3$ cloud}}{1 \text{ m}^3 \text{ cloud}} \right) \\
+&= 50 \cdot 4.2 \cdot 10^{-9} \cdot 10^6 \frac{\text{cm}^3 \text{ water}}{\text{m}^3 \text{ cloud}} \\
+&\approx 0.21 \frac{\text{cm}^3 \text{ water}}{\text{m}^3 \text{ cloud}}
+\end{align*}
+
+**With 500 droplets per $\text{cm}^3$**, the result is ten times larger, $2.1 \frac{\text{cm}^3 \text{ water}}{\text{m}^3 \text{ cloud}}$.
+
+So each cubic meter of cloud contains between $0.2$ and $2 \text{ cm}^3$ of water, that is less than half a teaspoon! The cloud is almost entirely air. This also means that water is only about $0.2$ to $2$ parts per million (ppm) of the volume of a cloud.
+:::
+
+### c. the water in the cloud {.unnumbered}
+
+::: {.card-success}
+How many cubic meters of water are there inside the cylindrical cloud?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+First we find the volume of the cloud, and then we use the result from part b.
+
+* **Starting point:** the volume of the cloud, $V = \pi R^2 h = \pi (1.0 \text{ km})^2 (3.0 \text{ km})$.
+* **Goal:** the volume of water, in $\text{m}^3$.
+* **Conversion information:**
+  $$
+  1 \text{ km}^3 = 10^9 \text{ m}^3 \\
+  0.21 \text{ cm}^3 \text{ water} \longleftrightarrow 1 \text{ m}^3 \text{ cloud} \quad (\text{or } 2.1 \text{ cm}^3) \\
+  1 \text{ m}^3 = 10^6 \text{ cm}^3
+  $$
+
+A cubic kilometer is a cube with sides of $10^3 \text{ m}$, so its volume is $(10^3 \text{ m})^3 = 10^9 \text{ m}^3$.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**Volume of the cloud:**
+
+$$
+V = \pi \left( 1.0 \text{ km} \right)^2 \left( 3.0 \text{ km} \right) = 3\pi \text{ km}^3 \approx 9.4 \ccancel{red}{km$^3$} \left( \frac{10^9 \text{ m}^3}{1 \ccancel{red}{km$^3$}} \right) = 9.4 \cdot 10^{9} \text{ m}^3
+$$
+
+**Volume of the water** (with $0.21 \text{ cm}^3$ of water per $\text{m}^3$ of cloud):
+
+\begin{align*}
+&9.4 \cdot 10^{9} \ccancel{red}{m$^3$ cloud}
+\left( \frac{0.21 \ccancel{blue}{cm$^3$ water}}{1 \ccancel{red}{m$^3$ cloud}} \right)
+\left( \frac{1 \text{ m}^3 \text{ water}}{10^6 \ccancel{blue}{cm$^3$ water}} \right) \\
+&= \frac{9.4 \cdot 10^{9} \cdot 0.21}{10^6} \text{ m}^3 \text{ water} \\
+&\approx 2.0 \cdot 10^{3} \text{ m}^3
+\end{align*}
+
+With $2.1 \text{ cm}^3$ per $\text{m}^3$ we get ten times more. So the cloud contains
+
+$$
+\boxed{2 \cdot 10^{3} \text{ to } 2 \cdot 10^{4} \text{ m}^3 \text{ of water}}
+$$
+
+An Olympic swimming pool holds about $2500 \text{ m}^3$, so this is between less than one and about eight Olympic pools.
+:::
+
+### d. soda bottles {.unnumbered}
+
+::: {.card-success}
+How many bottles of soda, of $1$ liter each, could be filled with this water?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $2.0 \cdot 10^{3} \text{ m}^3$ (or $2.0 \cdot 10^{4} \text{ m}^3$) of water.
+* **Goal:** the number of bottles.
+* **Conversion information:**
+  $$
+  1 \text{ m}^3 = 10^3 \text{ L} \\
+  1 \text{ bottle} \longleftrightarrow 1 \text{ L}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&2.0 \cdot 10^{3} \ccancel{red}{m$^3$}
+\left( \frac{10^3 \ccancel{blue}{L}}{1 \ccancel{red}{m$^3$}} \right)
+\left( \frac{1 \text{ bottle}}{1 \ccancel{blue}{L}} \right) \\
+&= 2.0 \cdot 10^{6} \text{ bottles}
+\end{align*}
+
+With the larger value we get ten times more, so we could fill
+
+$$
+\boxed{2 \cdot 10^{6} \text{ to } 2 \cdot 10^{7} \text{ bottles}}
+$$
+
+That's between two and twenty million bottles.
+:::
+
+### e. the mass of the water {.unnumbered}
+
+::: {.card-success}
+What is the mass of the water in the cloud?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+The density of water is a correspondence between a mass and a volume, and we use it as a conversion factor.
+
+* **Starting point:** $2.0 \cdot 10^{3} \text{ m}^3$ (or $2.0 \cdot 10^{4} \text{ m}^3$) of water.
+* **Goal:** the mass, in kg.
+* **Conversion information:**
+  $$
+  1000 \text{ kg} \longleftrightarrow 1 \text{ m}^3 \text{ of water}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&2.0 \cdot 10^{3} \ccancel{red}{m$^3$}
+\left( \frac{1000 \text{ kg}}{1 \ccancel{red}{m$^3$}} \right) \\
+&= 2.0 \cdot 10^{6} \text{ kg}
+\end{align*}
+
+and ten times more for the larger value. So the mass of the water in the cloud is
+
+$$
+\boxed{2 \cdot 10^{6} \text{ to } 2 \cdot 10^{7} \text{ kg}}
+$$
+
+That's between $2000$ and $20{,}000$ tons of water floating over our heads!
+
+For a different perspective, the air in this same cloud, at about $1.2 \text{ kg/m}^3$, weighs $1.2 \cdot 9.4 \cdot 10^{9} \approx 1 \cdot 10^{10} \text{ kg}$. So the water is just $0.02\%$ to $0.2\%$ of the mass of the cloud's air. Even a cloud that weighs thousands of tons is mostly air.
+:::

@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<link rel="alternate" hreflang="en" href="https://yairmau.github.io/measure/en/exercises/multi_step_problems_1.en.html">
+<link rel="alternate" hreflang="he" href="https://yairmau.github.io/measure/he/exercises/multi_step_problems_1.he.html">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>12  multi-step problems 1 – Measure for Measure</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
+<link href="../exercises/multi_step_problems_2.en.html" rel="next">
+<link href="../exercises/concentrations_and_dilutions.en.html" rel="prev">
+<link href="../archive/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e3574cce5e3fde4ed97df547c7360872.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-54cc5f61f87fd151f88f457a17120cd6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".quarto-secondary-nav .quarto-btn-toggle");
+  if (!button) return;
+  const hebrew = document.documentElement.lang.startsWith("he");
+  const label = document.createElement("span");
+  label.className = "chapter-menu-label";
+  label.textContent = hebrew ? "פרקים" : "Chapters";
+  button.append(label);
+  button.setAttribute("aria-label", label.textContent);
+  button.querySelector("i")?.setAttribute("aria-hidden", "true");
+});
+</script><script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../hebrew.css">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../exercises/concentrations_and_dilutions.en.html">exercises</a></li>
+<li class="breadcrumb-item"><a href="../exercises/multi_step_problems_1.en.html"><span class="chapter-number">12</span>  <span class="chapter-title">multi-step problems 1</span></a></li>
+</ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.en.html" class="sidebar-logo-link">
+      <img src="../archive/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../archive/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Measure for Measure</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://yairmau.com/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <a href="https://github.com/yairmau/measure/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="dropdown" id="languages-links-parent">
+<a class="btn btn-primary babelquarto-languages-button" id="languages-button" href="https://yairmau.github.io/measure/he/exercises/multi_step_problems_1.he.html" hreflang="he"><i class="bi bi-globe2"></i> :עברית</a>
+</div>
+<div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">mathematical foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mathematical_foundations/powers_rules.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">power rules</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">quantifying the world</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quantifying/dimensions.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions and units</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quantifying/SI.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">SI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quantifying/prefixes.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">prefixes</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">basic concepts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basic_concepts/area-and-volume.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">area and volume</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basic_concepts/concentration.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../basic_concepts/density.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>  <span class="chapter-title">density</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">conversion methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/prefix_operations.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>  <span class="chapter-title">prefix operations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/chain_link_conversion.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">chain-link conversion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/dilution.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">dilution: <span class="math inline">c_1 V_1 = c_2 V_2</span></span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/concentrations_and_dilutions.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">concentrations and dilutions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/multi_step_problems_1.en.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>  <span class="chapter-title">multi-step problems 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/multi_step_problems_2.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>  <span class="chapter-title">multi-step problems 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/multi_step_problems_3.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>  <span class="chapter-title">multi-step problems 3</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#the-chessboard-and-the-wheat" id="toc-the-chessboard-and-the-wheat" class="nav-link active" data-scroll-target="#the-chessboard-and-the-wheat"><span class="header-section-number">12.1</span> the chessboard and the wheat</a>
+  <ul class="collapse">
+<li><a href="#a.-how-many-grains" id="toc-a.-how-many-grains" class="nav-link" data-scroll-target="#a.-how-many-grains">a. how many grains?</a></li>
+  <li><a href="#b.-a-sea-of-wheat" id="toc-b.-a-sea-of-wheat" class="nav-link" data-scroll-target="#b.-a-sea-of-wheat">b. a sea of wheat</a></li>
+  <li><a href="#c.-how-long-is-a-light-year" id="toc-c.-how-long-is-a-light-year" class="nav-link" data-scroll-target="#c.-how-long-is-a-light-year">c. how long is a light-year?</a></li>
+  <li><a href="#d.-the-wheat-line-to-the-stars" id="toc-d.-the-wheat-line-to-the-stars" class="nav-link" data-scroll-target="#d.-the-wheat-line-to-the-stars">d. the wheat line to the stars</a></li>
+  <li><a href="#what-we-learned" id="toc-what-we-learned" class="nav-link" data-scroll-target="#what-we-learned">what we learned</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#a-comet-hits-the-earth" id="toc-a-comet-hits-the-earth" class="nav-link" data-scroll-target="#a-comet-hits-the-earth"><span class="header-section-number">12.2</span> a comet hits the earth</a>
+  <ul class="collapse">
+<li><a href="#a.-how-much-does-the-comet-weigh" id="toc-a.-how-much-does-the-comet-weigh" class="nav-link" data-scroll-target="#a.-how-much-does-the-comet-weigh">a. how much does the comet weigh?</a></li>
+  <li><a href="#b.-a-rising-sea" id="toc-b.-a-rising-sea" class="nav-link" data-scroll-target="#b.-a-rising-sea">b. a rising sea</a></li>
+  <li><a href="#c.-a-billion-bombs" id="toc-c.-a-billion-bombs" class="nav-link" data-scroll-target="#c.-a-billion-bombs">c. a billion bombs</a></li>
+  <li><a href="#d.-how-fast-is-it-going" id="toc-d.-how-fast-is-it-going" class="nav-link" data-scroll-target="#d.-how-fast-is-it-going">d. how fast is it going?</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#let-them-eat-brioche" id="toc-let-them-eat-brioche" class="nav-link" data-scroll-target="#let-them-eat-brioche"><span class="header-section-number">12.3</span> let them eat brioche</a>
+  <ul class="collapse">
+<li><a href="#a.-the-dry-ingredients" id="toc-a.-the-dry-ingredients" class="nav-link" data-scroll-target="#a.-the-dry-ingredients">a. the dry ingredients</a></li>
+  <li><a href="#b.-how-many-brioches" id="toc-b.-how-many-brioches" class="nav-link" data-scroll-target="#b.-how-many-brioches">b. how many brioches?</a></li>
+  <li><a href="#c.-a-mountain-of-butter" id="toc-c.-a-mountain-of-butter" class="nav-link" data-scroll-target="#c.-a-mountain-of-butter">c. a mountain of butter</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#a-trillion-trees" id="toc-a-trillion-trees" class="nav-link" data-scroll-target="#a-trillion-trees"><span class="header-section-number">12.4</span> a trillion trees</a>
+  <ul class="collapse">
+<li><a href="#a.-how-much-land" id="toc-a.-how-much-land" class="nav-link" data-scroll-target="#a.-how-much-land">a. how much land?</a></li>
+  <li><a href="#b.-a-tree-a-square" id="toc-b.-a-tree-a-square" class="nav-link" data-scroll-target="#b.-a-tree-a-square">b. a tree, a square</a></li>
+  <li><a href="#c.-a-forest-on-the-campus" id="toc-c.-a-forest-on-the-campus" class="nav-link" data-scroll-target="#c.-a-forest-on-the-campus">c. a forest on the campus</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#from-a-wardrobe-to-a-fingernail" id="toc-from-a-wardrobe-to-a-fingernail" class="nav-link" data-scroll-target="#from-a-wardrobe-to-a-fingernail"><span class="header-section-number">12.5</span> from a wardrobe to a fingernail</a>
+  <ul class="collapse">
+<li><a href="#a.-how-much-information-per-liter" id="toc-a.-how-much-information-per-liter" class="nav-link" data-scroll-target="#a.-how-much-information-per-liter">a. how much information per liter?</a></li>
+  <li><a href="#b.-how-heavy-is-a-movie" id="toc-b.-how-heavy-is-a-movie" class="nav-link" data-scroll-target="#b.-how-heavy-is-a-movie">b. how heavy is a movie?</a></li>
+  <li><a href="#c.-how-long-does-it-take" id="toc-c.-how-long-does-it-take" class="nav-link" data-scroll-target="#c.-how-long-does-it-take">c. how long does it take?</a></li>
+  <li><a href="#d.-how-much-does-a-gigabyte-cost" id="toc-d.-how-much-does-a-gigabyte-cost" class="nav-link" data-scroll-target="#d.-how-much-does-a-gigabyte-cost">d. how much does a gigabyte cost?</a></li>
+  </ul>
+</li>
+  </ul></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><!-- Shared KaTeX definitions. Keep these before the page's first equation. --><div hidden="" aria-hidden="true">
+<span class="math inline">\gdef\ccancel#1#2{\ {\color{#1}\cancel{\color{black}\text{#2}}}}</span>
+</div>
+
+<!-- Marker texture for the \ccancel strike (see styles.css): ragged edges plus a faint dry-ink grain. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="marker-texture" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feturbulence type="fractalNoise" basefrequency="0.5" numoctaves="2" seed="3" result="edge"></feturbulence><fedisplacementmap in="SourceGraphic" in2="edge" scale="2.5" xchannelselector="R" ychannelselector="G" result="rough"></fedisplacementmap><feturbulence type="fractalNoise" basefrequency="0.9 0.35" numoctaves="2" seed="8" result="grain"></feturbulence><fecolormatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.5 0 0 0 2.3" result="mask"></fecolormatrix><fecomposite in="rough" in2="mask" operator="in"></fecomposite></filter></defs></svg><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../exercises/concentrations_and_dilutions.en.html">exercises</a></li>
+<li class="breadcrumb-item"><a href="../exercises/multi_step_problems_1.en.html"><span class="chapter-number">12</span>  <span class="chapter-title">multi-step problems 1</span></a></li>
+</ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div>
+<h1 class="title">
+<span class="chapter-number">12</span>  <span class="chapter-title">multi-step problems 1</span>
+</h1>
+<button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/measure/blob/main/exercises/multi_step_problems_1.en.qmd"><i class="bi"></i> Code</button>
+</div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><p>Real problems rarely come with a single conversion. Usually we need to combine a few ideas: powers of ten, unit conversions, areas and volumes. Each exercise below has several parts, and each part uses the results of the previous ones, so it’s a good place to practice splitting a big problem into small, manageable steps.</p>
+<p>As before, try each part on your own first, and only then open the two boxes below it: the <strong>setup</strong> (starting point, goal and conversion information) and the <strong>computation</strong>.</p>
+<section id="the-chessboard-and-the-wheat" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="the-chessboard-and-the-wheat">
+<span class="header-section-number">12.1</span> the chessboard and the wheat</h2>
+<p>An old legend tells of the inventor of chess, who showed his new game to an Indian king. The king was so pleased that he promised to pay the inventor anything he wanted. The inventor asked for a modest reward in wheat grains: one grain for the first square of the chessboard, two grains for the second square, four for the third, eight for the fourth, and so on, doubling at every square, all the way to the 64th square.</p>
+<p>The king agreed immediately, thinking that this was a cheap price. He had no idea of how large the number really is. If you add up the grains on all 64 squares, you get</p>
+<p><span class="math display">
+1 + 2 + 4 + 8 + \dots + 2^{63} = 2^{64} - 1
+</span></p>
+<div class="curved-paper">
+<p><img src="../archive/images/chess-rice.jpg" class="img-fluid"></p>
+</div>
+<p>We will find out just how much wheat that is. Here is the data we’ll need:</p>
+<ul>
+<li>A cup of <span class="math inline">100 \text{ mL}</span> holds about <span class="math inline">1219</span> wheat grains.</li>
+<li>The area of India is <span class="math inline">3{,}286{,}592 \text{ km}^2</span>.</li>
+<li>A typical wheat grain is <span class="math inline">6.5 \text{ mm}</span> long.</li>
+<li>Light travels <span class="math inline">299{,}792{,}458 \text{ m}</span> in one second, which we can round to <span class="math inline">3.00 \cdot 10^8 \text{ m/s}</span>.</li>
+<li>The nearest star to our Sun, Proxima Centauri, is <span class="math inline">4.2</span> light-years away. A <strong>light-year</strong> is the distance that light travels in one year.</li>
+</ul>
+<section id="a.-how-many-grains" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="a.-how-many-grains">a. how many grains?</h3>
+<div class="card-success">
+<p>The total number of grains is <span class="math inline">2^{64} - 1</span>. Estimate this number <strong>without a calculator</strong>, using the approximation <span class="math inline">2^{10} \approx 10^3</span>.</p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="solution">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, subtracting 1 from a number with twenty digits changes nothing that we can measure, so we can safely forget the “<span class="math inline">-1</span>”.</p>
+<p>Now we split <span class="math inline">2^{64}</span> so that we can use <span class="math inline">2^{10}</span>, using the <a href="../mathematical_foundations/powers_rules.en.html">power rules</a>:</p>
+<p><span class="math display">
+2^{64} = 2^{4} \cdot 2^{60} = 2^4 \left( 2^{10} \right)^6 \approx 16 \cdot \left( 10^3 \right)^6 = 16 \cdot 10^{18} = 1.6 \cdot 10^{19}
+</span></p>
+<p>The exact value is <span class="math inline">2^{64} - 1 \approx 1.84 \cdot 10^{19}</span>. Our estimate is a bit low, because <span class="math inline">2^{10} = 1024</span> is slightly more than <span class="math inline">1000</span>, and this small error is multiplied six times. Still, we got the right order of magnitude, without a calculator. That’s about eighteen and a half <strong>quintillion</strong> grains.</p>
+<p>In the following parts we will use the exact value, <span class="math inline">N \approx 1.84 \cdot 10^{19}</span> grains.</p>
+</div>
+</div>
+</div>
+</section><section id="b.-a-sea-of-wheat" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="b.-a-sea-of-wheat">b. a sea of wheat</h3>
+<div class="card-success">
+<p>Imagine that all those grains are spread evenly over the entire area of India. How deep is the layer of wheat?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There are two things to find here: the total volume of the wheat, and the area of India in the right units. Then we combine them.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">1.84 \cdot 10^{19}</span> grains.</li>
+<li>
+<strong>Goal:</strong> the volume of wheat, in <span class="math inline">\text{m}^3</span>.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1219 \text{ grains} \longleftrightarrow 100 \text{ mL} \\
+1 \text{ m}^3 = 10^6 \text{ mL}
+</span>
+</li>
+</ul>
+<p>The second line comes from <span class="math inline">1 \text{ mL} = 1 \text{ cm}^3</span> and <span class="math inline">1 \text{ m} = 100 \text{ cm}</span>, so <span class="math inline">1 \text{ m}^3 = (100)^3 \text{ cm}^3 = 10^6 \text{ cm}^3</span>.</p>
+<p>The area is given in <span class="math inline">\text{km}^2</span>, and we want <span class="math inline">\text{m}^2</span>. Remember that the prefix is also squared, <span class="math inline">1 \text{ km}^2 = (10^3 \text{ m})^2 = 10^6 \text{ m}^2</span> (see <a href="../conversion_methods/prefix_operations.en.html">areas and volumes</a>).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Volume of the wheat:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;1.84 \cdot 10^{19} \ccancel{red}{grains}
+\left( \frac{100 \ccancel{blue}{mL}}{1219 \ccancel{red}{grains}} \right)
+\left( \frac{1 \text{ m}^3}{10^6 \ccancel{blue}{mL}} \right) \\
+&amp;= \frac{1.84 \cdot 10^{19} \cdot 100}{1219 \cdot 10^6} \text{ m}^3 \\
+&amp;\approx 1.5 \cdot 10^{12} \text{ m}^3
+\end{align*}</span></p>
+<p><strong>Area of India:</strong></p>
+<p><span class="math display">
+3.29 \cdot 10^{6} \ccancel{red}{km$^2$} \left( \frac{10^6 \text{ m}^2}{1 \ccancel{red}{km$^2$}} \right) = 3.29 \cdot 10^{12} \text{ m}^2
+</span></p>
+<p><strong>Depth:</strong> If the wheat forms a flat layer of depth <span class="math inline">h</span> over an area <span class="math inline">A</span>, its volume is <span class="math inline">V = A h</span>. So the depth is the volume divided by the area:</p>
+<p><span class="math display">
+h = \frac{V}{A} = \frac{1.5 \cdot 10^{12} \ccancel{gray}{m$^3$}}{3.29 \cdot 10^{12} \ccancel{gray}{m$^2$}} \text{ m} \approx \boxed{0.46 \text{ m}}
+</span></p>
+<p>After all that, the sea of wheat that covers a whole subcontinent is only about knee-high! The number of grains is astronomical, but so is the area of India.</p>
+</div>
+</div>
+</div>
+</section><section id="c.-how-long-is-a-light-year" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="c.-how-long-is-a-light-year">c. how long is a light-year?</h3>
+<p>Before we compare the wheat to the distance to the stars, we need to know how far a light-year is in meters. This is an intermediate step, and we can handle it with a short chain.</p>
+<div class="card-success">
+<p>What is the length of one light-year, in meters?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> 1 year.</li>
+<li>
+<strong>Goal:</strong> distance in meters.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ year} = 365 \text{ days} \\
+1 \text{ day} = 24 \text{ hours} \\
+1 \text{ hour} = 3600 \text{ seconds} \\
+3.00 \cdot 10^8 \text{ m} \longleftrightarrow 1 \text{ second (for light)}
+</span>
+</li>
+</ul>
+<p>The last line is the speed of light, written as a correspondence: every second, the light advances <span class="math inline">3.00 \cdot 10^8 \text{ m}</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;1 \ccancel{red}{year}
+\left( \frac{365 \ccancel{blue}{days}}{1 \ccancel{red}{year}} \right)
+\left( \frac{24 \ccancel{green}{hours}}{1 \ccancel{blue}{day}} \right)
+\left( \frac{3600 \ccancel{purple}{s}}{1 \ccancel{green}{hour}} \right)
+\left( \frac{3.00 \cdot 10^8 \text{ m}}{1 \ccancel{purple}{s}} \right) \\
+&amp;= 365 \cdot 24 \cdot 3600 \cdot 3.00 \cdot 10^8 \text{ m} \\
+&amp;\approx \boxed{9.46 \cdot 10^{15} \text{ m}}
+\end{align*}</span></p>
+<p>So one light-year is about <span class="math inline">9.5</span> thousand billion kilometers.</p>
+</div>
+</div>
+</div>
+</section><section id="d.-the-wheat-line-to-the-stars" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="d.-the-wheat-line-to-the-stars">d. the wheat line to the stars</h3>
+<div class="card-success">
+<p>Now place all the grains one after the other in a single straight line, each grain along its length. About how many one-way trips from the Sun to Proxima Centauri (the nearest star, <span class="math inline">4.2</span> light-years away) would this line cover?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">1.84 \cdot 10^{19}</span> grains.</li>
+<li>
+<strong>Goal:</strong> the number of Sun-to-star trips.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ grain} \longleftrightarrow 6.5 \text{ mm (of the line)} \\
+1 \text{ m} = 10^3 \text{ mm} \\
+1 \text{ light-year} = 9.46 \cdot 10^{15} \text{ m} \\
+1 \text{ trip} \longleftrightarrow 4.2 \text{ light-years}
+</span>
+</li>
+</ul>
+<p>The third line is the result of part c.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;1.84 \cdot 10^{19} \ccancel{red}{grains}
+\left( \frac{6.5 \ccancel{blue}{mm}}{1 \ccancel{red}{grain}} \right)
+\left( \frac{1 \ccancel{green}{m}}{10^3 \ccancel{blue}{mm}} \right)
+\left( \frac{1 \ccancel{purple}{ly}}{9.46 \cdot 10^{15} \ccancel{green}{m}} \right)
+\left( \frac{1 \text{ trip}}{4.2 \ccancel{purple}{ly}} \right) \\
+&amp;= \frac{1.84 \cdot 10^{19} \cdot 6.5}{10^3 \cdot 9.46 \cdot 10^{15} \cdot 4.2} \text{ trips} \\
+&amp;\approx \boxed{3.0 \text{ trips}}
+\end{align*}</span></p>
+<p>The grains would make about three one-way trips from the Sun to the nearest star. Notice that the answer is very close to a whole number, but our inputs (like <span class="math inline">6.5 \text{ mm}</span> and <span class="math inline">4.2</span> light-years) were rounded, so the honest answer is “about three”, not “exactly three”.</p>
+</div>
+</div>
+</div>
+</section><section id="what-we-learned" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="what-we-learned">what we learned</h3>
+<ul>
+<li>The same number, <span class="math inline">N \approx 1.84 \cdot 10^{19}</span>, went into two different chains. First we turned it into a <strong>volume</strong> and then into a <strong>depth</strong>, and later into a <strong>length</strong> and then into a <strong>number of trips</strong>.</li>
+<li>A long chain is just a few short ones glued together. When a problem needs an intermediate quantity (like the length of a light-year), stop, solve it separately, and then use it as conversion information.</li>
+<li>Areas need squared prefixes (<span class="math inline">1 \text{ km}^2 = 10^6 \text{ m}^2</span>), and volumes need cubed ones.</li>
+</ul></section></section><section id="a-comet-hits-the-earth" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="a-comet-hits-the-earth">
+<span class="header-section-number">12.2</span> a comet hits the earth</h2>
+<p>The movie <em>Don’t Look Up</em> (2021) is about a giant comet on a collision course with Earth. In the movie, the main character, played by Leonardo DiCaprio, warns that “if the comet hits the Earth, the impact will be equal to a billion Hiroshima [atomic bombs].” Is that reasonable? What else would happen if the comet were to melt into the oceans? We will use some numbers from the movie, and some from the real world, to find out.</p>
+<p>The comet is a ball of ice with a diameter of <span class="math inline">9 \text{ km}</span> (we’ll assume that it’s a perfect sphere) and a density of <span class="math inline">0.9 \text{ g/cm}^3</span>. Here is the rest of the data we’ll need:</p>
+<ul>
+<li>The density of liquid water is <span class="math inline">1 \text{ g/cm}^3</span>.</li>
+<li>The oceans cover <span class="math inline">71\%</span> of the surface of the Earth, and the radius of the Earth is <span class="math inline">6371 \text{ km}</span>.</li>
+<li>A sphere of radius <span class="math inline">r</span> has volume <span class="math inline">V = \frac{4}{3}\pi r^3</span> and surface area <span class="math inline">A = 4 \pi r^2</span>.</li>
+<li>The Hiroshima bomb had an explosive power of <span class="math inline">15</span> kilotons of TNT. One ton of TNT is defined as an amount of energy of <span class="math inline">4.184 \cdot 10^9 \text{ J}</span>.</li>
+<li>An object with mass <span class="math inline">m</span> and speed <span class="math inline">v</span> has kinetic energy <span class="math inline">E = \frac{1}{2} m v^2</span>.</li>
+</ul>
+<section id="a.-how-much-does-the-comet-weigh" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="a.-how-much-does-the-comet-weigh">a. how much does the comet weigh?</h3>
+<div class="card-success">
+<p>Find the mass of the comet, in kilograms.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We’ll do this in two steps. First we find the volume of the comet from its radius, and then we use the density as a conversion factor from volume to mass.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> the volume of the comet, which we find from its radius, <span class="math inline">r = 9 \text{ km}/2 = 4.5 \text{ km}</span>.</li>
+<li>
+<strong>Goal:</strong> the mass of the comet, in kg.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+0.9 \text{ g} \longleftrightarrow 1 \text{ cm}^3 \text{ of ice} \\
+1 \text{ m}^3 = 10^6 \text{ cm}^3 \\
+1 \text{ kg} = 10^3 \text{ g}
+</span>
+</li>
+</ul>
+<p>The density is a correspondence between a mass and a volume.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Volume:</strong> we convert the radius to meters, <span class="math inline">4.5 \text{ km} = 4.5 \cdot 10^3 \text{ m}</span>, and use the formula for the volume of a sphere:</p>
+<p><span class="math display">
+V = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi \left( 4.5 \cdot 10^3 \text{ m} \right)^3 \approx 3.82 \cdot 10^{11} \text{ m}^3
+</span></p>
+<p><strong>Mass:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;3.82 \cdot 10^{11} \ccancel{red}{m$^3$}
+\left( \frac{10^6 \ccancel{blue}{cm$^3$}}{1 \ccancel{red}{m$^3$}} \right)
+\left( \frac{0.9 \ccancel{green}{g}}{1 \ccancel{blue}{cm$^3$}} \right)
+\left( \frac{1 \text{ kg}}{10^3 \ccancel{green}{g}} \right) \\
+&amp;= \frac{3.82 \cdot 10^{11} \cdot 10^6 \cdot 0.9}{10^3} \text{ kg} \\
+&amp;\approx \boxed{3.44 \cdot 10^{14} \text{ kg}}
+\end{align*}</span></p>
+<p>That’s about 340 billion tonnes of ice.</p>
+</div>
+</div>
+</div>
+</section><section id="b.-a-rising-sea" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="b.-a-rising-sea">b. a rising sea</h3>
+<div class="card-success">
+<p>Suppose that the whole comet melts and all the water ends up in the oceans of the Earth. By how many meters would the sea level rise?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Melting doesn’t change the mass: the mass of the water is the same as the mass of the ice that we found in part a. But the <em>volume</em> changes, because water and ice have different densities. That’s why we need to use the density of water, and not of ice.</p>
+<p>We also need the area of the oceans, and then, if the water forms a thin layer over this area, the rise in sea level is the volume of water divided by this area, as we did in the wheat exercise: <span class="math inline">h = V/A</span>.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">3.44 \cdot 10^{14} \text{ kg}</span> of water.</li>
+<li>
+<strong>Goal:</strong> the volume of the water, in <span class="math inline">\text{m}^3</span>.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ g} \longleftrightarrow 1 \text{ cm}^3 \text{ of water} \\
+1 \text{ m}^3 = 10^6 \text{ cm}^3 \\
+1 \text{ kg} = 10^3 \text{ g}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Volume of the water:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;3.44 \cdot 10^{14} \ccancel{red}{kg}
+\left( \frac{10^3 \ccancel{blue}{g}}{1 \ccancel{red}{kg}} \right)
+\left( \frac{1 \ccancel{green}{cm$^3$}}{1 \ccancel{blue}{g}} \right)
+\left( \frac{1 \text{ m}^3}{10^6 \ccancel{green}{cm$^3$}} \right) \\
+&amp;= \frac{3.44 \cdot 10^{14} \cdot 10^3}{10^6} \text{ m}^3 \\
+&amp;= 3.44 \cdot 10^{11} \text{ m}^3
+\end{align*}</span></p>
+<p><strong>Area of the oceans:</strong> the oceans cover 71% of the surface of the Earth, so</p>
+<p><span class="math display">
+A = 0.71 \cdot 4\pi R^2 = 0.71 \cdot 4\pi \left( 6371 \text{ km} \right)^2 \approx 3.62 \cdot 10^8 \text{ km}^2
+</span></p>
+<p>and now we convert to square meters:</p>
+<p><span class="math display">
+3.62 \cdot 10^8 \ccancel{red}{km$^2$} \left( \frac{10^6 \text{ m}^2}{1 \ccancel{red}{km$^2$}} \right) = 3.62 \cdot 10^{14} \text{ m}^2
+</span></p>
+<p><strong>Rise in sea level:</strong></p>
+<p><span class="math display">
+h = \frac{V}{A} = \frac{3.44 \cdot 10^{11} \ccancel{gray}{m$^3$}}{3.62 \cdot 10^{14} \ccancel{gray}{m$^2$}} \text{ m} \approx \boxed{9.5 \cdot 10^{-4} \text{ m}}
+</span></p>
+<p>That’s about one millimeter! A gigantic comet, 9 kilometers across, and the sea level would hardly change. The oceans are enormous.</p>
+<p>What if we had used the density of ice by mistake, and just taken the volume of the comet, <span class="math inline">3.82 \cdot 10^{11} \text{ m}^3</span>? We’d get about <span class="math inline">1.05 \text{ mm}</span>, that’s 10% too high. It’s a small difference here, but it’s a good habit to always ask what happens to the volume when something melts.</p>
+</div>
+</div>
+</div>
+</section><section id="c.-a-billion-bombs" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="c.-a-billion-bombs">c. a billion bombs</h3>
+<div class="card-success">
+<p>How much energy is a billion (<span class="math inline">10^9</span>) Hiroshima bombs? Give the answer in joules.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">10^9</span> bombs.</li>
+<li>
+<strong>Goal:</strong> energy in joules.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ bomb} \longleftrightarrow 15 \text{ kilotons of TNT} \\
+1 \text{ kiloton} = 10^3 \text{ tons} \\
+1 \text{ ton of TNT} \longleftrightarrow 4.184 \cdot 10^9 \text{ J}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;10^9 \ccancel{red}{bombs}
+\left( \frac{15 \ccancel{blue}{kt}}{1 \ccancel{red}{bomb}} \right)
+\left( \frac{10^3 \ccancel{green}{tons}}{1 \ccancel{blue}{kt}} \right)
+\left( \frac{4.184 \cdot 10^9 \text{ J}}{1 \ccancel{green}{ton}} \right) \\
+&amp;= 10^9 \cdot 15 \cdot 10^3 \cdot 4.184 \cdot 10^9 \text{ J} \\
+&amp;\approx \boxed{6.28 \cdot 10^{22} \text{ J}}
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+</section><section id="d.-how-fast-is-it-going" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="d.-how-fast-is-it-going">d. how fast is it going?</h3>
+<div class="card-success">
+<p>Assume that the energy released in the impact (a billion Hiroshima bombs) is the kinetic energy of the comet. What is the speed of the comet at the moment of impact? Give the answer in km/h.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This time we need a formula, the kinetic energy <span class="math inline">E = \frac{1}{2}mv^2</span>, which we solve for the speed:</p>
+<p><span class="math display">
+v = \sqrt{\frac{2E}{m}}
+</span></p>
+<p>Before plugging in numbers, we check the units. The joule is <span class="math inline">\text{J} = \text{kg}\cdot\text{m}^2/\text{s}^2</span> (see <a href="../quantifying/dimensions.en.html">dimensions</a>), so:</p>
+<p><span class="math display">
+\sqrt{\frac{\text{J}}{\text{kg}}} = \sqrt{\frac{\ccancel{gray}{kg}\,\text{m}^2/\text{s}^2}{\ccancel{gray}{kg}}} = \text{m/s}
+</span></p>
+<p>so we get the speed in meters per second, and we convert to km/h afterwards.</p>
+<ul>
+<li>
+<strong>Energy:</strong> <span class="math inline">E = 6.28 \cdot 10^{22} \text{ J}</span>, from part c.</li>
+<li>
+<strong>Mass:</strong> <span class="math inline">m = 3.44 \cdot 10^{14} \text{ kg}</span>, from part a.</li>
+<li>
+<strong>Goal:</strong> speed in km/h.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ km} = 10^3 \text{ m} \\
+1 \text{ h} = 3600 \text{ s}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Speed in m/s:</strong></p>
+<p><span class="math display">
+v = \sqrt{\frac{2 \cdot 6.28 \cdot 10^{22} \text{ J}}{3.44 \cdot 10^{14} \text{ kg}}} = \sqrt{3.65 \cdot 10^{8} \text{ m}^2/\text{s}^2} \approx 1.91 \cdot 10^{4} \text{ m/s}
+</span></p>
+<p><strong>Speed in km/h:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;1.91 \cdot 10^{4} \frac{\ccancel{red}{m}}{\ccancel{blue}{s}}
+\left( \frac{1 \text{ km}}{10^3 \ccancel{red}{m}} \right)
+\left( \frac{3600 \ccancel{blue}{s}}{1 \text{ h}} \right) \\
+&amp;= \frac{1.91 \cdot 10^{4} \cdot 3600}{10^3} \frac{\text{km}}{\text{h}} \\
+&amp;\approx \boxed{6.9 \cdot 10^{4} \frac{\text{km}}{\text{h}}}
+\end{align*}</span></p>
+<p>That’s about <span class="math inline">19 \text{ km/s}</span>, more than 50 times the speed of sound. It’s fast, but it’s the right ballpark for comets and asteroids that travel through the solar system, which typically hit the Earth with speeds of tens of kilometers per second. So the movie’s claim is plausible: to release the energy of a billion Hiroshima bombs, a 9-kilometer comet only needs a speed that is perfectly normal for objects like it.</p>
+</div>
+</div>
+</div>
+</section></section><section id="let-them-eat-brioche" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="let-them-eat-brioche">
+<span class="header-section-number">12.3</span> let them eat brioche</h2>
+<p>“If they have no bread, let them eat brioche.” The philosopher Jean-Jacques Rousseau quoted this sentence, which he attributed to a “great princess” of eighteenth-century France. It became a symbol of the distance between the aristocracy and ordinary people. Brioche is a rich, buttery bread, and it was certainly not something that a poor family could afford.</p>
+<p>In the recipe book <em>Le cuisinier impérial</em> (1806), on page 366, we can find the list of ingredients for a brioche:</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">ingredient</th>
+<th style="text-align: center;">flour</th>
+<th style="text-align: center;">yeast</th>
+<th style="text-align: center;">salt</th>
+<th style="text-align: center;">butter</th>
+<th style="text-align: center;">eggs</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>quantity</strong></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>unit</strong></td>
+<td style="text-align: center;">quart</td>
+<td style="text-align: center;">once</td>
+<td style="text-align: center;">once</td>
+<td style="text-align: center;">livre</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<div class="curved-paper">
+<p><img src="../archive/images/Le%20cuisinier%20imp%C3%A9rial.jpeg" height="500"></p>
+</div>
+<p>In those days, before the French Revolution, the SI system didn’t exist yet, and the recipe uses old French units:</p>
+<ul>
+<li>The <strong>quart</strong> is a unit of <em>volume</em>. It is a quarter of a <strong>boisseau</strong>, and <span class="math inline">1 \text{ boisseau} = 12.7 \text{ L}</span>.</li>
+<li>The <strong>livre</strong> is a unit of <em>mass</em>, and <span class="math inline">1 \text{ livre} = 489 \text{ g}</span>. It is made of <span class="math inline">16</span> <strong>once</strong>, so the <strong>once</strong> is a unit of mass too.</li>
+</ul>
+<p>We’ll need some more data:</p>
+<ul>
+<li>One <span class="math inline">\text{cm}^3</span> of flour has a mass of <span class="math inline">0.78 \text{ g}</span>.</li>
+<li>The mass of a quart of butter is <span class="math inline">71</span> once.</li>
+<li>In 1784, the population of France was <span class="math inline">24.8</span> million people.</li>
+<li>One brioche is enough to feed <span class="math inline">7</span> people for a day.</li>
+</ul>
+<section id="a.-the-dry-ingredients" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="a.-the-dry-ingredients">a. the dry ingredients</h3>
+<div class="card-success">
+<p>What is the total mass of the dry ingredients (flour, yeast and salt) of one brioche? Give the answer in kilograms.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The flour is given as a volume (in quarts) and the yeast and salt are given as masses (in once), so we need two separate chains, and then we add the results, in the same unit.</p>
+<p><strong>Flour</strong></p>
+<ul>
+<li>
+<strong>Starting point:</strong> 1 quart of flour.</li>
+<li>
+<strong>Goal:</strong> mass in kg.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ boisseau} = 4 \text{ quarts} \\
+1 \text{ boisseau} = 12.7 \text{ L} \\
+1 \text{ L} = 10^3 \text{ cm}^3 \\
+0.78 \text{ g} \longleftrightarrow 1 \text{ cm}^3 \text{ of flour} \\
+1 \text{ kg} = 10^3 \text{ g}
+</span>
+</li>
+</ul>
+<p><strong>Yeast and salt</strong></p>
+<ul>
+<li>
+<strong>Starting point:</strong> 2 once (1 once of yeast and 1 once of salt).</li>
+<li>
+<strong>Goal:</strong> mass in kg.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ livre} = 16 \text{ once} \\
+1 \text{ livre} = 489 \text{ g} \\
+1 \text{ kg} = 10^3 \text{ g}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Flour:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;1 \ccancel{red}{quart}
+\left( \frac{1 \ccancel{blue}{boisseau}}{4 \ccancel{red}{quart}} \right)
+\left( \frac{12.7 \ccancel{green}{L}}{1 \ccancel{blue}{boisseau}} \right)
+\left( \frac{10^3 \ccancel{purple}{cm$^3$}}{1 \ccancel{green}{L}} \right)
+\left( \frac{0.78 \ccancel{orange}{g}}{1 \ccancel{purple}{cm$^3$}} \right)
+\left( \frac{1 \text{ kg}}{10^3 \ccancel{orange}{g}} \right) \\
+&amp;= \frac{12.7 \cdot 10^3 \cdot 0.78}{4 \cdot 10^3} \text{ kg} \\
+&amp;\approx 2.48 \text{ kg}
+\end{align*}</span></p>
+<p><strong>Yeast and salt:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;2 \ccancel{red}{once}
+\left( \frac{1 \ccancel{blue}{livre}}{16 \ccancel{red}{once}} \right)
+\left( \frac{489 \ccancel{green}{g}}{1 \ccancel{blue}{livre}} \right)
+\left( \frac{1 \text{ kg}}{10^3 \ccancel{green}{g}} \right) \\
+&amp;= \frac{2 \cdot 489}{16 \cdot 10^3} \text{ kg} \\
+&amp;\approx 0.061 \text{ kg}
+\end{align*}</span></p>
+<p><strong>Total:</strong></p>
+<p><span class="math display">
+2.48 \text{ kg} + 0.061 \text{ kg} \approx \boxed{2.54 \text{ kg}}
+</span></p>
+<p>Almost all of the mass is flour. The yeast and salt together are only about 2% of the dry ingredients.</p>
+</div>
+</div>
+</div>
+</section><section id="b.-how-many-brioches" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="b.-how-many-brioches">b. how many brioches?</h3>
+<div class="card-success">
+<p>Suppose that the entire population of France in 1784 ate nothing but brioche. How many brioches would be needed to feed everyone for a whole year?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">24.8 \cdot 10^6</span> people.</li>
+<li>
+<strong>Goal:</strong> the number of brioches in a year.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ brioche} \longleftrightarrow 7 \text{ people for 1 day} \\
+1 \text{ year} = 365 \text{ days}
+</span>
+</li>
+</ul>
+<p>The first line is a correspondence: one brioche feeds 7 people for a day. In other words, it’s <span class="math inline">7</span> “person-days” of food. Multiplying the number of people by the number of days gives the number of person-days we need to feed.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;24.8 \cdot 10^6 \ccancel{red}{people}
+\left( \frac{365 \ccancel{blue}{days}}{1 \text{ year}} \right)
+\left( \frac{1 \text{ brioche}}{7 \ccancel{red}{people} \ccancel{blue}{day}} \right) \\
+&amp;= \frac{24.8 \cdot 10^6 \cdot 365}{7} \frac{\text{brioches}}{\text{year}} \\
+&amp;\approx \boxed{1.29 \cdot 10^{9} \frac{\text{brioches}}{\text{year}}}
+\end{align*}</span></p>
+<p>That’s more than a billion brioches a year.</p>
+</div>
+</div>
+</div>
+</section><section id="c.-a-mountain-of-butter" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="c.-a-mountain-of-butter">c. a mountain of butter</h3>
+<div class="card-success">
+<p>What volume of butter would be needed to bake all these brioches? Give the answer in cubic meters.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The recipe gives the butter as a mass (in livres), but we want a volume. To go from mass to volume we need the density of butter. It’s hiding in the data: the mass of a quart of butter is 71 once. A quart is a volume, so this is a correspondence between a volume and a mass, and we can use it directly, without calculating the density.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">1.29 \cdot 10^9</span> brioches.</li>
+<li>
+<strong>Goal:</strong> the volume of butter, in <span class="math inline">\text{m}^3</span>.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ brioche} \longleftrightarrow 2 \text{ livre of butter} \\
+1 \text{ livre} = 16 \text{ once} \\
+71 \text{ once of butter} \longleftrightarrow 1 \text{ quart of butter} \\
+1 \text{ boisseau} = 4 \text{ quarts} \\
+1 \text{ boisseau} = 12.7 \text{ L} \\
+1 \text{ m}^3 = 10^3 \text{ L}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;1.29 \cdot 10^{9} \ccancel{red}{brioches}
+\left( \frac{2 \ccancel{blue}{livre}}{1 \ccancel{red}{brioche}} \right)
+\left( \frac{16 \ccancel{green}{once}}{1 \ccancel{blue}{livre}} \right)
+\left( \frac{1 \ccancel{purple}{quart}}{71 \ccancel{green}{once}} \right)
+\left( \frac{1 \ccancel{orange}{boisseau}}{4 \ccancel{purple}{quart}} \right)
+\left( \frac{12.7 \ccancel{gray}{L}}{1 \ccancel{orange}{boisseau}} \right)
+\left( \frac{1 \text{ m}^3}{10^3 \ccancel{gray}{L}} \right) \\
+&amp;= \frac{1.29 \cdot 10^{9} \cdot 2 \cdot 16 \cdot 12.7}{71 \cdot 4 \cdot 10^3} \text{ m}^3 \\
+&amp;\approx \boxed{1.85 \cdot 10^{6} \text{ m}^3}
+\end{align*}</span></p>
+<p>That’s about 1.85 million cubic meters of butter, enough to fill roughly 740 Olympic swimming pools (each holds about <span class="math inline">2500 \text{ m}^3</span>). No wonder that ordinary people couldn’t afford brioche!</p>
+<p>This is the longest chain of the page: six links, with a mix of old and modern units. Notice that we didn’t have to convert to SI units at every step. It’s enough to make sure that the units cancel, one link after the other.</p>
+</div>
+</div>
+</div>
+</section></section><section id="a-trillion-trees" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="a-trillion-trees">
+<span class="header-section-number">12.4</span> a trillion trees</h2>
+<p>Planting trees is one way to pull carbon out of the atmosphere, since trees are made largely of carbon that they take from the air as they grow. A research group led by the ecologist Thomas Crowther, from ETH Zürich, estimated how much we could plant, and what we would get. According to their estimate, to cancel the warming effect of the emissions from fossil fuels, we would need to plant <span class="math inline">1.2</span> trillion trees. All these trees would need an area of <span class="math inline">0.9</span> billion hectares. After growing, they would remove <span class="math inline">205</span> gigatons of carbon from the atmosphere.</p>
+<p>Let’s put these big numbers in perspective. Here is the data we’ll need:</p>
+<ul>
+<li>
+<span class="math inline">1</span> trillion is <span class="math inline">10^{12}</span> (a thousand billions), and <span class="math inline">1</span> billion is <span class="math inline">10^{9}</span>.</li>
+<li>A <strong>hectare</strong> (ha) is the area of a square with sides of <span class="math inline">100 \text{ m}</span>.</li>
+<li>The prefix <em>giga</em> means <span class="math inline">10^9</span>, so <span class="math inline">1 \text{ Gt}</span> (gigaton) is <span class="math inline">10^9</span> tons. Here, a ton is a <em>metric</em> ton, <span class="math inline">1 \text{ t} = 1000 \text{ kg}</span>.</li>
+<li>The radius of the Earth is <span class="math inline">6371 \text{ km}</span>, and the surface area of a sphere of radius <span class="math inline">R</span> is <span class="math inline">4\pi R^2</span>. Land covers <span class="math inline">29\%</span> of the surface of the Earth.</li>
+<li>A <strong>dunam</strong> is an old unit of area that is still used in Israel and in the Middle East. There are <span class="math inline">1000</span> dunams in one <span class="math inline">\text{km}^2</span>.</li>
+</ul>
+<section id="a.-how-much-land" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="a.-how-much-land">a. how much land?</h3>
+<div class="card-success">
+<p>What percentage of the dry land of the Earth would be covered by the new trees?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We need two areas in the same unit: the area of the new forests and the area of dry land. Then we divide one by the other. Let’s use <span class="math inline">\text{km}^2</span> for both.</p>
+<p><strong>Area of the forests</strong></p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">0.9 \cdot 10^9 \text{ ha}</span>.</li>
+<li>
+<strong>Goal:</strong> area in <span class="math inline">\text{km}^2</span>.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ ha} = (100 \text{ m})^2 = 10^4 \text{ m}^2 \\
+1 \text{ km}^2 = 10^6 \text{ m}^2
+</span>
+</li>
+</ul>
+<p>The second line comes from <span class="math inline">1 \text{ km} = 10^3 \text{ m}</span>, and remember to square the prefix: <span class="math inline">1 \text{ km}^2 = (10^3 \text{ m})^2 = 10^6 \text{ m}^2</span>.</p>
+<p><strong>Area of dry land</strong></p>
+<p>The land is 29% of the area of the sphere, <span class="math inline">A_\text{land} = 0.29 \cdot 4 \pi R^2</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Area of the forests:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;0.9 \cdot 10^{9} \ccancel{red}{ha}
+\left( \frac{10^4 \ccancel{blue}{m$^2$}}{1 \ccancel{red}{ha}} \right)
+\left( \frac{1 \text{ km}^2}{10^6 \ccancel{blue}{m$^2$}} \right) \\
+&amp;= \frac{0.9 \cdot 10^{9} \cdot 10^4}{10^6} \text{ km}^2 \\
+&amp;= 9 \cdot 10^{6} \text{ km}^2
+\end{align*}</span></p>
+<p><strong>Area of dry land:</strong></p>
+<p><span class="math display">
+A_\text{land} = 0.29 \cdot 4\pi \left( 6371 \text{ km} \right)^2 \approx 1.48 \cdot 10^{8} \text{ km}^2
+</span></p>
+<p><strong>Fraction:</strong></p>
+<p><span class="math display">
+\frac{9 \cdot 10^{6} \ccancel{gray}{km$^2$}}{1.48 \cdot 10^{8} \ccancel{gray}{km$^2$}} \approx 0.061 \quad\Longrightarrow\quad \boxed{6.1\%}
+</span></p>
+<p>The trees would cover about 6% of all the dry land on Earth. That’s roughly the area of the United States or of China, which are around <span class="math inline">9.6</span> million <span class="math inline">\text{km}^2</span> each.</p>
+</div>
+</div>
+</div>
+</section><section id="b.-a-tree-a-square" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="b.-a-tree-a-square">b. a tree, a square</h3>
+<div class="card-success">
+<p>How many square meters would each tree take, on average?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">0.9 \cdot 10^9</span> ha.</li>
+<li>
+<strong>Goal:</strong> area per tree, in <span class="math inline">\text{m}^2</span> per tree.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ ha} = 10^4 \text{ m}^2 \\
+1.2 \cdot 10^{12} \text{ trees} \longleftrightarrow 0.9 \cdot 10^9 \text{ ha}
+</span>
+</li>
+</ul>
+<p>The second line tells us that the whole forest of <span class="math inline">0.9</span> billion hectares is filled with <span class="math inline">1.2</span> trillion trees.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;0.9 \cdot 10^{9} \ccancel{red}{ha}
+\left( \frac{10^4 \text{ m}^2}{1 \ccancel{red}{ha}} \right)
+\left( \frac{1}{1.2 \cdot 10^{12} \text{ trees}} \right) \\
+&amp;= \frac{0.9 \cdot 10^{9} \cdot 10^4}{1.2 \cdot 10^{12}} \frac{\text{m}^2}{\text{tree}} \\
+&amp;= \boxed{7.5 \frac{\text{m}^2}{\text{tree}}}
+\end{align*}</span></p>
+<p>Each tree gets about <span class="math inline">7.5 \text{ m}^2</span>. That’s a square of side <span class="math inline">\sqrt{7.5} \approx 2.7 \text{ m}</span>, so we would plant one tree every 2.7 meters.</p>
+</div>
+</div>
+</div>
+</section><section id="c.-a-forest-on-the-campus" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="c.-a-forest-on-the-campus">c. a forest on the campus</h3>
+<div class="card-success">
+<p>The campus of the Hebrew University in Rehovot covers approximately <span class="math inline">200</span> dunams. If we planted trees over its entire area, in the same way as in the estimate above, how many kilograms of carbon would these trees remove from the atmosphere?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The estimate gives us a correspondence between an area and a mass of carbon: <span class="math inline">0.9</span> billion hectares of trees remove <span class="math inline">205</span> gigatons of carbon. We need to get from dunams to hectares, and from gigatons to kilograms.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">200</span> dunams.</li>
+<li>
+<strong>Goal:</strong> mass of carbon, in kg.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1000 \text{ dunam} = 1 \text{ km}^2 \\
+1 \text{ km}^2 = 10^6 \text{ m}^2 \\
+1 \text{ ha} = 10^4 \text{ m}^2 \\
+0.9 \cdot 10^9 \text{ ha} \longleftrightarrow 205 \text{ Gt of carbon} \\
+1 \text{ Gt} = 10^9 \text{ t} \\
+1 \text{ t} = 10^3 \text{ kg}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+&amp;200 \ccancel{red}{dunam}
+\left( \frac{1 \ccancel{blue}{km$^2$}}{10^3 \ccancel{red}{dunam}} \right)
+\left( \frac{10^6 \ccancel{green}{m$^2$}}{1 \ccancel{blue}{km$^2$}} \right)
+\left( \frac{1 \ccancel{purple}{ha}}{10^4 \ccancel{green}{m$^2$}} \right)
+\left( \frac{205 \ccancel{orange}{Gt}}{0.9 \cdot 10^9 \ccancel{purple}{ha}} \right)
+\left( \frac{10^9 \ccancel{gray}{t}}{1 \ccancel{orange}{Gt}} \right)
+\left( \frac{10^3 \text{ kg}}{1 \ccancel{gray}{t}} \right) \\
+&amp;= \frac{200 \cdot 10^6 \cdot 205 \cdot 10^9 \cdot 10^3}{10^3 \cdot 10^4 \cdot 0.9 \cdot 10^9} \text{ kg} \\
+&amp;\approx \boxed{4.6 \cdot 10^{6} \text{ kg}}
+\end{align*}</span></p>
+<p>That’s about 4600 tons of carbon, from a piece of land of <span class="math inline">20</span> hectares (<span class="math inline">200</span> dunams), about 28 football pitches.</p>
+<p><strong>A sanity check:</strong> the campus (<span class="math inline">200</span> dunams is <span class="math inline">2 \cdot 10^5 \text{ m}^2</span>) would fit about <span class="math inline">2 \cdot 10^5 \text{ m}^2 / 7.5 \text{ m}^2 \approx 27{,}000</span> trees, from part b. Dividing, each tree would remove about <span class="math inline">4.6 \cdot 10^6 \text{ kg}/27{,}000 \approx 170 \text{ kg}</span> of carbon. That’s the same as dividing the global numbers, <span class="math inline">205 \text{ Gt} / 1.2 \text{ trillion trees} \approx 170 \text{ kg}</span> per tree. Great, both ways agree.</p>
+</div>
+</div>
+</div>
+</section></section><section id="from-a-wardrobe-to-a-fingernail" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="from-a-wardrobe-to-a-fingernail">
+<span class="header-section-number">12.5</span> from a wardrobe to a fingernail</h2>
+<p>Digital data storage has changed a lot in the last decades. Below we compare two devices, one from each end of the story:</p>
+<ul>
+<li>
+<strong>A hard disk from IBM (1956):</strong> one of the first commercial hard disks. It was about the size of a wardrobe.</li>
+<li>
+<strong>A micro-SD card (2020):</strong> the tiny memory card that you find in phones and cameras.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">IBM hard disk (1956)</th>
+<th style="text-align: center;">micro-SD card (2020)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>capacity</strong></td>
+<td style="text-align: center;"><span class="math inline">5 \text{ MB}</span></td>
+<td style="text-align: center;"><span class="math inline">1 \text{ TB}</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>mass</strong></td>
+<td style="text-align: center;"><span class="math inline">907 \text{ kg}</span></td>
+<td style="text-align: center;"><span class="math inline">4.5 \text{ g}</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>dimensions</strong></td>
+<td style="text-align: center;"><span class="math inline">700 \times 1700 \times 1500 \text{ mm}</span></td>
+<td style="text-align: center;"><span class="math inline">11 \times 15 \times 1 \text{ mm}</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+<strong>price</strong> (in 2020 dollars)</td>
+<td style="text-align: center;"><span class="math inline">\$300{,}000</span></td>
+<td style="text-align: center;"><span class="math inline">\$220</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>writing speed</strong></td>
+<td style="text-align: center;"><span class="math inline">6.6 \text{ kB/s}</span></td>
+<td style="text-align: center;"><span class="math inline">90 \text{ MB/s}</span></td>
+</tr>
+</tbody>
+</table>
+<div class="curved-paper">
+<p><img src="../archive/images/hard_drive.jpg" class="img-fluid"></p>
+</div>
+<p>Information is measured in <em>bytes</em> (B). In this exercise we use the standard SI prefixes from the <a href="../quantifying/prefixes.en.html">prefixes</a> chapter, so <span class="math inline">1 \text{ kB} = 10^3 \text{ B}</span>, <span class="math inline">1 \text{ MB} = 10^6 \text{ B}</span>, <span class="math inline">1 \text{ GB} = 10^9 \text{ B}</span> and <span class="math inline">1 \text{ TB} = 10^{12} \text{ B}</span>. (In computing, these prefixes are sometimes used with powers of <span class="math inline">1024</span> instead, but we’ll ignore this small difference.)</p>
+<p>We’ll also need a movie: a high-quality version of <em>The Lord of the Rings: The Fellowship of the Ring</em> takes <span class="math inline">12.77 \text{ GB}</span>.</p>
+<section id="a.-how-much-information-per-liter" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="a.-how-much-information-per-liter">a. how much information per liter?</h3>
+<div class="card-success">
+<p>What is the density of information (the volume information density) of each device? Give the answer in gigabytes per liter (GB/L). A liter (L) is the volume of a cube with sides of <span class="math inline">10 \text{ cm}</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Information density is the amount of information divided by the volume, so we first need the volume of each device, in liters. The devices are boxes, so the volume is the product of the three sides.</p>
+<p><strong>Volume</strong></p>
+<ul>
+<li>
+<strong>Starting point:</strong> the volume in <span class="math inline">\text{mm}^3</span>, the product of the three sides.</li>
+<li>
+<strong>Goal:</strong> the volume in liters.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+1 \text{ L} = (10 \text{ cm})^3 = (100 \text{ mm})^3 = 10^6 \text{ mm}^3
+</span>
+</li>
+</ul>
+<p><strong>Density</strong></p>
+<p>Once we have the volume, we divide the capacity by it. We also convert the capacity to GB, using <span class="math inline">1 \text{ GB} = 10^3 \text{ MB}</span> and <span class="math inline">1 \text{ TB} = 10^3 \text{ GB}</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>IBM hard disk:</strong></p>
+<p><span class="math display">\begin{align*}
+V &amp;= 700 \cdot 1700 \cdot 1500 \text{ mm}^3 = 1.785 \cdot 10^9 \ccancel{red}{mm$^3$}
+\left( \frac{1 \text{ L}}{10^6 \ccancel{red}{mm$^3$}} \right) = 1785 \text{ L} \\[6pt]
+\text{density} &amp;= \frac{5 \ccancel{blue}{MB}}{1785 \text{ L}}
+\left( \frac{1 \text{ GB}}{10^3 \ccancel{blue}{MB}} \right)
+\approx \boxed{2.8 \cdot 10^{-6} \frac{\text{GB}}{\text{L}}}
+\end{align*}</span></p>
+<p><strong>micro-SD card:</strong></p>
+<p><span class="math display">\begin{align*}
+V &amp;= 11 \cdot 15 \cdot 1 \text{ mm}^3 = 165 \ccancel{red}{mm$^3$}
+\left( \frac{1 \text{ L}}{10^6 \ccancel{red}{mm$^3$}} \right) = 1.65 \cdot 10^{-4} \text{ L} \\[6pt]
+\text{density} &amp;= \frac{1 \ccancel{blue}{TB}}{1.65 \cdot 10^{-4} \text{ L}}
+\left( \frac{10^3 \text{ GB}}{1 \ccancel{blue}{TB}} \right)
+\approx \boxed{6.1 \cdot 10^{6} \frac{\text{GB}}{\text{L}}}
+\end{align*}</span></p>
+<p>The card packs about <span class="math inline">6.1 \cdot 10^6 / 2.8 \cdot 10^{-6} \approx 2 \cdot 10^{12}</span> times more information in the same volume, that’s two trillion times more.</p>
+</div>
+</div>
+</div>
+</section><section id="b.-how-heavy-is-a-movie" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="b.-how-heavy-is-a-movie">b. how heavy is a movie?</h3>
+<div class="card-success">
+<p>Suppose that we load the movie on each device. What mass of storage would we take up? Give the answer in kilograms.</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Each device has a correspondence between a mass and a capacity, for example <span class="math inline">907 \text{ kg}</span> for every <span class="math inline">5 \text{ MB}</span>. We use it as a conversion factor from information to mass.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">12.77 \text{ GB}</span> of information.</li>
+<li>
+<strong>Goal:</strong> mass in kg.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+\text{IBM:}\quad 907 \text{ kg} \longleftrightarrow 5 \text{ MB} \\
+\text{micro-SD:}\quad 4.5 \text{ g} \longleftrightarrow 1 \text{ TB} \\
+1 \text{ GB} = 10^3 \text{ MB},\quad 1 \text{ TB} = 10^3 \text{ GB},\quad 1 \text{ kg} = 10^3 \text{ g}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>IBM hard disk:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;12.77 \ccancel{red}{GB}
+\left( \frac{10^3 \ccancel{blue}{MB}}{1 \ccancel{red}{GB}} \right)
+\left( \frac{907 \text{ kg}}{5 \ccancel{blue}{MB}} \right) \\
+&amp;= \frac{12.77 \cdot 10^3 \cdot 907}{5} \text{ kg} \\
+&amp;\approx \boxed{2.3 \cdot 10^{6} \text{ kg}}
+\end{align*}</span></p>
+<p><strong>micro-SD card:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;12.77 \ccancel{red}{GB}
+\left( \frac{1 \ccancel{blue}{TB}}{10^3 \ccancel{red}{GB}} \right)
+\left( \frac{4.5 \ccancel{green}{g}}{1 \ccancel{blue}{TB}} \right)
+\left( \frac{1 \text{ kg}}{10^3 \ccancel{green}{g}} \right) \\
+&amp;= \frac{12.77 \cdot 4.5}{10^3 \cdot 10^3} \text{ kg} \\
+&amp;\approx \boxed{5.7 \cdot 10^{-5} \text{ kg}}
+\end{align*}</span></p>
+<p>On the IBM disk, the movie would weigh about 2300 tonnes, as much as roughly 400 adult elephants. On the micro-SD card it’s 57 milligrams, about the mass of a couple of grains of rice.</p>
+</div>
+</div>
+</div>
+</section><section id="c.-how-long-does-it-take" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="c.-how-long-does-it-take">c. how long does it take?</h3>
+<div class="card-success">
+<p>How long would it take to load the movie on each device? Give the answer in seconds, and also in a unit of time that is more convenient to express the result (for example minutes, hours, days, months, years).</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The writing speed is a correspondence between an amount of information and a time, so we can use it to convert information into time.</p>
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">12.77 \text{ GB}</span>.</li>
+<li>
+<strong>Goal:</strong> time, first in seconds and then in a convenient unit.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+\text{IBM:}\quad 6.6 \text{ kB} \longleftrightarrow 1 \text{ s} \\
+\text{micro-SD:}\quad 90 \text{ MB} \longleftrightarrow 1 \text{ s} \\
+1 \text{ GB} = 10^6 \text{ kB} = 10^3 \text{ MB} \\
+1 \text{ day} = 24 \text{ h} = 24 \cdot 3600 \text{ s}
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>IBM hard disk:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;12.77 \ccancel{red}{GB}
+\left( \frac{10^6 \ccancel{blue}{kB}}{1 \ccancel{red}{GB}} \right)
+\left( \frac{1 \text{ s}}{6.6 \ccancel{blue}{kB}} \right)
+= \frac{12.77 \cdot 10^6}{6.6} \text{ s} \approx \boxed{1.9 \cdot 10^{6} \text{ s}} \\[6pt]
+&amp;1.9 \cdot 10^{6} \ccancel{red}{s}
+\left( \frac{1 \ccancel{blue}{h}}{3600 \ccancel{red}{s}} \right)
+\left( \frac{1 \text{ day}}{24 \ccancel{blue}{h}} \right)
+\approx \boxed{22 \text{ days}}
+\end{align*}</span></p>
+<p><strong>micro-SD card:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;12.77 \ccancel{red}{GB}
+\left( \frac{10^3 \ccancel{blue}{MB}}{1 \ccancel{red}{GB}} \right)
+\left( \frac{1 \text{ s}}{90 \ccancel{blue}{MB}} \right)
+= \frac{12.77 \cdot 10^3}{90} \text{ s} \approx \boxed{142 \text{ s}} \\[6pt]
+&amp;142 \ccancel{red}{s}
+\left( \frac{1 \text{ min}}{60 \ccancel{red}{s}} \right)
+\approx \boxed{2.4 \text{ min}}
+\end{align*}</span></p>
+<p>Loading the movie on the 1956 disk would take more than three weeks, and on the micro-SD card, less than two and a half minutes. A number like <span class="math inline">1.9 \cdot 10^6</span> seconds doesn’t mean much to us, which is why it’s worth converting it to a unit that fits: days for the old disk, minutes for the card.</p>
+</div>
+</div>
+</div>
+</section><section id="d.-how-much-does-a-gigabyte-cost" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="d.-how-much-does-a-gigabyte-cost">d. how much does a gigabyte cost?</h3>
+<div class="card-success">
+<p>How many dollars does <span class="math inline">1 \text{ GB}</span> of storage cost in each device? How many times cheaper is <span class="math inline">1 \text{ GB}</span> in 2020 compared to 1956?</p>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="setup: starting point, goal, conversion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>setup: starting point, goal, conversion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>
+<strong>Starting point:</strong> <span class="math inline">1 \text{ GB}</span> of storage.</li>
+<li>
+<strong>Goal:</strong> the cost in dollars.</li>
+<li>
+<strong>Conversion information:</strong> <span class="math display">
+\text{IBM:}\quad \$300{,}000 \longleftrightarrow 5 \text{ MB} \\
+\text{micro-SD:}\quad \$220 \longleftrightarrow 1 \text{ TB} \\
+1 \text{ GB} = 10^3 \text{ MB},\quad 1 \text{ TB} = 10^3 \text{ GB}
+</span>
+</li>
+</ul>
+<p>For the second question, we divide the price per GB of 1956 by the price per GB of 2020.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="computation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>computation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>IBM hard disk:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;1 \ccancel{red}{GB}
+\left( \frac{10^3 \ccancel{blue}{MB}}{1 \ccancel{red}{GB}} \right)
+\left( \frac{\$300{,}000}{5 \ccancel{blue}{MB}} \right)
+= \frac{10^3 \cdot 300{,}000}{5} \text{ \$} = \boxed{\$6 \cdot 10^{7}}
+\end{align*}</span></p>
+<p><strong>micro-SD card:</strong></p>
+<p><span class="math display">\begin{align*}
+&amp;1 \ccancel{red}{GB}
+\left( \frac{1 \ccancel{blue}{TB}}{10^3 \ccancel{red}{GB}} \right)
+\left( \frac{\$220}{1 \ccancel{blue}{TB}} \right)
+= \frac{220}{10^3} \text{ \$} = \boxed{\$0.22}
+\end{align*}</span></p>
+<p><strong>How many times cheaper:</strong></p>
+<p><span class="math display">
+\frac{\$6 \cdot 10^{7}}{\$0.22} \approx \boxed{2.7 \cdot 10^{8}}
+</span></p>
+<p>In 1956, one gigabyte of storage cost 60 million dollars. Today it costs 22 cents. It became almost <strong>three hundred million times</strong> cheaper!</p>
+</div>
+</div>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.github\.io\/measure\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../exercises/concentrations_and_dilutions.en.html" class="pagination-link" aria-label="concentrations and dilutions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>  <span class="chapter-title">concentrations and dilutions</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../exercises/multi_step_problems_2.en.html" class="pagination-link" aria-label="multi-step problems 2">
+        <span class="nav-page-text"><span class="chapter-number">13</span>  <span class="chapter-title">multi-step problems 2</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body>
+</html>

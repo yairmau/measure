@@ -380,5 +380,38 @@
       "תרגילים",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations_and_dilutions.he.html</span>"
     ]
+  },
+  {
+    "objectID": "exercises/multi_step_problems_1.he.html",
+    "href": "exercises/multi_step_problems_1.he.html",
+    "title": "",
+    "section": "",
+    "text": "קוד\n\n\n\\gdef\\ccancel#1#2{\\ {\\color{#1}\\cancel{\\color{black}\\text{#2}}}}",
+    "crumbs": [
+      "תרגילים",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>multi_step_problems_1.he.html</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/multi_step_problems_2.he.html",
+    "href": "exercises/multi_step_problems_2.he.html",
+    "title": "",
+    "section": "",
+    "text": "קוד\n\n\n\\gdef\\ccancel#1#2{\\ {\\color{#1}\\cancel{\\color{black}\\text{#2}}}}",
+    "crumbs": [
+      "תרגילים",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>multi_step_problems_2.he.html</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/multi_step_problems_3.he.html",
+    "href": "exercises/multi_step_problems_3.he.html",
+    "title": "",
+    "section": "",
+    "text": "קוד\n\n\n\\gdef\\ccancel#1#2{\\ {\\color{#1}\\cancel{\\color{black}\\text{#2}}}}",
+    "crumbs": [
+      "תרגילים",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>multi_step_problems_3.he.html</span>"
+    ]
   }
 ]

@@ -1,0 +1,473 @@
+# multi-step problems 3
+
+More problems that combine several ideas. As before, try each part on your own first, and only then open the two boxes below it: the **setup** (starting point, goal and conversion information) and the **computation**.
+
+## Tevye the Milkman
+
+In the stories by the writer Sholem Aleichem about Tevye the Milkman (which are the basis of *Fiddler on the Roof*), Tevye lives in a small village near the town of Anatevka. Life in the Russian Empire was measured with very different units from the ones that we use today. In this exercise we'll convert some of them.
+
+### a. a walk to the butcher {.unnumbered}
+
+::: {.card-success}
+When Tevye visits Leizer-Wolf the butcher, he walks a distance of $3$ versts from his home in the village to Anatevka. A **verst** (верста) was a unit of length used in the Russian Empire, and it equals $500$ **sazhens**. A **sazhen** (сажень) is the distance between the fingertips of the outstretched arms of a (very tall) man, and it equals $2.1336 \text{ m}$. If the length of Tevye's step is $67 \text{ cm}$, how many steps does he take from his home to Anatevka? (Round to the nearest whole number.)
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $3$ versts.
+* **Goal:** the number of steps.
+* **Conversion information:**
+  $$
+  1 \text{ verst} = 500 \text{ sazhens} \\
+  1 \text{ sazhen} = 2.1336 \text{ m} \\
+  1 \text{ m} = 100 \text{ cm} \\
+  1 \text{ step} \longleftrightarrow 67 \text{ cm}
+  $$
+
+The last line is a correspondence: every step advances $67 \text{ cm}$.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&3 \ccancel{red}{versts}
+\left( \frac{500 \ccancel{blue}{sazhens}}{1 \ccancel{red}{verst}} \right)
+\left( \frac{2.1336 \ccancel{green}{m}}{1 \ccancel{blue}{sazhen}} \right)
+\left( \frac{100 \ccancel{purple}{cm}}{1 \ccancel{green}{m}} \right)
+\left( \frac{1 \text{ step}}{67 \ccancel{purple}{cm}} \right) \\
+&= \frac{3 \cdot 500 \cdot 2.1336 \cdot 100}{67} \text{ steps} \\
+&\approx 4776.7 \text{ steps} \approx \boxed{4777 \text{ steps}}
+\end{align*}
+
+Along the way we found that the distance is $3 \cdot 500 \cdot 2.1336 \approx 3200 \text{ m}$, a bit more than three kilometers. Tevye takes almost five thousand steps to get to town.
+:::
+
+### b. tevye's farm, in square meters {.unnumbered}
+
+::: {.card-success}
+Tevye owns a farm with an area of $0.7$ acres. An **acre** is the area of a square with sides of $70$ yards, and a **yard** is $91 \text{ cm}$. What is the area of Tevye's farm in square meters?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+This is an area, so we need to be careful: if $1 \text{ yd} = 0.91 \text{ m}$, then a square yard is $1 \text{ yd}^2 = (0.91 \text{ m})^2$, and the conversion factor is squared. This is the same idea as with the prefixes, when we converted $\text{km}^2$ to $\text{m}^2$ (see [areas and volumes](/conversion_methods/prefix_operations.en.html)).
+
+* **Starting point:** $0.7$ acres.
+* **Goal:** the area in $\text{m}^2$.
+* **Conversion information:**
+  $$
+  1 \text{ acre} = (70 \text{ yd})^2 = 4900 \text{ yd}^2 \\
+  1 \text{ yd}^2 = (0.91 \text{ m})^2 \approx 0.828 \text{ m}^2
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&0.7 \ccancel{red}{acres}
+\left( \frac{4900 \ccancel{blue}{yd$^2$}}{1 \ccancel{red}{acre}} \right)
+\left( \frac{0.828 \text{ m}^2}{1 \ccancel{blue}{yd$^2$}} \right) \\
+&= 0.7 \cdot 4900 \cdot 0.828 \text{ m}^2 \\
+&\approx \boxed{2.84 \cdot 10^{3} \text{ m}^2}
+\end{align*}
+
+That's a bit less than a third of a hectare.
+:::
+
+### c. tevye's farm, in desyatinas {.unnumbered}
+
+::: {.card-success}
+In the Russian Empire, land was measured in **desyatinas** (десятина). One desyatina is $3200$ square sazhens, where a sazhen is $2.1336 \text{ m}$. What is the area of Tevye's farm in desyatinas?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We start from the area in $\text{m}^2$ that we found in part b. We need a conversion from $\text{m}^2$ to square sazhens, and again the factor must be squared.
+
+* **Starting point:** $2.84 \cdot 10^3 \text{ m}^2$.
+* **Goal:** the area in desyatinas.
+* **Conversion information:**
+  $$
+  1 \text{ sazhen}^2 = (2.1336 \text{ m})^2 \approx 4.552 \text{ m}^2 \\
+  1 \text{ desyatina} = 3200 \text{ sazhen}^2
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&2.84 \cdot 10^{3} \ccancel{red}{m$^2$}
+\left( \frac{1 \ccancel{blue}{sazhen$^2$}}{4.552 \ccancel{red}{m$^2$}} \right)
+\left( \frac{1 \text{ desyatina}}{3200 \ccancel{blue}{sazhen$^2$}} \right) \\
+&= \frac{2.84 \cdot 10^{3}}{4.552 \cdot 3200} \text{ desyatinas} \\
+&\approx \boxed{0.195 \text{ desyatinas}}
+\end{align*}
+
+Tevye's farm is about a fifth of a desyatina. And indeed, in the stories he isn't a wealthy landowner!
+:::
+
+## a sheet of paper
+
+A sheet of paper looks like a very simple object, but we can learn a lot about it from just a few numbers. In this exercise we'll find out how thick it is, how big it is, and how much a package of paper weighs.
+
+### a. how thick is a sheet? {.unnumbered}
+
+::: {.card-success}
+A typical printer paper has an area density (the mass per unit area) of $80 \text{ gsm}$, which stands for $80$ grams per square meter. The volume density of the same paper is $800 \text{ kg/m}^3$. What is the thickness of one sheet, in micrometers ($\mu\text{m}$)?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+Let's think about a piece of paper with an area of exactly $1 \text{ m}^2$. Its mass is $80 \text{ g}$, and from the volume density we can find how much volume this mass takes. This volume is a slab with an area of $1 \text{ m}^2$, so its *height* is the thickness of the paper: for a slab of area $1 \text{ m}^2$, the number of $\text{m}^3$ is the same as the number of meters of thickness.
+
+* **Starting point:** $80 \text{ g}$ (of a piece of paper of $1 \text{ m}^2$).
+* **Goal:** the volume of this paper in $\text{m}^3$, which gives the thickness in meters, and then in $\mu\text{m}$.
+* **Conversion information:**
+  $$
+  1 \text{ kg} = 10^3 \text{ g} \\
+  800 \text{ kg} \longleftrightarrow 1 \text{ m}^3 \text{ of paper} \\
+  1 \, \mu\text{m} = 10^{-6} \text{ m}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&80 \ccancel{red}{g}
+\left( \frac{1 \ccancel{blue}{kg}}{10^3 \ccancel{red}{g}} \right)
+\left( \frac{1 \text{ m}^3}{800 \ccancel{blue}{kg}} \right)
+= \frac{80}{10^3 \cdot 800} \text{ m}^3 = 10^{-4} \text{ m}^3
+\end{align*}
+
+This volume sits on an area of $1 \text{ m}^2$, so the thickness is $10^{-4} \text{ m}$, and in micrometers:
+
+$$
+10^{-4} \ccancel{red}{m} \left( \frac{1 \, \mu\text{m}}{10^{-6} \ccancel{red}{m}} \right) = \boxed{100 \, \mu\text{m}}
+$$
+
+A sheet of paper is about $0.1 \text{ mm}$ thick, roughly the thickness of a human hair. As a sanity check, $500$ sheets would make a stack of $500 \cdot 0.1 \text{ mm} = 5 \text{ cm}$, which is indeed how tall a package of paper is.
+:::
+
+### b. the area of an A4 sheet {.unnumbered}
+
+::: {.card-success}
+The A series of paper sizes follows a simple rule. An A0 sheet has an area of $2^0 \text{ m}^2$ (that is, one square meter), an A1 sheet has an area of $2^{-1} \text{ m}^2$ (half a square meter), an A2 sheet has an area of $2^{-2} \text{ m}^2$ (a quarter of a square meter), and so on. What is the area of a regular A4 printer sheet, in square centimeters?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+The rule says that every step in the series divides the area by 2 (if you cut an A0 sheet in half, you get two A1 sheets). So an A$n$ sheet has an area of $2^{-n} \text{ m}^2$. See the [power rules](/mathematical_foundations/powers_rules.en.html) for negative exponents.
+
+* **Starting point:** the area of an A4 sheet, $2^{-4} \text{ m}^2$.
+* **Goal:** the area in $\text{cm}^2$.
+* **Conversion information:**
+  $$
+  1 \text{ m}^2 = (100 \text{ cm})^2 = 10^4 \text{ cm}^2
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+$$
+2^{-4} \ccancel{red}{m$^2$} \left( \frac{10^4 \text{ cm}^2}{1 \ccancel{red}{m$^2$}} \right) = \frac{10^4}{16} \text{ cm}^2 = \boxed{625 \text{ cm}^2}
+$$
+
+The real A4 sheet has sides of $21 \text{ cm}$ and $29.7 \text{ cm}$, and $21 \cdot 29.7 \approx 624 \text{ cm}^2$. Very close!
+:::
+
+### c. a package of paper {.unnumbered}
+
+::: {.card-success}
+What is the mass of a typical package of printer paper? It is A4 paper with an area density of $80 \text{ gsm}$, and a package holds $500$ sheets. Give the answer in kilograms.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $500$ sheets.
+* **Goal:** the mass in kg.
+* **Conversion information:**
+  $$
+  1 \text{ sheet} \longleftrightarrow 625 \text{ cm}^2 = 0.0625 \text{ m}^2 \quad (\text{part b}) \\
+  80 \text{ g} \longleftrightarrow 1 \text{ m}^2 \quad (80 \text{ gsm}) \\
+  1 \text{ kg} = 10^3 \text{ g}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&500 \ccancel{red}{sheets}
+\left( \frac{0.0625 \ccancel{blue}{m$^2$}}{1 \ccancel{red}{sheet}} \right)
+\left( \frac{80 \ccancel{green}{g}}{1 \ccancel{blue}{m$^2$}} \right)
+\left( \frac{1 \text{ kg}}{10^3 \ccancel{green}{g}} \right) \\
+&= \frac{500 \cdot 0.0625 \cdot 80}{10^3} \text{ kg} \\
+&= \boxed{2.5 \text{ kg}}
+\end{align*}
+
+Half a thousand sheets of paper weigh two and a half kilograms, and that's why a box of paper feels so heavy.
+:::
+
+### d. american paper {.unnumbered}
+
+::: {.card-success}
+In the United States, the common paper size is not A4, but "letter", whose dimensions are $8.5$ inches by $11$ inches. Given that $1 \text{ inch} = 2.54 \text{ cm}$, what is the area of a letter sheet, in square meters?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+This is an area, so the conversion factor from inches to centimeters must be squared: $1 \text{ in}^2 = (2.54 \text{ cm})^2$.
+
+* **Starting point:** the area of the sheet, $8.5 \text{ in} \times 11 \text{ in} = 93.5 \text{ in}^2$.
+* **Goal:** the area in $\text{m}^2$.
+* **Conversion information:**
+  $$
+  1 \text{ in}^2 = (2.54 \text{ cm})^2 \approx 6.452 \text{ cm}^2 \\
+  1 \text{ m}^2 = 10^4 \text{ cm}^2
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&93.5 \ccancel{red}{in$^2$}
+\left( \frac{6.452 \ccancel{blue}{cm$^2$}}{1 \ccancel{red}{in$^2$}} \right)
+\left( \frac{1 \text{ m}^2}{10^4 \ccancel{blue}{cm$^2$}} \right) \\
+&= \frac{93.5 \cdot 6.452}{10^4} \text{ m}^2 \\
+&\approx \boxed{0.0603 \text{ m}^2}
+\end{align*}
+
+A letter sheet is about $603 \text{ cm}^2$, a bit smaller than the $625 \text{ cm}^2$ of an A4 sheet: about $3.5\%$ less area.
+:::
+
+## mechanics in a parallel universe
+
+In a universe parallel to ours, mechanics was first developed by Yitzhak Natan, who lived in the Land of Israel in 600 BCE. At that time, the base units were different from the SI units that we use today:
+
+* The base unit of **length** was the **amah** (cubit), equal to $52 \text{ cm}$.
+* The base unit of **mass** was the **shekel**, equal to $14 \text{ g}$.
+* The base unit of **time** was the **chelek**. A day has $24$ hours, and an hour has $1080$ chalakim (that's the plural of chelek).
+
+We'll translate some quantities into the units that Yitzhak Natan was used to.
+
+### a. how long is a chelek? {.unnumbered}
+
+::: {.card-success}
+How many seconds are there in one chelek?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+* **Starting point:** $1$ chelek.
+* **Goal:** time in seconds.
+* **Conversion information:**
+  $$
+  1080 \text{ chalakim} = 1 \text{ h} \\
+  1 \text{ h} = 3600 \text{ s}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+$$
+1 \ccancel{red}{chelek} \left( \frac{1 \ccancel{blue}{h}}{1080 \ccancel{red}{chalakim}} \right) \left( \frac{3600 \text{ s}}{1 \ccancel{blue}{h}} \right) = \frac{3600}{1080} \text{ s} = \boxed{\frac{10}{3} \text{ s} \approx 3.33 \text{ s}}
+$$
+
+A chelek is three and a third seconds. We will use this in the next parts, together with $1 \text{ amah} = 0.52 \text{ m}$ and $1 \text{ shekel} = 0.014 \text{ kg}$.
+:::
+
+### b. gravity in Natan's units {.unnumbered}
+
+::: {.card-success}
+The gravitational acceleration on Earth is $g = 9.8 \text{ m/s}^2$. What is its value in the units that Yitzhak Natan was used to?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+An acceleration has the dimensions of length divided by time squared, $L/T^2$, so in Natan's system it is measured in $\text{amah/chelek}^2$ (see [dimensions](/quantifying/dimensions.en.html)). We convert the meters to amah and the seconds to chalakim. The time is squared, so its conversion factor is squared too.
+
+* **Starting point:** $9.8 \text{ m/s}^2$.
+* **Goal:** acceleration in $\text{amah/chelek}^2$.
+* **Conversion information:**
+  $$
+  1 \text{ amah} = 0.52 \text{ m} \\
+  1 \text{ chelek} = \tfrac{10}{3} \text{ s}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&9.8 \frac{\ccancel{red}{m}}{\ccancel{blue}{s$^2$}}
+\left( \frac{1 \text{ amah}}{0.52 \ccancel{red}{m}} \right)
+\left( \frac{(10/3)^2 \ccancel{blue}{s$^2$}}{1 \text{ chelek}^2} \right) \\
+&= \frac{9.8 \cdot (10/3)^2}{0.52} \frac{\text{amah}}{\text{chelek}^2} \\
+&\approx \boxed{209 \frac{\text{amah}}{\text{chelek}^2}}
+\end{align*}
+
+In Natan's units, $g \approx 209 \text{ amah/chelek}^2$.
+:::
+
+### c. atmospheric pressure {.unnumbered}
+
+::: {.card-success}
+The atmospheric pressure is $P_\text{atm} = 1.01 \cdot 10^5 \text{ Pa}$. What is its value in the units that Yitzhak Natan was used to?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+Pressure is force per area, and the pascal is $1 \text{ Pa} = 1 \text{ N/m}^2$. A newton is $1 \text{ N} = 1 \text{ kg} \cdot \text{m/s}^2$, so in base units
+
+$$
+1 \text{ Pa} = 1 \frac{\text{kg} \cdot \text{m/s}^2}{\text{m}^2} = 1 \frac{\text{kg}}{\text{m} \cdot \text{s}^2}
+$$
+
+which has the dimensions $M / (L \cdot T^2)$. So, in Natan's system pressure is measured in $\text{shekel}/(\text{amah} \cdot \text{chelek}^2)$. We convert each base unit separately: the kilograms to shekels, the meters to amah and the seconds to chalakim.
+
+* **Starting point:** $1.01 \cdot 10^5 \, \text{kg}/(\text{m} \cdot \text{s}^2)$.
+* **Goal:** pressure in $\text{shekel}/(\text{amah} \cdot \text{chelek}^2)$.
+* **Conversion information:**
+  $$
+  1 \text{ shekel} = 0.014 \text{ kg} \\
+  1 \text{ amah} = 0.52 \text{ m} \\
+  1 \text{ chelek} = \tfrac{10}{3} \text{ s}
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&1.01 \cdot 10^5 \frac{\ccancel{red}{kg}}{\ccancel{blue}{m} \, \ccancel{green}{s$^2$}}
+\left( \frac{1 \text{ shekel}}{0.014 \ccancel{red}{kg}} \right)
+\left( \frac{0.52 \ccancel{blue}{m}}{1 \text{ amah}} \right)
+\left( \frac{(10/3)^2 \ccancel{green}{s$^2$}}{1 \text{ chelek}^2} \right) \\
+&= \frac{1.01 \cdot 10^5 \cdot 0.52 \cdot (10/3)^2}{0.014} \frac{\text{shekel}}{\text{amah} \cdot \text{chelek}^2} \\
+&\approx \boxed{4.2 \cdot 10^{7} \frac{\text{shekel}}{\text{amah} \cdot \text{chelek}^2}}
+\end{align*}
+
+The meter is in the denominator of the pascal, so this time the factor of $0.52 \text{ m}$ goes on top, and the meter cancels. That's the idea of the chain-link method: we choose the version of each factor that cancels the unit that we want to get rid of.
+:::
+
+### d. a light bulb {.unnumbered}
+
+::: {.card-success}
+What is the power of a $30 \text{ W}$ light bulb in the units that Yitzhak Natan was used to? Recall that $1 \text{ W} = 1 \text{ J/s}$.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+Let's write the watt in terms of base units. A joule is a newton times a meter, $1 \text{ J} = 1 \text{ N} \cdot \text{m} = 1 \text{ kg} \cdot \text{m}^2/\text{s}^2$, so
+
+$$
+1 \text{ W} = 1 \frac{\text{J}}{\text{s}} = 1 \frac{\text{kg} \cdot \text{m}^2}{\text{s}^3}
+$$
+
+which has the dimensions $M L^2 / T^3$. So, in Natan's system, power is measured in $\text{shekel} \cdot \text{amah}^2/\text{chelek}^3$.
+
+* **Starting point:** $30 \, \text{kg} \cdot \text{m}^2/\text{s}^3$.
+* **Goal:** power in $\text{shekel} \cdot \text{amah}^2/\text{chelek}^3$.
+* **Conversion information:**
+  $$
+  1 \text{ shekel} = 0.014 \text{ kg} \\
+  1 \text{ amah} = 0.52 \text{ m} \\
+  1 \text{ chelek} = \tfrac{10}{3} \text{ s}
+  $$
+
+The meters are squared and the seconds are cubed, so we need to square and cube the corresponding conversion factors.
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+\begin{align*}
+&30 \frac{\ccancel{red}{kg} \, \ccancel{blue}{m$^2$}}{\ccancel{green}{s$^3$}}
+\left( \frac{1 \text{ shekel}}{0.014 \ccancel{red}{kg}} \right)
+\left( \frac{1 \text{ amah}^2}{0.52^2 \ccancel{blue}{m$^2$}} \right)
+\left( \frac{(10/3)^3 \ccancel{green}{s$^3$}}{1 \text{ chelek}^3} \right) \\
+&= \frac{30 \cdot (10/3)^3}{0.014 \cdot 0.52^2} \frac{\text{shekel} \cdot \text{amah}^2}{\text{chelek}^3} \\
+&\approx \boxed{2.9 \cdot 10^{5} \frac{\text{shekel} \cdot \text{amah}^2}{\text{chelek}^3}}
+\end{align*}
+
+In a world with different units, an ordinary light bulb would have a rather large number on its box: almost three hundred thousand!
+:::
+
+## rain in a box
+
+### a. water in the box {.unnumbered}
+
+::: {.card-success}
+After a thunderstorm, a depth of $5 \text{ mm}$ of rain was measured in a box that was left outside. The box has a square base, with sides of $1 \text{ m}$. How much water (in liters) collected in the box? Recall that a liter (L) is the volume of a cube with sides of $10 \text{ cm}$.
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+The water in the box has the shape of a rectangular block: a base of $1 \text{ m} \times 1 \text{ m}$ and a height of $5 \text{ mm}$. Its volume is the area of the base times the height. The liter is defined with centimeters, so let's convert all the lengths to centimeters.
+
+* **Starting point:** the volume of the block of water, $V = 1 \text{ m} \times 1 \text{ m} \times 5 \text{ mm}$.
+* **Goal:** the volume in liters.
+* **Conversion information:**
+  $$
+  1 \text{ m} = 100 \text{ cm} \\
+  1 \text{ mm} = 0.1 \text{ cm} \\
+  1 \text{ L} = (10 \text{ cm})^3 = 10^3 \text{ cm}^3
+  $$
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**The lengths in centimeters:** $1 \text{ m} = 100 \text{ cm}$, and $5 \text{ mm} = 0.5 \text{ cm}$.
+
+**Volume:**
+
+$$
+V = 100 \text{ cm} \cdot 100 \text{ cm} \cdot 0.5 \text{ cm} = 5000 \text{ cm}^3
+$$
+
+**In liters:**
+
+$$
+5000 \ccancel{red}{cm$^3$} \left( \frac{1 \text{ L}}{10^3 \ccancel{red}{cm$^3$}} \right) = \boxed{5 \text{ L}}
+$$
+
+So one millimeter of rain is exactly one liter of water on each square meter of ground. This is why the amount of rain is usually reported in millimeters: it tells us the depth of the water layer, and also how many liters fell on every square meter.
+:::
+
+### b. rain on a lake {.unnumbered}
+
+::: {.card-success}
+The same storm drops $5 \text{ mm}$ of rain over a lake with an area of $170 \text{ km}^2$ (about the area of Lake Kinneret). Assume that all the water stays in the lake. How much water was added to the lake, in cubic meters?
+:::
+
+::: {.callout-tip collapse="true" title="setup: starting point, goal, conversion"}
+
+We can use the result of part a as a conversion factor: every square meter receives $5 \text{ L}$. Or, we can find the volume as the area times the depth, like before. Let's use the second way, in meters.
+
+* **Starting point:** the area of the lake, $170 \text{ km}^2$.
+* **Goal:** the volume of water, in $\text{m}^3$.
+* **Conversion information:**
+  $$
+  1 \text{ km}^2 = (10^3 \text{ m})^2 = 10^6 \text{ m}^2 \\
+  1 \text{ mm} = 10^{-3} \text{ m}
+  $$
+
+Remember that the prefix is squared when we convert areas (see [areas and volumes](/conversion_methods/prefix_operations.en.html)).
+:::
+
+::: {.callout-note collapse="true" title="computation"}
+
+**The area in square meters:**
+
+$$
+170 \ccancel{red}{km$^2$} \left( \frac{10^6 \text{ m}^2}{1 \ccancel{red}{km$^2$}} \right) = 1.7 \cdot 10^{8} \text{ m}^2
+$$
+
+**The depth in meters:** $5 \text{ mm} = 5 \cdot 10^{-3} \text{ m}$.
+
+**The volume:**
+
+$$
+V = 1.7 \cdot 10^{8} \text{ m}^2 \cdot 5 \cdot 10^{-3} \text{ m} = \boxed{8.5 \cdot 10^{5} \text{ m}^3}
+$$
+
+That's $850{,}000$ cubic meters, or $850$ million liters, from a single storm! It's about $340$ Olympic swimming pools (each holds $2500 \text{ m}^3$).
+
+We can check this with part a: $1.7 \cdot 10^{8} \text{ m}^2$ times $5 \text{ L/m}^2$ is $8.5 \cdot 10^{8} \text{ L}$, and $10^3 \text{ L} = 1 \text{ m}^3$, so $8.5 \cdot 10^{5} \text{ m}^3$. It's the same result.
+:::

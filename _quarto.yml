@@ -62,6 +62,9 @@ book:
       part-he: תרגילים
       chapters:
         - exercises/concentrations_and_dilutions.en.qmd
+        - exercises/multi_step_problems_1.en.qmd
+        - exercises/multi_step_problems_2.en.qmd
+        - exercises/multi_step_problems_3.en.qmd
 
   sidebar:
     collapse-level: 2

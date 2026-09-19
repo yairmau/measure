@@ -47,7 +47,7 @@ You want to prepare $250 \text{ mL}$ of a salt solution with a concentration of 
   1 \text{ L} = 10^3 \text{ mL}
   $$
 
-The first line is a correspondence, like the speed of the train: every liter of solution comes with 0.5 mol of salt.
+The first line is a correspondence: every liter of solution comes with 0.5 mol of salt.
 :::
 
 ::: {.callout-note collapse="true" title="computation"}
