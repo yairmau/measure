@@ -69,33 +69,3 @@ Areas have the dimension of length squared ($L^2$), and volumes have the dimensi
 ```
 
 :::
-
-## don't forget the prefixes
-
-When converting units of area or volume, don't forget to square or cube the prefixes. Huh?  
-Let me give an example.
-
-::: {.card-info}
-How many square meters are in a square kilometer?
-:::
-
-$$
-1\, \mathrm{km}^2 = 1\, (\mathrm{km})^2 = 1 (\underbrace{10^3}_\text{kilo} \mathrm{m})^2  = 1 \left( 10^3 \right)^2 \left(\mathrm{m} \right)^2 = 10^6\, \mathrm{m}^2
-$$
-
-There are a million square meters in a square kilometers.
-
-When we write km$^2$, it's understood that the square acts on both the "kilo" and the "meter".
-Nobody writes this with explicit parentheses as we did above, but that is the intended meaning.
-
-Let's see another example.
-
-::: {.card-info}
-How many liters are in a cubic meter? One liter is the volume of a cube of side 10 cm.
-:::
-
-$$
-1\, \mathrm{m}^3 = (100\, \mathrm{cm})^3 = \left(10 \cdot 10\, \mathrm{cm}\right)^3 = 10^3\left(10\, \mathrm{cm}\right)^3 = 10^3\, \mathrm{L}
-$$
-
-There are a thousand liters in a cubic meter.

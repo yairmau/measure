@@ -1,1 +1,287 @@
 # chain-link conversion
+
+The chain-link method is the gift that keeps on giving. I can't overstate its usefulness.
+
+We will start with the same realization from the [Prefix Operations](/conversion_methods/prefix_operations.en.html) chapter:
+
+::: {.card-danger}
+We can always multiply a number by one.
+:::
+
+I think it's best if we solve a first example and see this in action.
+
+## first example
+
+![](/archive/images/12-inch-ruler.jpg)
+
+::: {.card-success}
+I have a 12-inch ruler. What's its lenght in cm? We know that $1 \text{ inch} = 2.54 \text{ cm}$.
+:::
+
+Maybe we don't need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.
+
+The very first thing we need to know is to split the information we got into three categories:
+
+* **Input**: this is the starting point in our computation, here it is that we have a 12-inch ruler.
+* **Output**: this is what we want to find out at the end of the exercise, the length in centimeters.
+* **Conversion information**, here it is $1 \text{ inch} = 2.54 \text{ cm}$.
+
+The basic structure of the chain-link method is the following:
+
+```{.tikz}
+%%| image-class: mb-4
+%%| filename: chain-link-method-overview
+%%| image-width: 100%
+%%| alt: Input leads through one or more conversion operations to the desired output.
+
+\begin{tikzpicture}[
+  >=stealth,
+  stage/.style={draw, rectangle, line width=0.8pt, inner sep=5pt,
+    minimum height=1.2cm, align=center},
+  arrow/.style={->, line width=1.2pt, shorten <=3mm, shorten >=3mm}
+]
+  \node[stage, text width=2.4cm] (input) at (0,0) {Input};
+  \node[stage] (conversion) at (4.5,0) {One or more\\conversion operations};
+  \node[stage, text width=2.4cm] (output) at (9,0) {Desired output};
+
+  \draw[arrow] (input.east) -- (conversion.west);
+  \draw[arrow] (conversion.east) -- (output.west);
+\end{tikzpicture}
+```
+
+Let's plug the input and output from our problem:
+
+```{.tikz}
+%%| image-class: mb-4
+%%| filename: chain-link-method-overview
+%%| image-width: 100%
+%%| alt: Input leads through one or more conversion operations to the desired output.
+
+\begin{tikzpicture}[
+  >=stealth,
+  stage/.style={draw, rectangle, line width=0.8pt, inner sep=5pt,
+    minimum height=1.2cm, align=center},
+  arrow/.style={->, line width=1.2pt, shorten <=3mm, shorten >=3mm}
+]
+  \node[stage, text width=2.4cm] (input) at (0,0) {12 inch};
+  \node[stage] (conversion) at (4.5,0) {One or more\\conversion operations};
+  \node[stage, text width=2.4cm] (output) at (9,0) {$x$ cm};
+
+  \draw[arrow] (input.east) -- (conversion.west);
+  \draw[arrow] (conversion.east) -- (output.west);
+\end{tikzpicture}
+```
+
+What should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:
+
+```{.tikz}
+%%| image-class: mb-4
+%%| filename: inch-cm-conversion-factors
+%%| image-width: 100%
+%%| alt: From 1 inch equals 2.54 cm, dividing both sides by 2.54 cm gives (1 inch)/(2.54 cm) equals 1; dividing both sides by 1 inch gives 1 equals (2.54 cm)/(1 inch).
+%%| additional-packages: \usepackage{amsmath}
+
+\begin{tikzpicture}[
+  >=stealth,
+  equation/.style={draw, rectangle, line width=0.8pt, inner sep=8pt},
+  operation/.style={font=\small, align=center, inner sep=4pt}
+]
+  \node[equation] (equality) at (0,0) {$1 \text{ inch} = 2.54 \text{ cm}$};
+  \node[equation, anchor=west] (cm) at (7,2)
+    {$\displaystyle \frac{1 \text{ inch}}{2.54 \text{ cm}} = 1$};
+  \node[equation, anchor=west] (inch) at (7,-2)
+    {$\displaystyle 1 = \frac{2.54 \text{ cm}}{1 \text{ inch}}$};
+  \draw[->, line width=1.2pt, shorten <=5mm, shorten >=5mm] (equality.north east) -- (cm.west)
+    node[midway, sloped, above=3pt, operation] {divide both sides\\by $2.54 \text{ cm}$};
+  \draw[->, line width=1.2pt, shorten <=5mm, shorten >=5mm] (equality.south east) -- (inch.west)
+    node[midway, sloped, below=3pt, operation] {divide both sides\\by $1 \text{ inch}$};
+\end{tikzpicture}
+```
+
+Now I can just multiply the input by 1 and cancel out the units:
+
+$$
+12 \text{ inch} = 12 \cancel{\text{ inch}} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \cancel{\text{ inch}}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
+$$
+
+How did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the input with the inch in the denominator in the conversion factor. Had I chosen the other one, I'd get this:
+
+$$
+12 \text{ inch} = 12 \text{ inch} \underbrace{\left( \frac{1 \text{ inch}}{2.54 \text{ cm}} \right)}_{1} = \begin{gathered}\text{now I'm stuck,}\\\text{there's nothing to cancel out}\end{gathered}
+$$
+
+Let's try another simple exercise
+
+## a train is travelling...
+::: {.card-success}
+A train is travelling with a constant speed of 90 km/h. How many km has it travelled after half an hour?
+:::
+
+* **Input:** 0.5 hour
+* **Output:** distance in km
+* **Conversion information:** The train is travelling at 90 km/h, so we write:
+  $$
+  90\text{ km}=1\text{ h} \longrightarrow
+  1 = \left(\frac{90\text{ km}}{1\text{ h}}\right)
+  = \left(\frac{1\text{ h}}{90\text{ km}} \right)
+  $$
+
+This feels a bit different than the first example. 1 inch and 2.54 cm are both lengths, and they are always equal to each other, so dividing one by the other should always give 1. In this exercise, we wrote that $90\text{ km}=1\text{ h}$, which is weird, we're saying that a length equals an amount of time. In the context of the train problem, this is always true, so we can go ahead as before and solve our problem:
+
+$$
+0.5 \text{ h} = 0.5 \cancel{\text{ h}} \left(\frac{90\text{ km}}{1\cancel{\text{ h}}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+$$
+
+Notice that I will always write the conversion factors in parenthesis to make it clear to myself and to others what is going on. I didn't have to, but it gives a nice visual cue.
+
+## chaining conversions
+
+Now we will solve an example with multiple conversions, and we'll see why this is called a "chain-link" method.
+
+![](/archive/images/chain-link.jpg)
+
+::: {.card-success}
+On 18 September 2026, gasoline in the USA costed 4.47 dollars per gallon. How much would that be in shekels per liter? On this same date we know that 1 dollar was worth 3.04 shekels, and one gallon equals approximately 3.79 liters.
+:::
+
+* **Input:** 4.47 dollars per gallon
+* **Output:** price in shekels per liter
+* **Conversion information:** We have two conversions now:
+  $$
+  1 \text{ USD} = 3.04 \text{ NIS} \longrightarrow
+  1 = \left(\frac{1 \text{ USD}}{3.04 \text{ NIS}}\right)
+  = \left(\frac{3.04 \text{ NIS}}{1 \text{ USD}} \right)
+  \\ \phantom{a}
+  \\
+  1 \text{ gallon} = 3.79 \text{ liter} \longrightarrow
+  1 = \left(\frac{1 \text{ gallon}}{3.79 \text{ liter}}\right)
+  = \left(\frac{3.79 \text{ liter}}{1 \text{ gallon}} \right)
+  $$
+
+It's time to solve:
+
+\begin{align*}
+4.47\, \frac{\text{USD}}{\text{gallon}}
+&=
+4.47\, \frac{\cancel{\text{USD}}}{\bcancel{\text{gallon}}}
+\left(\frac{3.04 \text{ NIS}}{1 \cancel{\text{ USD}}} \right)
+\left(\frac{1 \bcancel{\text{ gallon}}}{3.79 \text{ liter}}\right) \\
+&= \frac{4.47 \cdot 3.04}{3.79} \frac{\text{NIS}}{\text{liter}} \\
+&= \boxed{3.59 \, \frac{\text{NIS}}{\text{liter}}}
+\end{align*}
+
+A few comments.
+
+* We could have done this conversion in two steps, converting first the currency and then the volume. That's totally fine, but it takes a bit more paper.
+* We see the conversions being linked like in a chain, one parenthesis after the other. I used different cancelling lines to make clear what cancels what.
+* When choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the input with a unit in the denominator of the conversion factor (and vice-versa).
+
+## several links (we can do it!)
+
+![](/archive/images/wheat-field.jpg)
+
+::: {.card-success}
+A european farmer harvests wheat from a rectangular field with sides $120 \text{ m} \times 70 \text{ m}$. The productivity of this field is 4.94 tons per hectare. What will be the farmer's revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:
+
+* As of 18 September 2026, 1 euro was worth 1.15 USD.
+* One hectare is an area of $10^4$ squared meters.
+* One ton is $1000 \text{ kg}$.
+* One bushel of wheat weighs 60 pounds.
+* One \text{kg} is approximately $2.2$ pounds.
+:::
+
+* **Input:** We're given the dimensions of the field, so it would make sense to convert that to an area and use this as the input: $120 \text{ m} \times 70 \text{ m}=8400 \text{ m}^2$
+* **Output:** Amount of money in euros
+* **Conversion information:** We have several conversions:
+  $$
+  1 \text{ EUR} = 1.15 \text{ USD} \longrightarrow
+  1 = \left(\frac{1.15 \text{ USD}}{1 \text{ EUR}}\right)
+  = \left(\frac{1 \text{ EUR}}{1.15 \text{ USD}} \right)
+  \\ \phantom{a}
+  \\
+  1 \text{ hectare } (\text{ha}) = 4.94 \text{ ton} \longrightarrow
+  1 = \left(\frac{1 \text{ ha}}{4.94 \text{ ton}}\right)
+  = \left(\frac{4.94 \text{ ton}}{1 \text{ ha}} \right)
+  \\ \phantom{a}
+  \\
+  1 \text{ ton} = 10^3 \text{ kg} \longrightarrow
+  1 = \left(\frac{1 \text{ ton}}{10^3 \text{ kg}}\right)
+  = \left(\frac{10^3 \text{ kg}}{1 \text{ ton}} \right)
+  \\ \phantom{a}
+  \\
+  1 \text{ hectare} = 10^4 \text{ m}^2 \longrightarrow
+  1 = \left(\frac{1 \text{ hectare}}{10^4 \text{ m}^2}\right)
+  = \left(\frac{10^4 \text{ m}^2}{1 \text{ hectare}} \right)
+ \\ \phantom{a}
+  \\
+  1 \text{ bushel }(\text{bu}) = 60 \text{ pounds }(\text{lbs}) \longrightarrow
+  1 = \left(\frac{1 \text{ bu}}{60 \text{ lbs}}\right)
+  = \left(\frac{60 \text{ lbs}}{1 \text{ bu}} \right)
+\\ \phantom{a}
+  \\
+  1 \text{ bushel} = 7.27 \text{ USD} \longrightarrow
+  1 = \left(\frac{1 \text{ bu}}{7.27 \text{ USD}}\right)
+  = \left(\frac{7.27 \text{ USD}}{1 \text{ bu}} \right)
+ \\ \phantom{a}
+  \\
+  1 \text{ kg} = 2.2 \text{ pound} \longrightarrow
+  1 = \left(\frac{1 \text{ kg}}{2.2 \text{ lbs}}\right)
+  = \left(\frac{2.2 \text{ lbs}}{1 \text{ kg}} \right) 
+  $$
+
+
+Once we've written all the necessary information, finding the solution feels more like putting lego pieces together. Let's take a deep breath and solve this. I'll do it step by step.
+
+\begin{align*}
+&8400 \text{ m}^2= \\
+&8400 {\color{red}\cancel{\text{ m}^2}}
+\left(\frac{1 \text{ ha}}{10^4 \color{red}\cancel{\text{ m}^2}}\right)=
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \color{red}\cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \text{ ton}}{1 \color{red}\cancel{\text{ ha}}} \right)=
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \color{red}\cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \text{ kg}}{1 \color{red}\cancel{\text{ ton}}} \right) =
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \color{red}\cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \text{ lbs}}{1 \color{red}\cancel{\text{ kg}}} \right)  =
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \color{red}\cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \text{ bu}}{60 \color{red}\cancel{\text{ lbs}}}\right)  =
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \color{red}\cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \text{ USD}}{1 \color{red}\cancel{\text{ bu}}} \right)  =
+\\
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \color{red}\cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \color{red}\cancel{\text{ USD}}} \right) =
+\\
+& \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+\\
+& \boxed{961.87 \text{ EUR}}
+\end{align*}
+
+When solving it with pencil and paper, I wouldn't do each step in a different line, the solution would look like:
+
+
+\begin{align*}
+&8400 \cancel{\text{ m}^2}
+\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
+\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
+\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \cancel{\text{ USD}}} \right) =
+\\
+& \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+\\
+& \boxed{961.87 \text{ EUR}}
+\end{align*}
+

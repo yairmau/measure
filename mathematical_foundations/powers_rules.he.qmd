@@ -86,8 +86,8 @@ $$
 
 $$
 (10^a)^b
-=\underbrace{10^a\cdot10^a\cdots10^a}_{b\text{ גורמים}}
-=10^{\overbrace{a+a+\cdots+a}^{b\text{ איברים}}}
+=\underbrace{10^a\cdot10^a\cdots10^a}_{\text{ גורמים } b}
+=10^{\overbrace{a+a+\cdots+a}^{\text{ איברים } b}}
 =10^{ab}.
 $$
 

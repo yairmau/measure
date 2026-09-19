@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>2  dimensions – Measure for Measure</title>
+<title>2  dimensions and units – Measure for Measure</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
-<link href="../quantifying/units.en.html" rel="next">
+<link href="../quantifying/SI.en.html" rel="next">
 <link href="../mathematical_foundations/powers_rules.en.html" rel="prev">
 <link href="../archive/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
@@ -71,6 +71,45 @@ document.addEventListener("DOMContentLoaded", () => {
   button.setAttribute("aria-label", label.textContent);
   button.querySelector("i")?.setAttribute("aria-hidden", "true");
 });
+</script><script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
 </script><link rel="stylesheet" href="../hebrew.css">
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -83,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html">quantifying the world</a></li>
-<li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions</span></a></li>
+<li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions and units</span></a></li>
 </ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -148,13 +187,19 @@ document.addEventListener("DOMContentLoaded", () => {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../quantifying/dimensions.en.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions and units</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../quantifying/units.en.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">units</span></span></a>
+  <a href="../quantifying/SI.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">SI</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quantifying/prefixes.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">prefixes</span></span></a>
   </div>
 </li>
       </ul>
@@ -171,19 +216,42 @@ document.addEventListener("DOMContentLoaded", () => {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basic_concepts/area-and-volume.en.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">area and volume</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">area and volume</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basic_concepts/concentration.en.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">concentration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basic_concepts/density.en.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">density</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>  <span class="chapter-title">density</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">conversion methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/prefix_operations.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>  <span class="chapter-title">prefix operations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/chain_link_conversion.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">chain-link conversion</span></span></a>
   </div>
 </li>
       </ul>
@@ -192,17 +260,22 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"><span class="header-section-number">2.1</span> definition</a></li>
+  <li><a href="#derived-quantities" id="toc-derived-quantities" class="nav-link" data-scroll-target="#derived-quantities"><span class="header-section-number">2.2</span> derived quantities</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html">quantifying the world</a></li>
-<li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions</span></a></li>
+<li class="breadcrumb-item"><a href="../quantifying/dimensions.en.html"><span class="chapter-number">2</span>  <span class="chapter-title">dimensions and units</span></a></li>
 </ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div>
 <h1 class="title">
-<span class="chapter-number">2</span>  <span class="chapter-title">dimensions</span>
+<span class="chapter-number">2</span>  <span class="chapter-title">dimensions and units</span>
 </h1>
 <button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/measure/blob/main/quantifying/dimensions.en.qmd"><i class="bi"></i> Code</button>
 </div></div>
@@ -219,9 +292,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-</header><p>Dimensions are physical quantities that describe the nature of a measurement, such as length, time, or mass. Units, on the other hand, are standardized quantities used to express the value of a dimension. For example, “meter”, “inch” and “parsec” are units for the dimension of length.</p>
-<p>The three fundamental dimensions in mechanics are <strong>length</strong>, <strong>time</strong>, and <strong>mass</strong>. In addition to these, other important dimensions include <strong>temperature</strong>, <strong>electric current</strong>, and <strong>amount of substance</strong>. Each physical quantity can be described in terms of these basic dimensions.</p>
-<p>Commonly used dimensions in science and engineering:</p>
+</header><section id="definition" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="definition">
+<span class="header-section-number">2.1</span> definition</h2>
+<p><strong>Dimensions</strong> answer the question: what is being measured? For example, we can measure length, mass or time.</p>
+<p><strong>Units</strong> answer: how to we measure? Length, for example, can be measured in centimeters, miles, or cubits (from your elbow to the tip of your middle finger).</p>
+<p>The three fundamental dimensions in Classical Mechanics are <strong>length</strong>, <strong>time</strong>, and <strong>mass</strong>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -254,32 +329,100 @@ document.addEventListener("DOMContentLoaded", () => {
 <td>amount of matter</td>
 <td>kilogram (kg)</td>
 </tr>
-<tr class="even">
+</tbody>
+</table>
+<p>In addition to these, other important dimensions include <strong>temperature</strong>, <strong>electric current</strong>, and <strong>amount of substance</strong>.</p>
+<div id="offcanvasOtherDimensions" class="offcanvas offcanvas-start">
+<section id="other-dimensions" class="level3 unnumbered unlisted offcanvas-header"><h3 class="unnumbered unlisted anchored" data-anchor-id="other-dimensions">Other dimensions</h3>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+</button>
+</section><div class="offcanvas-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 24%">
+</colgroup>
+<thead><tr class="header">
+<th>Dimension</th>
+<th>Symbol</th>
+<th>Description</th>
+<th>SI Unit</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
 <td>Temperature</td>
 <td>Θ</td>
 <td>degree of hotness</td>
 <td>kelvin (K)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Electric current</td>
 <td>I</td>
 <td>flow of electric charge</td>
 <td>ampere (A)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Amount of substance</td>
 <td>N</td>
 <td>quantity of entities</td>
 <td>mole (mol)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Luminous intensity</td>
 <td>J</td>
 <td>brightness</td>
 <td>candela (cd)</td>
 </tr>
 </tbody>
-</table></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</table>
+</div>
+</div>
+<div class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOtherDimensions" style="height: 2.5rem; line-height: 2.3rem; padding-top: 0; padding-bottom: 0;">
+<p>See here.</p>
+</div>
+</section><section id="derived-quantities" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="derived-quantities">
+<span class="header-section-number">2.2</span> derived quantities</h2>
+<p>We can combine the three fundamental dimensions most used in classical mechanics to derive many familiar concepts.</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Quantity</th>
+<th>Derived dimensions</th>
+<th>SI Unit</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Velocity</td>
+<td>L T<span class="math inline">^{-1}</span>
+</td>
+<td>meter per second (m/s)</td>
+</tr>
+<tr class="even">
+<td>Area</td>
+<td>L<span class="math inline">^2</span>
+</td>
+<td>meter squared (m<span class="math inline">^2</span>)</td>
+</tr>
+<tr class="odd">
+<td>Force</td>
+<td>MLT<span class="math inline">^{-2}</span>
+</td>
+<td>newton (N)</td>
+</tr>
+<tr class="even">
+<td>Frequency</td>
+<td>T<span class="math inline">^{-1}</span>
+</td>
+<td>hertz (Hz)</td>
+</tr>
+<tr class="odd">
+<td>And many many more…</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -735,8 +878,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../quantifying/units.en.html" class="pagination-link" aria-label="units">
-        <span class="nav-page-text"><span class="chapter-number">3</span>  <span class="chapter-title">units</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../quantifying/SI.en.html" class="pagination-link" aria-label="SI">
+        <span class="nav-page-text"><span class="chapter-number">3</span>  <span class="chapter-title">SI</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

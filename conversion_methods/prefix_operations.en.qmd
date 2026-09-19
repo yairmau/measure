@@ -1,1 +1,89 @@
 # prefix operations
+
+## one prefix
+Sometimes we need to convert between different orders of magnitude of the same base unit.
+For example:
+
+::: {.card-info}
+How many kilograms does a piece of metal of 600 grams have?
+:::
+
+In the solution below, the trick is to realize that **we can always multiply a number by one**!
+
+\begin{align*}
+\text{(start) }&\quad&& 600 \text{ g} \\
+\text{(multiply by one) }&&& 1\cdot 600 \text{ g} \\
+\text{(in powers of 10) }&&& \underbrace{10^{-3}10^3}_{=1}\cdot 600 \text{ g} \\
+\text{(kilo means 1000) }&&& 10^{-3}\underbrace{10^3}_{=\text{k}}\cdot 600 \text{ g} \\
+\text{(put k next to g) }&&& 10^{-3}\cdot 600 \text{ kg} \\
+\text{(end) }&&& 0.6 \text{ kg}
+\end{align*}
+
+Now that we understand the logic behind this conversion, we can do it a bit shorter. I know that I need the result in **kilo**grams, so I write a $\text{k}$ next to the grams and multiply by a factor of $10^{-3}$, to balance out the "kilo":
+
+\begin{align*}
+\text{(start) }&\quad&& 600 \text{ g} \\
+\text{(write both k and }10^{-3}\text{) }&&& 10^{-3}\cdot 600 \text{ kg} \\
+\text{(end) }&&& 0.6 \text{ kg}
+\end{align*}
+
+## two prefixes
+
+Let's try another one, this time with two prefixes.
+
+::: {.card-info}
+How many centimeters are there in 2 kilometers?
+:::
+
+In the solution below we use the fact that "centi" means one hundredth, $\text{c}=10^{-2}$.
+
+\begin{align*}
+\text{(start) }&\quad&& 2 \text{ km} \\
+\text{(write k as 1000) }&&& 2\cdot 10^3 \text{ m} \\
+\text{(write both c and }10^{2}\text{) }&&&  2\cdot 10^3 \underbrace{10^2 \text{ c}}_{=1} \text{m}\\
+\text{(end) }&&& 200000 \text{ cm}
+\end{align*}
+
+## two prefixes, but different
+
+::: {.card-info}
+A solution has 5 micrograms of salt per milliliter. What is the concentration in grams per liter?
+:::
+
+\begin{align*}
+\text{(start) }&\quad&& 5 \,\frac{\mu\text{g}}{\text{mL}}\\
+\text{(spell out }\mu\text{ and m)}&&& 5 \,\frac{10^{-6}\text{g}}{10^{-3}\text{L}}\\
+\text{(consolidate) }&&&  5\cdot 10^{-3} \,\frac{\text{g}}{\text{L}}\\
+\text{(end) }&&& 0.005 \,\frac{\text{g}}{\text{L}}
+\end{align*}
+
+If we are beeing loose with significant figures, then I guess that the last line counts as correct, but I would recommend stopping at the line before last.
+
+## areas and volumes
+
+When converting units of area or volume, don't forget to square or cube the prefixes.
+
+::: {.card-info}
+How many square meters are in a square kilometer?
+:::
+
+$$
+1\, \mathrm{km}^2 = 1\, (\mathrm{km})^2 = 1 (\underbrace{10^3}_\text{k} \mathrm{m})^2  = 1 \left( 10^3 \right)^2 \left(\mathrm{m} \right)^2 = 10^6\, \mathrm{m}^2
+$$
+
+There are a million square meters in a square kilometers.
+
+When we write km$^2$, it's understood that the square acts on both the "kilo" and the "meter".
+Nobody writes this with explicit parentheses as we did above, but that is the intended meaning.
+
+Let's see another example, now with volume.
+
+::: {.card-info}
+How many liters are in a cubic meter? One liter is the volume of a cube of side 10 cm.
+:::
+
+$$
+1\, \mathrm{m}^3 = (100\, \mathrm{cm})^3 = \left(10 \cdot 10\, \mathrm{cm}\right)^3 = 10^3\left(10\, \mathrm{cm}\right)^3 = 10^3\, \mathrm{L}
+$$
+
+There are a thousand liters in a cubic meter.

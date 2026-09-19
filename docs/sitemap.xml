@@ -2,58 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yairmau.github.io/measure/he/index.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.870Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.848Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/he/mathematical_foundations/powers_rules.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.871Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.848Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/he/quantifying/dimensions.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.871Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.849Z</lastmod>
   </url>
   <url>
-    <loc>https://yairmau.github.io/measure/he/quantifying/units.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.871Z</lastmod>
+    <loc>https://yairmau.github.io/measure/he/quantifying/SI.he.html</loc>
+    <lastmod>2026-09-19T09:06:03.849Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/he/quantifying/prefixes.he.html</loc>
+    <lastmod>2026-09-19T09:06:03.849Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/he/basic_concepts/area-and-volume.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.865Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.839Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/he/basic_concepts/concentration.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.865Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.840Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/he/basic_concepts/density.he.html</loc>
-    <lastmod>2026-09-13T06:27:19.865Z</lastmod>
+    <lastmod>2026-09-19T09:06:03.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/he/conversion_methods/prefix_operations.he.html</loc>
+    <lastmod>2026-09-19T09:06:03.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/he/conversion_methods/chain_link_conversion.he.html</loc>
+    <lastmod>2026-09-19T09:06:03.841Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/index.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.171Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.791Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/mathematical_foundations/powers_rules.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.172Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.791Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/quantifying/dimensions.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.172Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.791Z</lastmod>
   </url>
   <url>
-    <loc>https://yairmau.github.io/measure/en/quantifying/units.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.172Z</lastmod>
+    <loc>https://yairmau.github.io/measure/en/quantifying/SI.en.html</loc>
+    <lastmod>2026-09-19T09:05:59.791Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/en/quantifying/prefixes.en.html</loc>
+    <lastmod>2026-09-19T09:05:59.792Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/basic_concepts/area-and-volume.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.169Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.787Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/basic_concepts/concentration.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.170Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.787Z</lastmod>
   </url>
   <url>
     <loc>https://yairmau.github.io/measure/en/basic_concepts/density.en.html</loc>
-    <lastmod>2026-09-13T06:27:16.170Z</lastmod>
+    <lastmod>2026-09-19T09:05:59.787Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/en/conversion_methods/prefix_operations.en.html</loc>
+    <lastmod>2026-09-19T09:05:59.790Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yairmau.github.io/measure/en/conversion_methods/chain_link_conversion.en.html</loc>
+    <lastmod>2026-09-19T09:05:59.790Z</lastmod>
   </url>
 </urlset>

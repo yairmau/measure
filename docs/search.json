@@ -103,5 +103,38 @@
       "basic concepts",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>concentrations and densities</span>"
     ]
+  },
+  {
+    "objectID": "conversion_methods/chain_link_conversion.en.html",
+    "href": "conversion_methods/chain_link_conversion.en.html",
+    "title": "9  chain-link conversion",
+    "section": "",
+    "text": "9.1 first example\nThe chain-link method is the gift that keeps on giving. I can’t overstate its usefulness.\nWe will start with the same realization from the Prefix Operations chapter:\nI think it’s best if we solve a first example and see this in action.\nMaybe we don’t need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.\nThe very first thing we need to know is to split the information we got into three categories:\nThe basic structure of the chain-link method is the following:\nLet’s plug the input and output from our problem:\nWhat should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/chain_link_conversion.en.html#first-example",
+    "href": "conversion_methods/chain_link_conversion.en.html#first-example",
+    "title": "9  chain-link conversion",
+    "section": "",
+    "text": "I have a 12-inch ruler. What’s its lenght in cm? We know that 1 \\text{ inch} = 2.54 \\text{ cm}.\n\n\n\n\nInput: this is the starting point in our computation, here it is that we have a 12-inch ruler.\nOutput: this is what we want to find out at the end of the exercise, the length in centimeters.\nConversion information, here it is 1 \\text{ inch} = 2.54 \\text{ cm}.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/chain_link_conversion.en.html#a-train-is-travelling",
+    "href": "conversion_methods/chain_link_conversion.en.html#a-train-is-travelling",
+    "title": "9  chain-link conversion",
+    "section": "9.2 a train is travelling…",
+    "text": "9.2 a train is travelling…\n\nA train is travelling with a constant speed of 90 km/h. How many km has it travelled after half an hour?\n\nThe basic structure of the solution is the following. We start with the fact that the train travelled for half an hour, do some operations, and end up with the solution in km.\n\n0.5 \\text{ hour} = \\text{some operations here...} = x \\text{ km}\n\nOur goal is to find what this x should be.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
   }
 ]
