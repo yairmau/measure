@@ -122,3 +122,29 @@
     transition: none;
   }
 }
+
+/* marker-style strike for the colored \ccancel macro (math-macros.html):
+   thicker, semi-transparent, round ends. Plain black \cancel is untouched,
+   because only \ccancel puts an inline color on .cancel-lap. */
+.katex .cancel-lap[style*="color"] svg {
+  overflow: visible;
+  /* pull the strike in, so it doesn't stick out past the word */
+  width: 84%;
+  margin-left: 8%;
+}
+/* put the strike behind the text (like zorder in matplotlib); isolation keeps
+   the negative z-index inside the equation instead of behind the page background */
+.katex .cancel-lap[style*="color"] {
+  isolation: isolate;
+}
+.katex .cancel-lap[style*="color"] .svg-align {
+  z-index: -1;
+}
+.katex .cancel-lap[style*="color"] svg line {
+  stroke-width: 0.3em;
+  stroke-opacity: 0.4;
+  stroke-linecap: round;
+  /* rough edges and grain, defined in math-macros.html */
+  filter: url(#marker-texture);
+  mix-blend-mode: multiply;
+}

@@ -25,6 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../">
+<link href="../conversion_methods/dilution.en.html" rel="next">
 <link href="../conversion_methods/prefix_operations.en.html" rel="prev">
 <link href="../archive/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script><script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
@@ -221,7 +222,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basic_concepts/concentration.en.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -253,6 +254,29 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">chain-link conversion</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/dilution.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">dilution: <span class="math inline">c_1 V_1 = c_2 V_2</span></span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/concentrations_and_dilutions.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">concentrations and dilutions</span></span></a>
+  </div>
+</li>
       </ul>
 </li>
     </ul>
@@ -270,7 +294,12 @@ window.Quarto = {
   </ul></nav>
 </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<main class="content" id="quarto-document-content"><!-- Shared KaTeX definitions. Keep these before the page's first equation. --><div hidden="" aria-hidden="true">
+<span class="math inline">\gdef\ccancel#1#2{\ {\color{#1}\cancel{\color{black}\text{#2}}}}</span>
+</div>
+
+<!-- Marker texture for the \ccancel strike (see styles.css): ragged edges plus a faint dry-ink grain. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="marker-texture" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feturbulence type="fractalNoise" basefrequency="0.5" numoctaves="2" seed="3" result="edge"></feturbulence><fedisplacementmap in="SourceGraphic" in2="edge" scale="2.5" xchannelselector="R" ychannelselector="G" result="rough"></fedisplacementmap><feturbulence type="fractalNoise" basefrequency="0.9 0.35" numoctaves="2" seed="8" result="grain"></feturbulence><fecolormatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.5 0 0 0 2.3" result="mask"></fecolormatrix><fecomposite in="rough" in2="mask" operator="in"></fecomposite></filter></defs></svg><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../conversion_methods/prefix_operations.en.html">conversion methods</a></li>
 <li class="breadcrumb-item"><a href="../conversion_methods/chain_link_conversion.en.html"><span class="chapter-number">9</span>  <span class="chapter-title">chain-link conversion</span></a></li>
 </ol></nav><div class="quarto-title">
@@ -303,30 +332,31 @@ window.Quarto = {
 <span class="header-section-number">9.1</span> first example</h2>
 <p><img src="../archive/images/12-inch-ruler.jpg" class="img-fluid"></p>
 <div class="card-success">
-<p>I have a 12-inch ruler. What’s its lenght in cm? We know that <span class="math inline">1 \text{ inch} = 2.54 \text{ cm}</span>.</p>
+<p>I have a 12-inch ruler. What’s its length in cm? We know that <span class="math inline">1 \text{ inch} = 2.54 \text{ cm}</span>.</p>
 </div>
 <p>Maybe we don’t need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.</p>
 <p>The very first thing we need to know is to split the information we got into three categories:</p>
 <ul>
 <li>
-<strong>Input</strong>: this is the starting point in our computation, here it is that we have a 12-inch ruler.</li>
+<strong>Starting point</strong>: this is where our computation begins, here it is that we have a 12-inch ruler.</li>
 <li>
-<strong>Output</strong>: this is what we want to find out at the end of the exercise, the length in centimeters.</li>
+<strong>Goal</strong>: this is what we want to find out at the end of the exercise, the length in centimeters.</li>
 <li>
 <strong>Conversion information</strong>, here it is <span class="math inline">1 \text{ inch} = 2.54 \text{ cm}</span>.</li>
 </ul>
 <p>The basic structure of the chain-link method is the following:</p>
-<img src="chain_link_conversion_files/mediabag/chain-link-method-overview.55b23a8e.svg" class="mb-4 img-fluid" style="width:100.0%" alt="Input leads through one or more conversion operations to the desired output."><p>Let’s plug the input and output from our problem:</p>
-<img src="chain_link_conversion_files/mediabag/chain-link-method-overview.918ae4f8.svg" class="mb-4 img-fluid" style="width:100.0%" alt="Input leads through one or more conversion operations to the desired output."><p>What should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:</p>
-<img src="chain_link_conversion_files/mediabag/inch-cm-conversion-factors.56675ea0.svg" class="mb-4 img-fluid" style="width:100.0%" alt="From 1 inch equals 2.54 cm, dividing both sides by 2.54 cm gives (1 inch)/(2.54 cm) equals 1; dividing both sides by 1 inch gives 1 equals (2.54 cm)/(1 inch)."><p>Now I can just multiply the input by 1 and cancel out the units:</p>
+<img src="chain_link_conversion_files/mediabag/chain-link-method-overview.f5b32695.svg" class="mb-4 img-fluid" style="width:100.0%" alt="The starting point leads through one or more conversion operations to the goal."><p>Let’s plug the starting point and goal from our problem:</p>
+<img src="chain_link_conversion_files/mediabag/chain-link-method-overview.918ae4f8.svg" class="mb-4 img-fluid" style="width:100.0%" alt="The starting point leads through one or more conversion operations to the goal."><p>What should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:</p>
+<img src="chain_link_conversion_files/mediabag/inch-cm-conversion-factors.56675ea0.svg" class="mb-4 img-fluid" style="width:100.0%" alt="From 1 inch equals 2.54 cm, dividing both sides by 2.54 cm gives (1 inch)/(2.54 cm) equals 1; dividing both sides by 1 inch gives 1 equals (2.54 cm)/(1 inch)."><p>Now I can just multiply the starting point by 1 and cancel out the units:</p>
 <p><span class="math display">
-12 \text{ inch} = 12 \cancel{\text{ inch}} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \cancel{\text{ inch}}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
+12 \text{ inch} = 12 \ccancel{black}{inch} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \ccancel{gray}{inch}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
 </span></p>
-<p>How did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the input with the inch in the denominator in the conversion factor. Had I chosen the other one, I’d get this:</p>
+<p>How did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the starting point with the inch in the denominator in the conversion factor. Had I chosen the other one, I’d get this:</p>
 <p><span class="math display">
 12 \text{ inch} = 12 \text{ inch} \underbrace{\left( \frac{1 \text{ inch}}{2.54 \text{ cm}} \right)}_{1} = \begin{gathered}\text{now I'm stuck,}\\\text{there's nothing to cancel out}\end{gathered}
 </span></p>
-<p>Let’s try another simple exercise</p>
+<p>As a rule, we write the conversion factors with parentheses to make it clear what’s going on in the calculation.</p>
+<p>Let’s try another simple exercise.</p>
 </section><section id="a-train-is-travelling" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="a-train-is-travelling">
 <span class="header-section-number">9.2</span> a train is travelling…</h2>
 <div class="card-success">
@@ -334,168 +364,178 @@ window.Quarto = {
 </div>
 <ul>
 <li>
-<strong>Input:</strong> 0.5 hour</li>
+<strong>Starting point:</strong> 0.5 hour</li>
 <li>
-<strong>Output:</strong> distance in km</li>
+<strong>Goal:</strong> distance in km</li>
 <li>
 <strong>Conversion information:</strong> The train is travelling at 90 km/h, so we write: <span class="math display">
-90\text{ km}=1\text{ h} \longrightarrow
-1 = \left(\frac{90\text{ km}}{1\text{ h}}\right)
-= \left(\frac{1\text{ h}}{90\text{ km}} \right)
+90\text{ km}
+\;\longleftrightarrow \;
+{1\text{ h}}
 </span>
 </li>
 </ul>
-<p>This feels a bit different than the first example. 1 inch and 2.54 cm are both lengths, and they are always equal to each other, so dividing one by the other should always give 1. In this exercise, we wrote that <span class="math inline">90\text{ km}=1\text{ h}</span>, which is weird, we’re saying that a length equals an amount of time. In the context of the train problem, this is always true, so we can go ahead as before and solve our problem:</p>
+<p>This conversion information is different from the first example. There we had a real equality between quantities of the same dimensions: a length of 1 inch always equals a length of 2.54 centimeters. In this exercise, the speed gives us a <strong>correspondence</strong> between two quantities of different dimensions. If you tell me that an hour has elapsed, then I know that we’ve travelled 90 km (and vice-versa). But we don’t use the equal sign because length and time are fundamentally different things. So how do we use this correspondence to our advantage?</p>
+<p>Long story short, this looks exactly like the conversion factors in parenthesis from before. We use the correspondence as a rate: 90 kilometres for every hour. To find distance from time, we multiply by kilometres per hour; to find time from distance, we use its reciprocal. The units help us choose the correct orientation:</p>
 <p><span class="math display">
-0.5 \text{ h} = 0.5 \cancel{\text{ h}} \left(\frac{90\text{ km}}{1\cancel{\text{ h}}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+\left( \frac{90\text{ km}}{1\text{ h}} \right)
+\;\text{or}\;
+\left( \frac{1\text{ h}}{90\text{ km}} \right)
 </span></p>
-<p>Notice that I will always write the conversion factors in parenthesis to make it clear to myself and to others what is going on. I didn’t have to, but it gives a nice visual cue.</p>
+<p>Let’s solve now our problem:</p>
+<p><span class="math display">
+0.5 \ccancel{gray}{h} \left(\frac{90\text{ km}}{1\ccancel{gray}{h}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+</span></p>
+<p>We’re done with our solution now, but let me just take a few more moments beyond the “long story short”, and explain why this works.</p>
+<p>Given the correspondence <span class="math inline">90\text{ km} \leftrightarrow {1\text{ h}}</span>, we can write a true equality:</p>
+<p><span class="math display">
+\frac{\text{distance travelled}}{90\text{ km}}
+=
+\frac{\text{elapsed time}}{1\text{ h}}
+</span></p>
+<p>Because the speed is constant, both ratios describe the same fraction of a one-hour journey: half an hour corresponds to half of 90 kilometres.</p>
+<p>If you know the elapsed time, and want to find out the distance travelled, then take the equation above and multiply both sides by <span class="math inline">90\text{ km}</span>:</p>
+<p><span class="math display">
+\text{distance travelled} =
+\left( \frac{90\text{ km}}{1\text{ h}} \right) \text{elapsed time}
+</span></p>
+<p>Hey! We’ve just derived the most basic equation from kinematics:</p>
+<p><span class="math display">
+\Delta x = v\Delta t,
+</span></p>
+<p>where <span class="math inline">\Delta x</span> stands for travelled distance and <span class="math inline">\Delta t</span> for elapsed time.</p>
+<p>Multiplying by the speed converts an elapsed time into the distance travelled. If we wanted to convert from distance to time, then we just need to multiply by the reciprocal of the speed, and that fully explains what we’ve claimed above.</p>
 </section><section id="chaining-conversions" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="chaining-conversions">
 <span class="header-section-number">9.3</span> chaining conversions</h2>
 <p>Now we will solve an example with multiple conversions, and we’ll see why this is called a “chain-link” method.</p>
 <p><img src="../archive/images/chain-link.jpg" class="img-fluid"></p>
 <div class="card-success">
-<p>On 18 September 2026, gasoline in the USA costed 4.47 dollars per gallon. How much would that be in shekels per liter? On this same date we know that 1 dollar was worth 3.04 shekels, and one gallon equals approximately 3.79 liters.</p>
+<p>I travelled from Israel to the USA and went on a road trip on a 2021 Ford Escape. This car has a fuel consumption of 3.5 gallons per 100 miles. I’m wondering how far I can travel on a full tank (15 gallons), but miles confuse me, so I want to find the answer in kilometers (1 mile equals 1.61 km approximately).</p>
 </div>
 <ul>
 <li>
-<strong>Input:</strong> 4.47 dollars per gallon</li>
+<strong>Starting point:</strong> 15 gallons</li>
 <li>
-<strong>Output:</strong> price in shekels per liter</li>
+<strong>Goal:</strong> distance in kilometers</li>
 <li>
 <strong>Conversion information:</strong> We have two conversions now: <span class="math display">
-1 \text{ USD} = 3.04 \text{ NIS} \longrightarrow
-1 = \left(\frac{1 \text{ USD}}{3.04 \text{ NIS}}\right)
-= \left(\frac{3.04 \text{ NIS}}{1 \text{ USD}} \right)
-\\ \phantom{a}
-\\
-1 \text{ gallon} = 3.79 \text{ liter} \longrightarrow
-1 = \left(\frac{1 \text{ gallon}}{3.79 \text{ liter}}\right)
-= \left(\frac{3.79 \text{ liter}}{1 \text{ gallon}} \right)
+3.5 \text{ gallon} \longleftrightarrow 100 \text{ miles} \\
+1.61 \text{ km} \approx 1 \text{ mile}
 </span>
 </li>
 </ul>
 <p>It’s time to solve:</p>
 <p><span class="math display">\begin{align*}
-4.47\, \frac{\text{USD}}{\text{gallon}}
+&amp;15 \ccancel{red}{gallon}
+\left( \frac{100 \ccancel{blue}{mile}}{3.5 \ccancel{red}{gallon}} \right)
+\left( \frac{1.61 \text{ km}}{1 \ccancel{blue}{mile}} \right) \\
 &amp;=
-4.47\, \frac{\cancel{\text{USD}}}{\bcancel{\text{gallon}}}
-\left(\frac{3.04 \text{ NIS}}{1 \cancel{\text{ USD}}} \right)
-\left(\frac{1 \bcancel{\text{ gallon}}}{3.79 \text{ liter}}\right) \\
-&amp;= \frac{4.47 \cdot 3.04}{3.79} \frac{\text{NIS}}{\text{liter}} \\
-&amp;= \boxed{3.59 \, \frac{\text{NIS}}{\text{liter}}}
+\frac{15 \cdot 100 \cdot 1.61}{3.5} \text{ km} \\
+&amp;= \boxed{690 \text{ km}}
 \end{align*}</span></p>
 <p>A few comments.</p>
 <ul>
-<li>We could have done this conversion in two steps, converting first the currency and then the volume. That’s totally fine, but it takes a bit more paper.</li>
-<li>We see the conversions being linked like in a chain, one parenthesis after the other. I used different cancelling lines to make clear what cancels what.</li>
-<li>When choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the input with a unit in the denominator of the conversion factor (and vice-versa).</li>
+<li>We could have done this conversion in two steps, using fuel consumption to find the distance in miles, and then converting miles to kilometers. That’s totally fine, but it takes a bit more paper.</li>
+<li>We see the conversions being linked like in a chain, one parenthesis after the other. I used different colors to make clear what cancels what.</li>
+<li>When choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the starting point with a unit in the denominator of the conversion factor (and vice-versa).</li>
 </ul></section><section id="several-links-we-can-do-it" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="several-links-we-can-do-it">
 <span class="header-section-number">9.4</span> several links (we can do it!)</h2>
 <p><img src="../archive/images/wheat-field.jpg" class="img-fluid"></p>
 <div class="card-success">
-<p>A european farmer harvests wheat from a rectangular field with sides <span class="math inline">120 \text{ m} \times 70 \text{ m}</span>. The productivity of this field is 4.94 tons per hectare. What will be the farmer’s revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:</p>
+<p>A European farmer harvests wheat from a rectangular field with sides <span class="math inline">120 \text{ m} \times 70 \text{ m}</span>. The productivity of this field is 4.94 tonnes per hectare. What will be the farmer’s revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:</p>
 <ul>
 <li>As of 18 September 2026, 1 euro was worth 1.15 USD.</li>
-<li>One hectare is an area of <span class="math inline">10^4</span> squared meters.</li>
-<li>One ton is <span class="math inline">1000 \text{ kg}</span>.</li>
-<li>One bushel of wheat weighs 60 pounds.</li>
-<li>One is approximately <span class="math inline">2.2</span> pounds.</li>
+<li>One hectare is an area of <span class="math inline">10^4</span> square meters.</li>
+<li>One tonne is <span class="math inline">1000 \text{ kg}</span>.</li>
+<li>One bushel (volume unit) of wheat weighs 60 pounds.</li>
+<li>One <span class="math inline">\text{kg}</span> is approximately <span class="math inline">2.2</span> pounds.</li>
 </ul>
 </div>
 <ul>
 <li>
-<strong>Input:</strong> We’re given the dimensions of the field, so it would make sense to convert that to an area and use this as the input: <span class="math inline">120 \text{ m} \times 70 \text{ m}=8400 \text{ m}^2</span>
+<strong>Starting point:</strong> We’re given the dimensions of the field, so it would make sense to convert that to an area and use this as the starting point: <span class="math inline">120 \text{ m} \times 70 \text{ m}=8400 \text{ m}^2</span>
 </li>
 <li>
-<strong>Output:</strong> Amount of money in euros</li>
+<strong>Goal:</strong> Amount of money in euros</li>
 <li>
 <strong>Conversion information:</strong> We have several conversions: <span class="math display">
-1 \text{ EUR} = 1.15 \text{ USD} \longrightarrow
-1 = \left(\frac{1.15 \text{ USD}}{1 \text{ EUR}}\right)
-= \left(\frac{1 \text{ EUR}}{1.15 \text{ USD}} \right)
-\\ \phantom{a}
+1 \text{ EUR (€)} = 1.15 \text{ USD (\$)}
 \\
-1 \text{ hectare } (\text{ha}) = 4.94 \text{ ton} \longrightarrow
-1 = \left(\frac{1 \text{ ha}}{4.94 \text{ ton}}\right)
-= \left(\frac{4.94 \text{ ton}}{1 \text{ ha}} \right)
-\\ \phantom{a}
+1 \text{ hectare } (\text{ha}) \longleftrightarrow 4.94 \text{ tonne (t)}
 \\
-1 \text{ ton} = 10^3 \text{ kg} \longrightarrow
-1 = \left(\frac{1 \text{ ton}}{10^3 \text{ kg}}\right)
-= \left(\frac{10^3 \text{ kg}}{1 \text{ ton}} \right)
-\\ \phantom{a}
+1 \text{ tonne (t)} = 10^3 \text{ kg}
 \\
-1 \text{ hectare} = 10^4 \text{ m}^2 \longrightarrow
-1 = \left(\frac{1 \text{ hectare}}{10^4 \text{ m}^2}\right)
-= \left(\frac{10^4 \text{ m}^2}{1 \text{ hectare}} \right)
-\\ \phantom{a}
+1 \text{ hectare (ha)} = 10^4 \text{ m}^2
 \\
-1 \text{ bushel }(\text{bu}) = 60 \text{ pounds }(\text{lbs}) \longrightarrow
-1 = \left(\frac{1 \text{ bu}}{60 \text{ lbs}}\right)
-= \left(\frac{60 \text{ lbs}}{1 \text{ bu}} \right)
-\\ \phantom{a}
+1 \text{ bushel }(\text{bu}) \longleftrightarrow 60 \text{ pounds }(\text{lbs})
 \\
-1 \text{ bushel} = 7.27 \text{ USD} \longrightarrow
-1 = \left(\frac{1 \text{ bu}}{7.27 \text{ USD}}\right)
-= \left(\frac{7.27 \text{ USD}}{1 \text{ bu}} \right)
-\\ \phantom{a}
+1 \text{ bushel (bu)} \longleftrightarrow 7.27 \text{ USD}
 \\
-1 \text{ kg} = 2.2 \text{ pound} \longrightarrow
-1 = \left(\frac{1 \text{ kg}}{2.2 \text{ lbs}}\right)
-= \left(\frac{2.2 \text{ lbs}}{1 \text{ kg}} \right)
+1 \text{ kg} \approx 2.2 \text{ pound (lbs)}
 </span>
 </li>
 </ul>
-<p>Once we’ve written all the necessary information, finding the solution feels more like putting lego pieces together. Let’s take a deep breath and solve this. I’ll do it step by step.</p>
+<p>Once we’ve written all the necessary information, finding the solution feels more like putting lego pieces together. Let’s take a deep breath and solve this. Each line adds one factor to the previous line, and we evaluate the product once the chain is complete.</p>
 <p><span class="math display">\begin{align*}
-&amp;8400 \text{ m}^2= \\
-&amp;8400 {\color{red}\cancel{\text{ m}^2}}
-\left(\frac{1 \text{ ha}}{10^4 \color{red}\cancel{\text{ m}^2}}\right)=
+&amp;8400 \text{ m}^2 \\
+&amp;8400 \ccancel{red}{m$^2$}
+\left(\frac{1 \text{ ha}}{10^4 \ccancel{red}{m$^2$}}\right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \color{red}\cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \text{ ton}}{1 \color{red}\cancel{\text{ ha}}} \right)=
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{red}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \text{ t}}{1 \ccancel{red}{ha}} \right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \color{red}\cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \text{ kg}}{1 \color{red}\cancel{\text{ ton}}} \right) =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{red}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \text{ kg}}{1 \ccancel{red}{t}} \right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \color{red}\cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \text{ lbs}}{1 \color{red}\cancel{\text{ kg}}} \right)  =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{red}{kg}}{1 \ccancel{gray}{t}} \right)\left(\frac{2.2 \text{ lbs}}{1 \ccancel{red}{kg}} \right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \color{red}\cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \text{ bu}}{60 \color{red}\cancel{\text{ lbs}}}\right)  =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{red}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \text{ bu}}{60 \ccancel{red}{lbs}}\right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \color{red}\cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \text{ USD}}{1 \color{red}\cancel{\text{ bu}}} \right)  =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{red}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \text{ \$}}{1 \ccancel{red}{bu}} \right)
 \\
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \color{red}\cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \color{red}\cancel{\text{ USD}}} \right) =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \ccancel{red}{\$}}{1 \ccancel{gray}{bu}} \right)\!\!
+\left(\frac{1 \text{ €}}{1.15 \ccancel{red}{\$}} \right)
 \\
-&amp; \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+&amp;= \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ €}
 \\
-&amp; \boxed{961.87 \text{ EUR}}
+&amp;\approx \boxed{961.87 \text{ €}}
 \end{align*}</span></p>
 <p>When solving it with pencil and paper, I wouldn’t do each step in a different line, the solution would look like:</p>
 <p><span class="math display">\begin{align*}
-&amp;8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \cancel{\text{ USD}}} \right) =
+&amp;8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \ccancel{gray}{\$}}{1 \ccancel{gray}{bu}} \right)\!\!
+\left(\frac{1 \text{ €}}{1.15 \ccancel{gray}{\$}} \right)
 \\
-&amp; \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+&amp;= \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ €}
 \\
-&amp; \boxed{961.87 \text{ EUR}}
+&amp;\approx \boxed{961.87 \text{ €}}
 \end{align*}</span></p>
 
 
@@ -955,6 +995,9 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../conversion_methods/dilution.en.html" class="pagination-link" aria-label="dilution: $c_1 V_1 = c_2 V_2$">
+        <span class="nav-page-text"><span class="chapter-number">10</span>  <span class="chapter-title">dilution: <span class="math inline">c_1 V_1 = c_2 V_2</span></span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

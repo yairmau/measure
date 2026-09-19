@@ -1,16 +1,121 @@
-# concentration
+# concentration and density
 
-Concentrations basically answer the question:
+Concentrations and densities answer the question:
 
 ::: {.card-info}
-How much of something is there in a given volume?
+How much of something of interest is there in a given volume or mass?
 :::
+
+## mass density
+
+Usually, when we just say the word "density", we are referring to mass density. Mass density answers the question:
+
+> How much mass is there in a unit volume of a given material?
+
+For example, the density of water is $1\text{ kg/L}$, the density of iron is $7.87 \text{ g/cm}^3$, and the density of air is about $1.2 \text{ kg/m}^3$. These three examples used different unit volumes: liters (cubic decimeters), cubic centimeters (which is equal to milliliters) and cubic meters.
+
+The Greek letter *rho* is commonly used to represent density:
+
+$$
+\rho = \frac{m}{V} = \frac{\text{mass}}{\text{volume}}
+$$
+
+Another name for mass density is *volumetric mass density*, and it makes clear that the denominator in the equation above is a volume.
+
+## area density and linear density
+
+Area density and linear density answer the question:
+
+> How much mass is there in a unit area or in a unit length of a given material?
+
+It's the same idea as volumetric density, but in 2d and 1d:
+
+$$
+\rho_A = \frac{m}{A} = \frac{\text{mass}}{\text{area}}
+\qquad\qquad
+\rho_\ell = \frac{m}{\ell} = \frac{\text{mass}}{\text{length}}
+$$
+
+One very common example of a material measured with area densities is paper. Printer paper usually has $80 \text{ g/m}^2$, while cardstock for birthday cards has $300 \text{ g/m}^2$.
+
+A common product measured with linear density is thread for textiles. Sewing threads usually have around 25 grams per 1000 meters, while leather threads can range between 70 to 105 grams per 1000 meters. In the textile industry, *tex* is the name given for grams per 1000 meters.
+
+## mass concentration
+
+This is very similar to mass density. Density tells us the total mass per unit volume of a material. Mass concentration tells us how much of a particular component is present per unit volume of the mixture:
+
+$$
+\rho_i = \frac{m_i}{V} = \frac{\text{mass of component } i}{\text{volume of the mixture}}
+$$
+
+Note that $V$ is the volume of the whole mixture, not of the component alone.
+
+Examples of substances measured by mass concentration:
+
+* Salinity of ocean water: about 35 g/L of dissolved salts
+* Normal fasting blood glucose: 70–100 mg/dL (0.7–1.0 g/L)
+* Sugar in regular cola: about 105 g/L
+* Paracetamol pediatric syrup: 24 mg/mL
+* Fine particulate matter ($\text{PM}_{2.5}$) in urban air: 15–35 $\mu$g/m$^3$
+
+## molar concentration
+
+Molar concentration is amount of substance per volume, commonly expressed in mol/L. Also called molarity. Molar concentration is usually denoted by the letter $c$:
+
+$$
+c = \frac{n}{V} = \frac{\text{amount of solute in moles}}{\text{volume of the solution in liters}}
+$$
+
+Enjoy this lovely joke:
 
 ::: {.curved-paper}
 ![](two-moles.jpg){height=400px}
 :::
 
-Concentrations are very commonly used in chemistry. The quantities can be moles, grams, milligrams, etc. The volumes can be liters, milliliters, etc. A few examples:
+Examples of solutions measured by molar concentration:
 
-* concentration of a given medical compound: 2 $\mu$g/mL
-* concentration of a reagent: 0.5 mol/L
+* Ocean water:  about 0.6 mol/L of dissolved NaCl
+* Household vinegar: 0.8–0.9 mol/L of acetic acid
+* Human stomach acid: 0.03–0.1 mol/L of HCl
+* Physiological saline solution (IV drip): 154 mmol/L of NaCl (0.154 mol/L)
+* Concentrated hydrochloric acid in a chemistry lab: ~12 mol/L
+
+
+## percent, per mille, ppm, ppb
+
+Often, concentrations are expressed not with composite units like g/L or mol/L, but as **dimensionless fractions**—the ratio of a substance compared to the whole mixture:
+
+$$
+\text{fraction} = \frac{\text{amount of the substance}}{\text{amount of the whole mixture}}
+$$
+
+Because these fractions can be very small numbers, we multiply them by powers of 10 to make them convenient to read and write:
+
+| Name | Symbol | Meaning |
+| :--- | :---: | :--- |
+| **Percent** | % | parts per hundred ($1 / 100$) |
+| **Per mille** | ‰ | parts per thousand ($1 / 10^3$) |
+| **Parts per million (ppm)** | ppm | parts per million ($1 / 10^6$) |
+| **Parts per billion (ppb)** | ppb | parts per billion ($1 / 10^9$) |
+
+Since these are ratios, it is always important to know whether they refer to **mass** (e.g., grams of solute per gram of solution) or **volume** (e.g., liters of gas per liter of air). A percent by mass and a percent by volume are different things: 5% by mass of ethanol in water is not the same mixture as 5% by volume, because ethanol and water have different densities:
+
+$$
+\text{mass fraction } w_i = \frac{m_i}{m_\text{total}}
+\qquad\qquad
+\text{volume fraction } \varphi_i = \frac{V_i}{V_\text{total}}
+$$
+
+Examples:
+
+* **Percent (%):**
+  * Alcohol by volume (ABV) in beer: ~5% (5 mL of ethanol per 100 mL of beer)
+  * Salinity of the Dead Sea: ~34% by mass
+* **Per mille (‰):**
+  * Ocean salinity: ~35‰ (35 grams of salt per kilogram of seawater)
+  * Blood alcohol concentration (BAC) in many European countries: legal driving limit is often 0.5‰
+* **Parts per million (ppm):**
+  * Carbon dioxide ($\text{CO}_2$) in the atmosphere in 2026: ~432 ppm (roughly 0.0432%)
+  * Chlorine added to tap water or swimming pools: 1–3 ppm.
+* **Parts per billion (ppb):**
+  * Lead or arsenic safety limits in drinking water: typically below 10–15 ppb

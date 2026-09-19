@@ -18,7 +18,7 @@ $$
 10^2 \cdot 10^3 = 10^{2+3} = 10^5.
 $$
 
-Now we're getting at something. Generalizing the pattern above, we can write the one important rule we need:
+Now we're getting at something. Generalizing the pattern above, we can write the one important rule we need, the product rule:
 
 ::: {.card-success}
 $$

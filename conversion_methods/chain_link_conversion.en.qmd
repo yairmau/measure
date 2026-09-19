@@ -15,15 +15,15 @@ I think it's best if we solve a first example and see this in action.
 ![](/archive/images/12-inch-ruler.jpg)
 
 ::: {.card-success}
-I have a 12-inch ruler. What's its lenght in cm? We know that $1 \text{ inch} = 2.54 \text{ cm}$.
+I have a 12-inch ruler. What's its length in cm? We know that $1 \text{ inch} = 2.54 \text{ cm}$.
 :::
 
 Maybe we don't need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.
 
 The very first thing we need to know is to split the information we got into three categories:
 
-* **Input**: this is the starting point in our computation, here it is that we have a 12-inch ruler.
-* **Output**: this is what we want to find out at the end of the exercise, the length in centimeters.
+* **Starting point**: this is where our computation begins, here it is that we have a 12-inch ruler.
+* **Goal**: this is what we want to find out at the end of the exercise, the length in centimeters.
 * **Conversion information**, here it is $1 \text{ inch} = 2.54 \text{ cm}$.
 
 The basic structure of the chain-link method is the following:
@@ -32,7 +32,7 @@ The basic structure of the chain-link method is the following:
 %%| image-class: mb-4
 %%| filename: chain-link-method-overview
 %%| image-width: 100%
-%%| alt: Input leads through one or more conversion operations to the desired output.
+%%| alt: The starting point leads through one or more conversion operations to the goal.
 
 \begin{tikzpicture}[
   >=stealth,
@@ -40,22 +40,22 @@ The basic structure of the chain-link method is the following:
     minimum height=1.2cm, align=center},
   arrow/.style={->, line width=1.2pt, shorten <=3mm, shorten >=3mm}
 ]
-  \node[stage, text width=2.4cm] (input) at (0,0) {Input};
+  \node[stage, text width=2.4cm] (input) at (0,0) {Starting point};
   \node[stage] (conversion) at (4.5,0) {One or more\\conversion operations};
-  \node[stage, text width=2.4cm] (output) at (9,0) {Desired output};
+  \node[stage, text width=2.4cm] (output) at (9,0) {Goal};
 
   \draw[arrow] (input.east) -- (conversion.west);
   \draw[arrow] (conversion.east) -- (output.west);
 \end{tikzpicture}
 ```
 
-Let's plug the input and output from our problem:
+Let's plug the starting point and goal from our problem:
 
 ```{.tikz}
 %%| image-class: mb-4
 %%| filename: chain-link-method-overview
 %%| image-width: 100%
-%%| alt: Input leads through one or more conversion operations to the desired output.
+%%| alt: The starting point leads through one or more conversion operations to the goal.
 
 \begin{tikzpicture}[
   >=stealth,
@@ -98,41 +98,82 @@ What should be the conversion operations? We can manipulate the conversion infor
 \end{tikzpicture}
 ```
 
-Now I can just multiply the input by 1 and cancel out the units:
+Now I can just multiply the starting point by 1 and cancel out the units:
 
 $$
-12 \text{ inch} = 12 \cancel{\text{ inch}} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \cancel{\text{ inch}}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
+12 \text{ inch} = 12 \ccancel{black}{inch} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \ccancel{gray}{inch}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
 $$
 
-How did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the input with the inch in the denominator in the conversion factor. Had I chosen the other one, I'd get this:
+How did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the starting point with the inch in the denominator in the conversion factor. Had I chosen the other one, I'd get this:
 
 $$
 12 \text{ inch} = 12 \text{ inch} \underbrace{\left( \frac{1 \text{ inch}}{2.54 \text{ cm}} \right)}_{1} = \begin{gathered}\text{now I'm stuck,}\\\text{there's nothing to cancel out}\end{gathered}
 $$
 
-Let's try another simple exercise
+As a rule, we write the conversion factors with parentheses to make it clear what's going on in the calculation.
+
+Let's try another simple exercise.
 
 ## a train is travelling...
 ::: {.card-success}
 A train is travelling with a constant speed of 90 km/h. How many km has it travelled after half an hour?
 :::
 
-* **Input:** 0.5 hour
-* **Output:** distance in km
+* **Starting point:** 0.5 hour
+* **Goal:** distance in km
 * **Conversion information:** The train is travelling at 90 km/h, so we write:
   $$
-  90\text{ km}=1\text{ h} \longrightarrow
-  1 = \left(\frac{90\text{ km}}{1\text{ h}}\right)
-  = \left(\frac{1\text{ h}}{90\text{ km}} \right)
+  90\text{ km}
+  \;\longleftrightarrow \;
+  {1\text{ h}}
   $$
 
-This feels a bit different than the first example. 1 inch and 2.54 cm are both lengths, and they are always equal to each other, so dividing one by the other should always give 1. In this exercise, we wrote that $90\text{ km}=1\text{ h}$, which is weird, we're saying that a length equals an amount of time. In the context of the train problem, this is always true, so we can go ahead as before and solve our problem:
+This conversion information is different from the first example. There we had a real equality between quantities of the same dimensions: a length of 1 inch always equals a length of 2.54 centimeters. In this exercise, the speed gives us a **correspondence** between two quantities of different dimensions. If you tell me that an hour has elapsed, then I know that we've travelled 90 km (and vice-versa).
+But we don't use the equal sign because length and time are fundamentally different things.
+So how do we use this correspondence to our advantage? 
+
+Long story short, this looks exactly like the conversion factors in parenthesis from before. We use the correspondence as a rate: 90 kilometres for every hour. To find distance from time, we multiply by kilometres per hour; to find time from distance, we use its reciprocal. The units help us choose the correct orientation:
 
 $$
-0.5 \text{ h} = 0.5 \cancel{\text{ h}} \left(\frac{90\text{ km}}{1\cancel{\text{ h}}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+\left( \frac{90\text{ km}}{1\text{ h}} \right)
+\;\text{or}\;
+\left( \frac{1\text{ h}}{90\text{ km}} \right)
 $$
 
-Notice that I will always write the conversion factors in parenthesis to make it clear to myself and to others what is going on. I didn't have to, but it gives a nice visual cue.
+Let's solve now our problem:
+
+$$
+0.5 \ccancel{gray}{h} \left(\frac{90\text{ km}}{1\ccancel{gray}{h}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+$$
+
+We're done with our solution now, but let me just take a few more moments beyond the "long story short", and explain why this works.
+
+Given the correspondence $90\text{ km} \leftrightarrow {1\text{ h}}$, we can write a true equality:
+
+$$
+\frac{\text{distance travelled}}{90\text{ km}}
+=
+\frac{\text{elapsed time}}{1\text{ h}}
+$$
+
+Because the speed is constant, both ratios describe the same fraction of a one-hour journey: half an hour corresponds to half of 90 kilometres.
+
+If you know the elapsed time, and want to find out the distance travelled, then take the equation above and multiply both sides by $90\text{ km}$:
+
+$$
+\text{distance travelled} = 
+\left( \frac{90\text{ km}}{1\text{ h}} \right) \text{elapsed time}
+$$
+
+Hey! We've just derived the most basic equation from kinematics:
+
+$$
+\Delta x = v\Delta t,
+$$
+
+where $\Delta x$ stands for travelled distance and $\Delta t$ for elapsed time.
+
+Multiplying by the speed converts an elapsed time into the distance travelled. If we wanted to convert from distance to time, then we just need to multiply by the reciprocal of the speed, and that fully explains what we've claimed above.
 
 ## chaining conversions
 
@@ -141,147 +182,131 @@ Now we will solve an example with multiple conversions, and we'll see why this i
 ![](/archive/images/chain-link.jpg)
 
 ::: {.card-success}
-On 18 September 2026, gasoline in the USA costed 4.47 dollars per gallon. How much would that be in shekels per liter? On this same date we know that 1 dollar was worth 3.04 shekels, and one gallon equals approximately 3.79 liters.
+I travelled from Israel to the USA and went on a road trip on a 2021 Ford Escape. This car has a fuel consumption of 3.5 gallons per 100 miles. I'm wondering how far I can travel on a full tank (15 gallons), but miles confuse me, so I want to find the answer in kilometers (1 mile equals 1.61 km approximately).
 :::
 
-* **Input:** 4.47 dollars per gallon
-* **Output:** price in shekels per liter
+* **Starting point:** 15 gallons
+* **Goal:** distance in kilometers
 * **Conversion information:** We have two conversions now:
   $$
-  1 \text{ USD} = 3.04 \text{ NIS} \longrightarrow
-  1 = \left(\frac{1 \text{ USD}}{3.04 \text{ NIS}}\right)
-  = \left(\frac{3.04 \text{ NIS}}{1 \text{ USD}} \right)
-  \\ \phantom{a}
-  \\
-  1 \text{ gallon} = 3.79 \text{ liter} \longrightarrow
-  1 = \left(\frac{1 \text{ gallon}}{3.79 \text{ liter}}\right)
-  = \left(\frac{3.79 \text{ liter}}{1 \text{ gallon}} \right)
+  3.5 \text{ gallon} \longleftrightarrow 100 \text{ miles} \\
+  1.61 \text{ km} \approx 1 \text{ mile}
   $$
 
 It's time to solve:
 
 \begin{align*}
-4.47\, \frac{\text{USD}}{\text{gallon}}
+&15 \ccancel{red}{gallon}
+\left( \frac{100 \ccancel{blue}{mile}}{3.5 \ccancel{red}{gallon}} \right)
+\left( \frac{1.61 \text{ km}}{1 \ccancel{blue}{mile}} \right) \\
 &=
-4.47\, \frac{\cancel{\text{USD}}}{\bcancel{\text{gallon}}}
-\left(\frac{3.04 \text{ NIS}}{1 \cancel{\text{ USD}}} \right)
-\left(\frac{1 \bcancel{\text{ gallon}}}{3.79 \text{ liter}}\right) \\
-&= \frac{4.47 \cdot 3.04}{3.79} \frac{\text{NIS}}{\text{liter}} \\
-&= \boxed{3.59 \, \frac{\text{NIS}}{\text{liter}}}
+\frac{15 \cdot 100 \cdot 1.61}{3.5} \text{ km} \\
+&= \boxed{690 \text{ km}}
 \end{align*}
 
 A few comments.
 
-* We could have done this conversion in two steps, converting first the currency and then the volume. That's totally fine, but it takes a bit more paper.
-* We see the conversions being linked like in a chain, one parenthesis after the other. I used different cancelling lines to make clear what cancels what.
-* When choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the input with a unit in the denominator of the conversion factor (and vice-versa).
+* We could have done this conversion in two steps, using fuel consumption to find the distance in miles, and then converting miles to kilometers. That's totally fine, but it takes a bit more paper.
+* We see the conversions being linked like in a chain, one parenthesis after the other. I used different colors to make clear what cancels what.
+* When choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the starting point with a unit in the denominator of the conversion factor (and vice-versa).
 
 ## several links (we can do it!)
 
 ![](/archive/images/wheat-field.jpg)
 
 ::: {.card-success}
-A european farmer harvests wheat from a rectangular field with sides $120 \text{ m} \times 70 \text{ m}$. The productivity of this field is 4.94 tons per hectare. What will be the farmer's revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:
+A European farmer harvests wheat from a rectangular field with sides $120 \text{ m} \times 70 \text{ m}$. The productivity of this field is 4.94 tonnes per hectare. What will be the farmer's revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:
 
 * As of 18 September 2026, 1 euro was worth 1.15 USD.
-* One hectare is an area of $10^4$ squared meters.
-* One ton is $1000 \text{ kg}$.
-* One bushel of wheat weighs 60 pounds.
-* One \text{kg} is approximately $2.2$ pounds.
+* One hectare is an area of $10^4$ square meters.
+* One tonne is $1000 \text{ kg}$.
+* One bushel (volume unit) of wheat weighs 60 pounds.
+* One $\text{kg}$ is approximately $2.2$ pounds.
 :::
 
-* **Input:** We're given the dimensions of the field, so it would make sense to convert that to an area and use this as the input: $120 \text{ m} \times 70 \text{ m}=8400 \text{ m}^2$
-* **Output:** Amount of money in euros
+* **Starting point:** We're given the dimensions of the field, so it would make sense to convert that to an area and use this as the starting point: $120 \text{ m} \times 70 \text{ m}=8400 \text{ m}^2$
+* **Goal:** Amount of money in euros
 * **Conversion information:** We have several conversions:
   $$
-  1 \text{ EUR} = 1.15 \text{ USD} \longrightarrow
-  1 = \left(\frac{1.15 \text{ USD}}{1 \text{ EUR}}\right)
-  = \left(\frac{1 \text{ EUR}}{1.15 \text{ USD}} \right)
-  \\ \phantom{a}
+  1 \text{ EUR (€)} = 1.15 \text{ USD (\$)}
   \\
-  1 \text{ hectare } (\text{ha}) = 4.94 \text{ ton} \longrightarrow
-  1 = \left(\frac{1 \text{ ha}}{4.94 \text{ ton}}\right)
-  = \left(\frac{4.94 \text{ ton}}{1 \text{ ha}} \right)
-  \\ \phantom{a}
+  1 \text{ hectare } (\text{ha}) \longleftrightarrow 4.94 \text{ tonne (t)} 
   \\
-  1 \text{ ton} = 10^3 \text{ kg} \longrightarrow
-  1 = \left(\frac{1 \text{ ton}}{10^3 \text{ kg}}\right)
-  = \left(\frac{10^3 \text{ kg}}{1 \text{ ton}} \right)
-  \\ \phantom{a}
+  1 \text{ tonne (t)} = 10^3 \text{ kg}
   \\
-  1 \text{ hectare} = 10^4 \text{ m}^2 \longrightarrow
-  1 = \left(\frac{1 \text{ hectare}}{10^4 \text{ m}^2}\right)
-  = \left(\frac{10^4 \text{ m}^2}{1 \text{ hectare}} \right)
- \\ \phantom{a}
+  1 \text{ hectare (ha)} = 10^4 \text{ m}^2
   \\
-  1 \text{ bushel }(\text{bu}) = 60 \text{ pounds }(\text{lbs}) \longrightarrow
-  1 = \left(\frac{1 \text{ bu}}{60 \text{ lbs}}\right)
-  = \left(\frac{60 \text{ lbs}}{1 \text{ bu}} \right)
-\\ \phantom{a}
+  1 \text{ bushel }(\text{bu}) \longleftrightarrow 60 \text{ pounds }(\text{lbs})
   \\
-  1 \text{ bushel} = 7.27 \text{ USD} \longrightarrow
-  1 = \left(\frac{1 \text{ bu}}{7.27 \text{ USD}}\right)
-  = \left(\frac{7.27 \text{ USD}}{1 \text{ bu}} \right)
- \\ \phantom{a}
+  1 \text{ bushel (bu)} \longleftrightarrow 7.27 \text{ USD}
   \\
-  1 \text{ kg} = 2.2 \text{ pound} \longrightarrow
-  1 = \left(\frac{1 \text{ kg}}{2.2 \text{ lbs}}\right)
-  = \left(\frac{2.2 \text{ lbs}}{1 \text{ kg}} \right) 
+  1 \text{ kg} \approx 2.2 \text{ pound (lbs)}
   $$
 
 
-Once we've written all the necessary information, finding the solution feels more like putting lego pieces together. Let's take a deep breath and solve this. I'll do it step by step.
+Once we've written all the necessary information, finding the solution feels more like putting lego pieces together. Let's take a deep breath and solve this. Each line adds one factor to the previous line, and we evaluate the product once the chain is complete.
 
 \begin{align*}
-&8400 \text{ m}^2= \\
-&8400 {\color{red}\cancel{\text{ m}^2}}
-\left(\frac{1 \text{ ha}}{10^4 \color{red}\cancel{\text{ m}^2}}\right)=
+&8400 \text{ m}^2 \\
+&8400 \ccancel{red}{m$^2$}
+\left(\frac{1 \text{ ha}}{10^4 \ccancel{red}{m$^2$}}\right)
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \color{red}\cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \text{ ton}}{1 \color{red}\cancel{\text{ ha}}} \right)=
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{red}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \text{ t}}{1 \ccancel{red}{ha}} \right)
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \color{red}\cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \text{ kg}}{1 \color{red}\cancel{\text{ ton}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{red}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \text{ kg}}{1 \ccancel{red}{t}} \right)
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \color{red}\cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \text{ lbs}}{1 \color{red}\cancel{\text{ kg}}} \right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{red}{kg}}{1 \ccancel{gray}{t}} \right)\left(\frac{2.2 \text{ lbs}}{1 \ccancel{red}{kg}} \right)
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \color{red}\cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \text{ bu}}{60 \color{red}\cancel{\text{ lbs}}}\right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{red}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \text{ bu}}{60 \ccancel{red}{lbs}}\right) 
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \color{red}\cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \text{ USD}}{1 \color{red}\cancel{\text{ bu}}} \right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{red}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \text{ \$}}{1 \ccancel{red}{bu}} \right) 
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \color{red}\cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \color{red}\cancel{\text{ USD}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \ccancel{red}{\$}}{1 \ccancel{gray}{bu}} \right)\!\!
+\left(\frac{1 \text{ €}}{1.15 \ccancel{red}{\$}} \right)
 \\
-& \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+&= \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ €}
 \\
-& \boxed{961.87 \text{ EUR}}
+&\approx \boxed{961.87 \text{ €}}
 \end{align*}
 
 When solving it with pencil and paper, I wouldn't do each step in a different line, the solution would look like:
 
 
 \begin{align*}
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \cancel{\text{ USD}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)\!\!
+\left(\frac{4.94 \ccancel{gray}{t}}{1 \ccancel{gray}{ha}} \right)\!\!
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{t}} \right)\!\!
+\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\!\!
+\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right)\!\!
+\left(\frac{7.27 \ccancel{gray}{\$}}{1 \ccancel{gray}{bu}} \right)\!\!
+\left(\frac{1 \text{ €}}{1.15 \ccancel{gray}{\$}} \right)
 \\
-& \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
+&= \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ €}
 \\
-& \boxed{961.87 \text{ EUR}}
+&\approx \boxed{961.87 \text{ €}}
 \end{align*}
-

@@ -57,6 +57,11 @@ book:
       chapters:
         - conversion_methods/prefix_operations.en.qmd
         - conversion_methods/chain_link_conversion.en.qmd
+        - conversion_methods/dilution.en.qmd
+    - part: exercises
+      part-he: תרגילים
+      chapters:
+        - exercises/concentrations_and_dilutions.en.qmd
 
   sidebar:
     collapse-level: 2
@@ -81,6 +86,8 @@ format:
     highlight-style: kate-custom.theme #kate #solarized # kate # tango # breeze # ayu # monokai # breezedark # espresso
     include-in-header:
       - includes.html
+    include-before-body:
+      - math-macros.html
     code-line-numbers: true
     code-tools:
       source: repo  # https://quarto.org/docs/output-formats/html-code.html#code-tools

@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>6  concentration – Measure for Measure</title>
+<title>6  concentration and density – Measure for Measure</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -122,7 +122,7 @@ window.Quarto = {
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../basic_concepts/area-and-volume.en.html">basic concepts</a></li>
-<li class="breadcrumb-item"><a href="../basic_concepts/concentration.en.html"><span class="chapter-number">6</span>  <span class="chapter-title">concentration</span></a></li>
+<li class="breadcrumb-item"><a href="../basic_concepts/concentration.en.html"><span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span></a></li>
 </ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -222,7 +222,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../basic_concepts/concentration.en.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,23 +254,59 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">chain-link conversion</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conversion_methods/dilution.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">dilution: <span class="math inline">c_1 V_1 = c_2 V_2</span></span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/concentrations_and_dilutions.en.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">concentrations and dilutions</span></span></a>
+  </div>
+</li>
       </ul>
 </li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#mass-density" id="toc-mass-density" class="nav-link active" data-scroll-target="#mass-density"><span class="header-section-number">6.1</span> mass density</a></li>
+  <li><a href="#area-density-and-linear-density" id="toc-area-density-and-linear-density" class="nav-link" data-scroll-target="#area-density-and-linear-density"><span class="header-section-number">6.2</span> area density and linear density</a></li>
+  <li><a href="#mass-concentration" id="toc-mass-concentration" class="nav-link" data-scroll-target="#mass-concentration"><span class="header-section-number">6.3</span> mass concentration</a></li>
+  <li><a href="#molar-concentration" id="toc-molar-concentration" class="nav-link" data-scroll-target="#molar-concentration"><span class="header-section-number">6.4</span> molar concentration</a></li>
+  <li><a href="#percent-per-mille-ppm-ppb" id="toc-percent-per-mille-ppm-ppb" class="nav-link" data-scroll-target="#percent-per-mille-ppm-ppb"><span class="header-section-number">6.5</span> percent, per mille, ppm, ppb</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<main class="content" id="quarto-document-content"><!-- Shared KaTeX definitions. Keep these before the page's first equation. --><div hidden="" aria-hidden="true">
+<span class="math inline">\gdef\ccancel#1#2{\ {\color{#1}\cancel{\color{black}\text{#2}}}}</span>
+</div>
+
+<!-- Marker texture for the \ccancel strike (see styles.css): ragged edges plus a faint dry-ink grain. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="marker-texture" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feturbulence type="fractalNoise" basefrequency="0.5" numoctaves="2" seed="3" result="edge"></feturbulence><fedisplacementmap in="SourceGraphic" in2="edge" scale="2.5" xchannelselector="R" ychannelselector="G" result="rough"></fedisplacementmap><feturbulence type="fractalNoise" basefrequency="0.9 0.35" numoctaves="2" seed="8" result="grain"></feturbulence><fecolormatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.5 0 0 0 2.3" result="mask"></fecolormatrix><fecomposite in="rough" in2="mask" operator="in"></fecomposite></filter></defs></svg><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="../basic_concepts/area-and-volume.en.html">basic concepts</a></li>
-<li class="breadcrumb-item"><a href="../basic_concepts/concentration.en.html"><span class="chapter-number">6</span>  <span class="chapter-title">concentration</span></a></li>
+<li class="breadcrumb-item"><a href="../basic_concepts/concentration.en.html"><span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span></a></li>
 </ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div>
 <h1 class="title">
-<span class="chapter-number">6</span>  <span class="chapter-title">concentration</span>
+<span class="chapter-number">6</span>  <span class="chapter-title">concentration and density</span>
 </h1>
 <button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/yairmau/measure/blob/main/basic_concepts/concentration.en.qmd"><i class="bi"></i> Code</button>
 </div></div>
@@ -287,18 +323,140 @@ window.Quarto = {
   
 
 
-</header><p>Concentrations basically answer the question:</p>
+</header><p>Concentrations and densities answer the question:</p>
 <div class="card-info">
-<p>How much of something is there in a given volume?</p>
+<p>How much of something of interest is there in a given volume or mass?</p>
 </div>
+<section id="mass-density" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="mass-density">
+<span class="header-section-number">6.1</span> mass density</h2>
+<p>Usually, when we just say the word “density”, we are referring to mass density. Mass density answers the question:</p>
+<blockquote class="blockquote">
+<p>How much mass is there in a unit volume of a given material?</p>
+</blockquote>
+<p>For example, the density of water is <span class="math inline">1\text{ kg/L}</span>, the density of iron is <span class="math inline">7.87 \text{ g/cm}^3</span>, and the density of air is about <span class="math inline">1.2 \text{ kg/m}^3</span>. These three examples used different unit volumes: liters (cubic decimeters), cubic centimeters (which is equal to milliliters) and cubic meters.</p>
+<p>The Greek letter <em>rho</em> is commonly used to represent density:</p>
+<p><span class="math display">
+\rho = \frac{m}{V} = \frac{\text{mass}}{\text{volume}}
+</span></p>
+<p>Another name for mass density is <em>volumetric mass density</em>, and it makes clear that the denominator in the equation above is a volume.</p>
+</section><section id="area-density-and-linear-density" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="area-density-and-linear-density">
+<span class="header-section-number">6.2</span> area density and linear density</h2>
+<p>Area density and linear density answer the question:</p>
+<blockquote class="blockquote">
+<p>How much mass is there in a unit area or in a unit length of a given material?</p>
+</blockquote>
+<p>It’s the same idea as volumetric density, but in 2d and 1d:</p>
+<p><span class="math display">
+\rho_A = \frac{m}{A} = \frac{\text{mass}}{\text{area}}
+\qquad\qquad
+\rho_\ell = \frac{m}{\ell} = \frac{\text{mass}}{\text{length}}
+</span></p>
+<p>One very common example of a material measured with area densities is paper. Printer paper usually has <span class="math inline">80 \text{ g/m}^2</span>, while cardstock for birthday cards has <span class="math inline">300 \text{ g/m}^2</span>.</p>
+<p>A common product measured with linear density is thread for textiles. Sewing threads usually have around 25 grams per 1000 meters, while leather threads can range between 70 to 105 grams per 1000 meters. In the textile industry, <em>tex</em> is the name given for grams per 1000 meters.</p>
+</section><section id="mass-concentration" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="mass-concentration">
+<span class="header-section-number">6.3</span> mass concentration</h2>
+<p>This is very similar to mass density. Density tells us the total mass per unit volume of a material. Mass concentration tells us how much of a particular component is present per unit volume of the mixture:</p>
+<p><span class="math display">
+\rho_i = \frac{m_i}{V} = \frac{\text{mass of component } i}{\text{volume of the mixture}}
+</span></p>
+<p>Note that <span class="math inline">V</span> is the volume of the whole mixture, not of the component alone.</p>
+<p>Examples of substances measured by mass concentration:</p>
+<ul>
+<li>Salinity of ocean water: about 35 g/L of dissolved salts</li>
+<li>Normal fasting blood glucose: 70–100 mg/dL (0.7–1.0 g/L)</li>
+<li>Sugar in regular cola: about 105 g/L</li>
+<li>Paracetamol pediatric syrup: 24 mg/mL</li>
+<li>Fine particulate matter (<span class="math inline">\text{PM}_{2.5}</span>) in urban air: 15–35 <span class="math inline">\mu</span>g/m<span class="math inline">^3</span>
+</li>
+</ul></section><section id="molar-concentration" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="molar-concentration">
+<span class="header-section-number">6.4</span> molar concentration</h2>
+<p>Molar concentration is amount of substance per volume, commonly expressed in mol/L. Also called molarity. Molar concentration is usually denoted by the letter <span class="math inline">c</span>:</p>
+<p><span class="math display">
+c = \frac{n}{V} = \frac{\text{amount of solute in moles}}{\text{volume of the solution in liters}}
+</span></p>
+<p>Enjoy this lovely joke:</p>
 <div class="curved-paper">
 <p><img src="two-moles.jpg" height="400"></p>
 </div>
-<p>Concentrations are very commonly used in chemistry. The quantities can be moles, grams, milligrams, etc. The volumes can be liters, milliliters, etc. A few examples:</p>
+<p>Examples of solutions measured by molar concentration:</p>
 <ul>
-<li>concentration of a given medical compound: 2 <span class="math inline">\mu</span>g/mL</li>
-<li>concentration of a reagent: 0.5 mol/L</li>
-</ul></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<li>Ocean water: about 0.6 mol/L of dissolved NaCl</li>
+<li>Household vinegar: 0.8–0.9 mol/L of acetic acid</li>
+<li>Human stomach acid: 0.03–0.1 mol/L of HCl</li>
+<li>Physiological saline solution (IV drip): 154 mmol/L of NaCl (0.154 mol/L)</li>
+<li>Concentrated hydrochloric acid in a chemistry lab: ~12 mol/L</li>
+</ul></section><section id="percent-per-mille-ppm-ppb" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="percent-per-mille-ppm-ppb">
+<span class="header-section-number">6.5</span> percent, per mille, ppm, ppb</h2>
+<p>Often, concentrations are expressed not with composite units like g/L or mol/L, but as <strong>dimensionless fractions</strong>—the ratio of a substance compared to the whole mixture:</p>
+<p><span class="math display">
+\text{fraction} = \frac{\text{amount of the substance}}{\text{amount of the whole mixture}}
+</span></p>
+<p>Because these fractions can be very small numbers, we multiply them by powers of 10 to make them convenient to read and write:</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Meaning</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Percent</strong></td>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;">parts per hundred (<span class="math inline">1 / 100</span>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Per mille</strong></td>
+<td style="text-align: center;">‰</td>
+<td style="text-align: left;">parts per thousand (<span class="math inline">1 / 10^3</span>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Parts per million (ppm)</strong></td>
+<td style="text-align: center;">ppm</td>
+<td style="text-align: left;">parts per million (<span class="math inline">1 / 10^6</span>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Parts per billion (ppb)</strong></td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;">parts per billion (<span class="math inline">1 / 10^9</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>Since these are ratios, it is always important to know whether they refer to <strong>mass</strong> (e.g., grams of solute per gram of solution) or <strong>volume</strong> (e.g., liters of gas per liter of air). A percent by mass and a percent by volume are different things: 5% by mass of ethanol in water is not the same mixture as 5% by volume, because ethanol and water have different densities:</p>
+<p><span class="math display">
+\text{mass fraction } w_i = \frac{m_i}{m_\text{total}}
+\qquad\qquad
+\text{volume fraction } \varphi_i = \frac{V_i}{V_\text{total}}
+</span></p>
+<p>Examples:</p>
+<ul>
+<li>
+<strong>Percent (%):</strong>
+<ul>
+<li>Alcohol by volume (ABV) in beer: ~5% (5 mL of ethanol per 100 mL of beer)</li>
+<li>Salinity of the Dead Sea: ~34% by mass</li>
+</ul>
+</li>
+<li>
+<strong>Per mille (‰):</strong>
+<ul>
+<li>Ocean salinity: ~35‰ (35 grams of salt per kilogram of seawater)</li>
+<li>Blood alcohol concentration (BAC) in many European countries: legal driving limit is often 0.5‰</li>
+</ul>
+</li>
+<li>
+<strong>Parts per million (ppm):</strong>
+<ul>
+<li>Carbon dioxide (<span class="math inline">\text{CO}_2</span>) in the atmosphere in 2026: ~432 ppm (roughly 0.0432%)</li>
+<li>Chlorine added to tap water or swimming pools: 1–3 ppm.</li>
+</ul>
+</li>
+<li>
+<strong>Parts per billion (ppb):</strong>
+<ul>
+<li>Lead or arsenic safety limits in drinking water: typically below 10–15 ppb</li>
+</ul>
+</li>
+</ul></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();

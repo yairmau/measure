@@ -109,7 +109,7 @@
     "href": "conversion_methods/chain_link_conversion.en.html",
     "title": "9  chain-link conversion",
     "section": "",
-    "text": "9.1 first example\nThe chain-link method is the gift that keeps on giving. I can’t overstate its usefulness.\nWe will start with the same realization from the Prefix Operations chapter:\nI think it’s best if we solve a first example and see this in action.\nMaybe we don’t need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.\nThe very first thing we need to know is to split the information we got into three categories:\nThe basic structure of the chain-link method is the following:\nLet’s plug the input and output from our problem:\nWhat should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:",
+    "text": "9.1 first example\nThe chain-link method is the gift that keeps on giving. I can’t overstate its usefulness.\nWe will start with the same realization from the Prefix Operations chapter:\nI think it’s best if we solve a first example and see this in action.\nMaybe we don’t need any fancy techniques to solve this one, but the idea is that we start with the really simple examples, because things will get complicated fast.\nThe very first thing we need to know is to split the information we got into three categories:\nThe basic structure of the chain-link method is the following:\nLet’s plug the starting point and goal from our problem:\nWhat should be the conversion operations? We can manipulate the conversion information we were given to get two expressions that equal 1:\nNow I can just multiply the starting point by 1 and cancel out the units:\n12 \\text{ inch} = 12 \\ccancel{black}{inch} \\underbrace{\\left( \\frac{2.54 \\text{ cm}}{1 \\ccancel{gray}{inch}} \\right)}_{1} = 12\\cdot 2.54 \\text{ cm} = \\boxed{30.48 \\text{ cm}}\nHow did I know which of the conversion factors to use? Only one of them would allow me to cancel the inch from the starting point with the inch in the denominator in the conversion factor. Had I chosen the other one, I’d get this:\n12 \\text{ inch} = 12 \\text{ inch} \\underbrace{\\left( \\frac{1 \\text{ inch}}{2.54 \\text{ cm}} \\right)}_{1} = \\begin{gathered}\\text{now I'm stuck,}\\\\\\text{there's nothing to cancel out}\\end{gathered}\nAs a rule, we write the conversion factors with parentheses to make it clear what’s going on in the calculation.\nLet’s try another simple exercise.",
     "crumbs": [
       "conversion methods",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
@@ -120,7 +120,7 @@
     "href": "conversion_methods/chain_link_conversion.en.html#first-example",
     "title": "9  chain-link conversion",
     "section": "",
-    "text": "I have a 12-inch ruler. What’s its lenght in cm? We know that 1 \\text{ inch} = 2.54 \\text{ cm}.\n\n\n\n\nInput: this is the starting point in our computation, here it is that we have a 12-inch ruler.\nOutput: this is what we want to find out at the end of the exercise, the length in centimeters.\nConversion information, here it is 1 \\text{ inch} = 2.54 \\text{ cm}.",
+    "text": "I have a 12-inch ruler. What’s its length in cm? We know that 1 \\text{ inch} = 2.54 \\text{ cm}.\n\n\n\n\nStarting point: this is where our computation begins, here it is that we have a 12-inch ruler.\nGoal: this is what we want to find out at the end of the exercise, the length in centimeters.\nConversion information, here it is 1 \\text{ inch} = 2.54 \\text{ cm}.",
     "crumbs": [
       "conversion methods",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
@@ -131,10 +131,175 @@
     "href": "conversion_methods/chain_link_conversion.en.html#a-train-is-travelling",
     "title": "9  chain-link conversion",
     "section": "9.2 a train is travelling…",
-    "text": "9.2 a train is travelling…\n\nA train is travelling with a constant speed of 90 km/h. How many km has it travelled after half an hour?\n\nThe basic structure of the solution is the following. We start with the fact that the train travelled for half an hour, do some operations, and end up with the solution in km.\n\n0.5 \\text{ hour} = \\text{some operations here...} = x \\text{ km}\n\nOur goal is to find what this x should be.",
+    "text": "9.2 a train is travelling…\n\nA train is travelling with a constant speed of 90 km/h. How many km has it travelled after half an hour?\n\n\nStarting point: 0.5 hour\nGoal: distance in km\nConversion information: The train is travelling at 90 km/h, so we write: \n90\\text{ km}\n\\;\\longleftrightarrow \\;\n{1\\text{ h}}\n\n\nThis conversion information is different from the first example. There we had a real equality between quantities of the same dimensions: a length of 1 inch always equals a length of 2.54 centimeters. In this exercise, the speed gives us a correspondence between two quantities of different dimensions. If you tell me that an hour has elapsed, then I know that we’ve travelled 90 km (and vice-versa). But we don’t use the equal sign because length and time are fundamentally different things. So how do we use this correspondence to our advantage?\nLong story short, this looks exactly like the conversion factors in parenthesis from before. We use the correspondence as a rate: 90 kilometres for every hour. To find distance from time, we multiply by kilometres per hour; to find time from distance, we use its reciprocal. The units help us choose the correct orientation:\n\n\\left( \\frac{90\\text{ km}}{1\\text{ h}} \\right)\n\\;\\text{or}\\;\n\\left( \\frac{1\\text{ h}}{90\\text{ km}} \\right)\n\nLet’s solve now our problem:\n\n0.5 \\ccancel{gray}{h} \\left(\\frac{90\\text{ km}}{1\\ccancel{gray}{h}}\\right) = 0.5\\cdot 90 \\text{ km} = \\boxed{45 \\text{ km}}\n\nWe’re done with our solution now, but let me just take a few more moments beyond the “long story short”, and explain why this works.\nGiven the correspondence 90\\text{ km} \\leftrightarrow {1\\text{ h}}, we can write a true equality:\n\n\\frac{\\text{distance travelled}}{90\\text{ km}}\n=\n\\frac{\\text{elapsed time}}{1\\text{ h}}\n\nBecause the speed is constant, both ratios describe the same fraction of a one-hour journey: half an hour corresponds to half of 90 kilometres.\nIf you know the elapsed time, and want to find out the distance travelled, then take the equation above and multiply both sides by 90\\text{ km}:\n\n\\text{distance travelled} =\n\\left( \\frac{90\\text{ km}}{1\\text{ h}} \\right) \\text{elapsed time}\n\nHey! We’ve just derived the most basic equation from kinematics:\n\n\\Delta x = v\\Delta t,\n\nwhere \\Delta x stands for travelled distance and \\Delta t for elapsed time.\nMultiplying by the speed converts an elapsed time into the distance travelled. If we wanted to convert from distance to time, then we just need to multiply by the reciprocal of the speed, and that fully explains what we’ve claimed above.",
     "crumbs": [
       "conversion methods",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/chain_link_conversion.en.html#chaining-conversions",
+    "href": "conversion_methods/chain_link_conversion.en.html#chaining-conversions",
+    "title": "9  chain-link conversion",
+    "section": "9.3 chaining conversions",
+    "text": "9.3 chaining conversions\nNow we will solve an example with multiple conversions, and we’ll see why this is called a “chain-link” method.\n\n\nI travelled from Israel to the USA and went on a road trip on a 2021 Ford Escape. This car has a fuel consumption of 3.5 gallons per 100 miles. I’m wondering how far I can travel on a full tank (15 gallons), but miles confuse me, so I want to find the answer in kilometers (1 mile equals 1.61 km approximately).\n\n\nStarting point: 15 gallons\nGoal: distance in kilometers\nConversion information: We have two conversions now: \n3.5 \\text{ gallon} \\longleftrightarrow 100 \\text{ miles} \\\\\n1.61 \\text{ km} \\approx 1 \\text{ mile}\n\n\nIt’s time to solve:\n\\begin{align*}\n&15 \\ccancel{red}{gallon}\n\\left( \\frac{100 \\ccancel{blue}{mile}}{3.5 \\ccancel{red}{gallon}} \\right)\n\\left( \\frac{1.61 \\text{ km}}{1 \\ccancel{blue}{mile}} \\right) \\\\\n&=\n\\frac{15 \\cdot 100 \\cdot 1.61}{3.5} \\text{ km} \\\\\n&= \\boxed{690 \\text{ km}}\n\\end{align*}\nA few comments.\n\nWe could have done this conversion in two steps, using fuel consumption to find the distance in miles, and then converting miles to kilometers. That’s totally fine, but it takes a bit more paper.\nWe see the conversions being linked like in a chain, one parenthesis after the other. I used different colors to make clear what cancels what.\nWhen choosing the correct version of the conversion factors in the parenthesis, I made sure that I can cancel a unit in the numerator of the starting point with a unit in the denominator of the conversion factor (and vice-versa).",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/chain_link_conversion.en.html#several-links-we-can-do-it",
+    "href": "conversion_methods/chain_link_conversion.en.html#several-links-we-can-do-it",
+    "title": "9  chain-link conversion",
+    "section": "9.4 several links (we can do it!)",
+    "text": "9.4 several links (we can do it!)\n\n\nA European farmer harvests wheat from a rectangular field with sides 120 \\text{ m} \\times 70 \\text{ m}. The productivity of this field is 4.94 tonnes per hectare. What will be the farmer’s revenue (in Euros), given that they can sell the wheat in the American market for 7.27 dollars per bushel? Extra information:\n\nAs of 18 September 2026, 1 euro was worth 1.15 USD.\nOne hectare is an area of 10^4 square meters.\nOne tonne is 1000 \\text{ kg}.\nOne bushel (volume unit) of wheat weighs 60 pounds.\nOne \\text{kg} is approximately 2.2 pounds.\n\n\n\nStarting point: We’re given the dimensions of the field, so it would make sense to convert that to an area and use this as the starting point: 120 \\text{ m} \\times 70 \\text{ m}=8400 \\text{ m}^2\nGoal: Amount of money in euros\nConversion information: We have several conversions: \n1 \\text{ EUR (€)} = 1.15 \\text{ USD (\\$)}\n\\\\\n1 \\text{ hectare } (\\text{ha}) \\longleftrightarrow 4.94 \\text{ tonne (t)}\n\\\\\n1 \\text{ tonne (t)} = 10^3 \\text{ kg}\n\\\\\n1 \\text{ hectare (ha)} = 10^4 \\text{ m}^2\n\\\\\n1 \\text{ bushel }(\\text{bu}) \\longleftrightarrow 60 \\text{ pounds }(\\text{lbs})\n\\\\\n1 \\text{ bushel (bu)} \\longleftrightarrow 7.27 \\text{ USD}\n\\\\\n1 \\text{ kg} \\approx 2.2 \\text{ pound (lbs)}\n\n\nOnce we’ve written all the necessary information, finding the solution feels more like putting lego pieces together. Let’s take a deep breath and solve this. Each line adds one factor to the previous line, and we evaluate the product once the chain is complete.\n\\begin{align*}\n&8400 \\text{ m}^2 \\\\\n&8400 \\ccancel{red}{m$^2$}\n\\left(\\frac{1 \\text{ ha}}{10^4 \\ccancel{red}{m$^2$}}\\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{red}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\text{ t}}{1 \\ccancel{red}{ha}} \\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{red}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\text{ kg}}{1 \\ccancel{red}{t}} \\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{gray}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\ccancel{red}{kg}}{1 \\ccancel{gray}{t}} \\right)\\left(\\frac{2.2 \\text{ lbs}}{1 \\ccancel{red}{kg}} \\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{gray}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\ccancel{gray}{kg}}{1 \\ccancel{gray}{t}} \\right)\\!\\!\n\\left(\\frac{2.2 \\ccancel{red}{lbs}}{1 \\ccancel{gray}{kg}} \\right)\\left(\\frac{1 \\text{ bu}}{60 \\ccancel{red}{lbs}}\\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{gray}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\ccancel{gray}{kg}}{1 \\ccancel{gray}{t}} \\right)\\!\\!\n\\left(\\frac{2.2 \\ccancel{gray}{lbs}}{1 \\ccancel{gray}{kg}} \\right)\\!\\!\n\\left(\\frac{1 \\ccancel{red}{bu}}{60 \\ccancel{gray}{lbs}}\\right)\\!\\!\n\\left(\\frac{7.27 \\text{ \\$}}{1 \\ccancel{red}{bu}} \\right)\n\\\\\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{gray}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\ccancel{gray}{kg}}{1 \\ccancel{gray}{t}} \\right)\\!\\!\n\\left(\\frac{2.2 \\ccancel{gray}{lbs}}{1 \\ccancel{gray}{kg}} \\right)\\!\\!\n\\left(\\frac{1 \\ccancel{gray}{bu}}{60 \\ccancel{gray}{lbs}}\\right)\\!\\!\n\\left(\\frac{7.27 \\ccancel{red}{\\$}}{1 \\ccancel{gray}{bu}} \\right)\\!\\!\n\\left(\\frac{1 \\text{ €}}{1.15 \\ccancel{red}{\\$}} \\right)\n\\\\\n&= \\frac{8400\\cdot 4.94 \\cdot 10^3 \\cdot 2.2 \\cdot 7.27}{10^4 \\cdot 60 \\cdot 1.15} \\text{ €}\n\\\\\n&\\approx \\boxed{961.87 \\text{ €}}\n\\end{align*}\nWhen solving it with pencil and paper, I wouldn’t do each step in a different line, the solution would look like:\n\\begin{align*}\n&8400 \\ccancel{gray}{m$^2$}\n\\left(\\frac{1 \\ccancel{gray}{ha}}{10^4 \\ccancel{gray}{m$^2$}}\\right)\\!\\!\n\\left(\\frac{4.94 \\ccancel{gray}{t}}{1 \\ccancel{gray}{ha}} \\right)\\!\\!\n\\left(\\frac{10^3 \\ccancel{gray}{kg}}{1 \\ccancel{gray}{t}} \\right)\\!\\!\n\\left(\\frac{2.2 \\ccancel{gray}{lbs}}{1 \\ccancel{gray}{kg}} \\right)\\!\\!\n\\left(\\frac{1 \\ccancel{gray}{bu}}{60 \\ccancel{gray}{lbs}}\\right)\\!\\!\n\\left(\\frac{7.27 \\ccancel{gray}{\\$}}{1 \\ccancel{gray}{bu}} \\right)\\!\\!\n\\left(\\frac{1 \\text{ €}}{1.15 \\ccancel{gray}{\\$}} \\right)\n\\\\\n&= \\frac{8400\\cdot 4.94 \\cdot 10^3 \\cdot 2.2 \\cdot 7.27}{10^4 \\cdot 60 \\cdot 1.15} \\text{ €}\n\\\\\n&\\approx \\boxed{961.87 \\text{ €}}\n\\end{align*}",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>chain-link conversion</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/concentrations_and_dilutions.en.html",
+    "href": "exercises/concentrations_and_dilutions.en.html",
+    "title": "11  concentrations and dilutions",
+    "section": "",
+    "text": "11.1 a salty stock\nThese four exercises come from everyday work in a biology lab, but you don’t need any biology to solve them. Everything is about concentration (how much of something is dissolved in a liquid) and about the chain-link method.\nEach exercise comes with a short introduction, followed by the problem. Try to solve it on your own first. Then open the two boxes below the problem, one at a time:\nIf the setup is enough for you to finish the problem alone, that’s even better!\nMany experiments need a liquid with a precise amount of salt dissolved in it. To make it, we weigh some solid salt, put it in a special glass bottle called a volumetric flask, and add water until the liquid reaches a line drawn on the neck of the flask. That line marks the exact volume we want.\nThe concentration tells us how many moles of salt there are in each liter of the final liquid. A mole is just a very large number of particles (about 6\\cdot 10^{23}), and the molar mass tells us how many grams one mole weighs. You can read more about this in concentration and density.",
+    "crumbs": [
+      "exercises",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations and dilutions</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/concentrations_and_dilutions.en.html#a-salty-stock",
+    "href": "exercises/concentrations_and_dilutions.en.html#a-salty-stock",
+    "title": "11  concentrations and dilutions",
+    "section": "",
+    "text": "You want to prepare 250 \\text{ mL} of a salt solution with a concentration of 0.5 \\text{ mol/L}. The salt is NaCl, and its molar mass is 58.44 \\text{ g/mol}. How many grams of NaCl should you weigh?\n\n\n\n\n\n\n\nTipsetup: input, output, conversion\n\n\n\n\n\n\nInput: the volume we want to make, 250 mL.\nOutput: the mass of salt, in grams.\nConversion information: \n0.5 \\text{ mol} \\longleftrightarrow 1 \\text{ L of solution} \\\\\n58.44 \\text{ g} \\longleftrightarrow 1 \\text{ mol} \\\\\n1 \\text{ L} = 10^3 \\text{ mL}\n\n\nThe first line is a correspondence, like the speed of the train: every liter of solution comes with 0.5 mol of salt.\n\n\n\n\n\n\n\n\n\nNotecomputation\n\n\n\n\n\n\\begin{align*}\n&250 \\ccancel{red}{ mL}\n\\left( \\frac{1 \\ccancel{blue}{ L}}{10^3 \\ccancel{red}{ mL}} \\right)\n\\left( \\frac{0.5 \\ccancel{green}{ mol}}{1 \\ccancel{blue}{ L}} \\right)\n\\left( \\frac{58.44 \\text{ g}}{1 \\ccancel{green}{ mol}} \\right) \\\\\n&= \\frac{250 \\cdot 0.5 \\cdot 58.44}{10^3} \\text{ g} \\\\\n&\\approx \\boxed{7.3 \\text{ g}}\n\\end{align*}\nWeigh 7.3 g of NaCl, dissolve it in a bit less than 250 mL of water, and then add water until the liquid reaches the mark. The concentration refers to the volume of the final solution, not to the volume of the water we started with.",
+    "crumbs": [
+      "exercises",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations and dilutions</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/concentrations_and_dilutions.en.html#from-stock-to-working-solution",
+    "href": "exercises/concentrations_and_dilutions.en.html#from-stock-to-working-solution",
+    "title": "11  concentrations and dilutions",
+    "section": "11.2 from stock to working solution",
+    "text": "11.2 from stock to working solution\nChemicals are often stored as a very concentrated liquid, called a stock solution. It saves space in the freezer, and it lasts longer. When we need to use it, we dilute a little bit of the stock with water, to get the working solution, which has the concentration that we need for the experiment.\nThe unit mM is read “millimolar”, and it means \\text{mmol/L}. To measure small volumes, labs use a micropipette, an instrument that measures volumes in microliters (\\mu\\text{L}). Remember that 1 \\text{ mL} = 1000\\, \\mu\\text{L}.\n\n\nIn your freezer there is a stock solution with a concentration of 100 \\text{ mM}. You need 10 \\text{ mL} of a working solution with a concentration of 2 \\text{ mM}. How many microliters of the stock solution do you need to pipette? How much water do you add?\n\n\n\n\n\n\n\nTipsetup: input, output, conversion\n\n\n\n\n\n\nInput: the volume we want to make, 10 mL of working solution.\nOutput: the volume of stock solution, in \\mu\\text{L}.\nConversion information: \n2 \\text{ mmol} \\longleftrightarrow 1 \\text{ L of working solution} \\\\\n100 \\text{ mmol} \\longleftrightarrow 1 \\text{ L of stock solution} \\\\\n1 \\text{ L} = 10^3 \\text{ mL} = 10^6\\, \\mu\\text{L}\n\n\nThe first two lines are just the concentrations, written as correspondences (“mM” is \\text{mmol/L}). The plan is: first find how much reagent is in 10 mL of working solution, and then find which volume of stock has that same amount.\n\n\n\n\n\n\n\n\n\nNotecomputation\n\n\n\n\n\n\\begin{align*}\n&10 \\ccancel{red}{ mL}\n\\left( \\frac{1 \\ccancel{blue}{ L}}{10^3 \\ccancel{red}{ mL}} \\right)\n\\left( \\frac{2 \\ccancel{green}{ mmol}}{1 \\ccancel{blue}{ L}} \\right)\n\\left( \\frac{1 \\ccancel{purple}{ L}}{100 \\ccancel{green}{ mmol}} \\right)\n\\left( \\frac{10^6\\, \\mu\\text{L}}{1 \\ccancel{purple}{ L}} \\right) \\\\\n&= \\frac{10 \\cdot 2 \\cdot 10^6}{10^3 \\cdot 100} \\,\\mu\\text{L} \\\\\n&= \\boxed{200 \\,\\mu\\text{L}}\n\\end{align*}\nPipette 200\\,\\mu\\text{L} of stock and add 10\\text{ mL} - 0.2\\text{ mL} = 9.8 \\text{ mL} of water.\nNotice that the amount of reagent (in moles) is the same before and after the dilution: we only added water. Writing this down for the stock (concentration c_1, volume V_1) and for the working solution (c_2, V_2) gives the famous dilution equation:\n\nc_1 V_1 = c_2 V_2",
+    "crumbs": [
+      "exercises",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations and dilutions</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/concentrations_and_dilutions.en.html#a-1000-stock",
+    "href": "exercises/concentrations_and_dilutions.en.html#a-1000-stock",
+    "title": "11  concentrations and dilutions",
+    "section": "11.3 a 1000× stock",
+    "text": "11.3 a 1000× stock\nTo grow bacteria in the lab we use a liquid growth medium, which is basically food for bacteria. Often, we add an antibiotic to the medium, so that only the bacteria we want will grow, and not any unwanted intruders.\nAntibiotics are stored as a strong stock solution. When a stock is 1000 times more concentrated than what we need, we call it a “1000× stock” (read “one thousand X”).\n\nAn antibiotic called ampicillin is added to growth medium at a concentration of 100 \\,\\mu\\text{g/mL}. Your stock solution has a concentration of 100 \\text{ mg/mL}. How much of the stock solution should you add to 500 \\text{ mL} of growth medium?\n\n\n\n\n\n\n\nTipsetup: input, output, conversion\n\n\n\n\n\n\nInput: the volume of medium, 500 mL.\nOutput: the volume of stock solution, in \\mu\\text{L}.\nConversion information: \n100 \\,\\mu\\text{g} \\longleftrightarrow 1 \\text{ mL of medium} \\\\\n100 \\text{ mg} \\longleftrightarrow 1 \\text{ mL of stock} \\\\\n1 \\text{ mg} = 10^3\\, \\mu\\text{g} \\\\\n1 \\text{ mL} = 10^3\\, \\mu\\text{L}\n\n\nBe careful: the stock is in milligrams and the medium is in micrograms. That’s why we need the third conversion.\n\n\n\n\n\n\n\n\n\nNotecomputation\n\n\n\n\n\n\\begin{align*}\n&500 \\ccancel{red}{ mL of medium}\n\\left( \\frac{100 \\ccancel{blue}{ $\\mu$g}}{1 \\ccancel{red}{ mL of medium}} \\right)\n\\left( \\frac{1 \\ccancel{green}{ mg}}{10^3 \\ccancel{blue}{ $\\mu$g}} \\right)\n\\left( \\frac{1 \\ccancel{purple}{ mL of stock}}{100 \\ccancel{green}{ mg}} \\right)\n\\left( \\frac{10^3\\, \\mu\\text{L}}{1 \\ccancel{purple}{ mL of stock}} \\right) \\\\\n&= \\frac{500 \\cdot 100 \\cdot 10^3}{10^3 \\cdot 100} \\,\\mu\\text{L} \\\\\n&= \\boxed{500 \\,\\mu\\text{L}}\n\\end{align*}\nDoes the result make sense? Dividing 100 \\text{ mg/mL} by 100 \\,\\mu\\text{g/mL} gives a factor of 1000, so this is indeed a “1000× stock”. We should then need 500 \\text{ mL}/1000 = 0.5 \\text{ mL}, which is exactly what we found.",
+    "crumbs": [
+      "exercises",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations and dilutions</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/concentrations_and_dilutions.en.html#counting-bacteria",
+    "href": "exercises/concentrations_and_dilutions.en.html#counting-bacteria",
+    "title": "11  concentrations and dilutions",
+    "section": "11.4 counting bacteria",
+    "text": "11.4 counting bacteria\nHow many bacteria are there in a drop of liquid? They are too small to count under the eye, but we can make each one of them visible. If we spread a small drop of liquid on a plate with bacterial food (an agar plate) and leave it in a warm oven overnight, every single bacterium multiplies into a visible dot, called a colony. Counting colonies is counting bacteria.\nThe problem is that a culture usually has billions of bacteria per milliliter, and we can only count if there are a few dozen on the plate. So we first dilute the culture a lot, and we do it in steps. This is called a serial dilution.\n%%| image-class: mb-4\n%%| filename: serial-dilution\n%%| image-width: 100%\n%%| alt: A culture tube followed by six tubes. From each tube, 100 microliters are transferred to the next tube, which contains 900 microliters of sterile liquid.\n%%| additional-packages: \\usepackage{amsmath}\n\n\\begin{tikzpicture}[\n  &gt;=stealth,\n  tube/.style={draw, rectangle, line width=0.8pt, minimum width=1.0cm,\n    minimum height=1.6cm, align=center, fill=blue!15},\n  arrow/.style={-&gt;, line width=1.0pt, shorten &lt;=1mm, shorten &gt;=1mm}\n]\n  \\node[tube, fill=blue!40] (c) at (0,0) {};\n  \\node[font=\\small, below=2pt of c, align=center] {culture};\n  \\foreach \\i in {1,...,6} {\n    \\pgfmathsetmacro{\\shade}{40 - 6*\\i}\n    \\node[tube, fill=blue!\\shade] (t\\i) at (2*\\i,0) {};\n    \\node[font=\\small, below=2pt of t\\i] {tube \\i};\n  }\n  \\draw[arrow] (c.north) to[bend left=40] node[above, font=\\scriptsize] {$100\\,\\mu\\text{L}$} (t1.north);\n  \\foreach \\i/\\j in {1/2,2/3,3/4,4/5,5/6} {\n    \\draw[arrow] (t\\i.north) to[bend left=40] node[above, font=\\scriptsize] {$100\\,\\mu\\text{L}$} (t\\j.north);\n  }\n  \\node[font=\\small, align=center] at (7,-2.2) {each tube (except the culture) started with $900\\,\\mu\\text{L}$ of sterile liquid};\n\\end{tikzpicture}\n\nYou take 100\\,\\mu\\text{L} of a bacterial culture and add it to a tube with 900\\,\\mu\\text{L} of sterile liquid. After mixing, you take 100\\,\\mu\\text{L} from this tube and add it to another tube with 900\\,\\mu\\text{L} of sterile liquid, and so on, until you have six tubes. You spread 100\\,\\mu\\text{L} from the last tube on an agar plate, and after a night in the oven you count 87 colonies. Each colony grew from a single bacterium. How many bacteria per mL were in the original culture?\n\n\n\n\n\n\n\nTipsetup: input, output, conversion\n\n\n\n\n\n\nInput: 87 bacteria, which were in 100\\,\\mu\\text{L} of the last tube.\nOutput: bacteria per mL of the original culture.\nConversion information: \n1 \\text{ mL} = 10^3\\, \\mu\\text{L}\n and the dilution factor, which we find now.\n\nEvery time we move 100\\,\\mu\\text{L} into 900\\,\\mu\\text{L}, the total volume is 100+900=1000\\,\\mu\\text{L}, and the bacteria spread in a volume 10 times larger. That means the concentration is divided by 10 at each tube. After six tubes, the concentration is divided by 10^6: \n\\text{concentration in the last tube} = 10^{-6} \\cdot \\text{concentration in the culture}\n Going backwards, from the last tube to the culture, we need to multiply by 10^6.\n\n\n\n\n\n\n\n\n\nNotecomputation\n\n\n\n\n\nThe first two factors convert the count on the plate into a concentration in the last tube, and the last factor undoes the dilution:\n\\begin{align*}\n&\\frac{87 \\text{ bacteria}}{100 \\ccancel{red}{ $\\mu$L}}\n\\left( \\frac{10^3 \\ccancel{red}{ $\\mu$L}}{1 \\text{ mL}} \\right)\n\\left( 10^6 \\right) \\\\\n&= \\frac{87 \\cdot 10^3 \\cdot 10^6}{100} \\frac{\\text{bacteria}}{\\text{mL}} \\\\\n&\\approx \\boxed{8.7 \\cdot 10^8 \\,\\frac{\\text{bacteria}}{\\text{mL}}}\n\\end{align*}\nThe factor of 10^6 has no units. It’s our “multiply by one” trick in disguise: the last tube is a million times more diluted, so the original culture must be a million times more concentrated.",
+    "crumbs": [
+      "exercises",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>concentrations and dilutions</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html",
+    "href": "conversion_methods/dilution.en.html",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "",
+    "text": "10.1 the idea: adding water doesn’t add solute\nIf you work with solutions, you will dilute them all the time: take a bit of something concentrated, add water, and get something less concentrated. There is a formula for this that everyone in the lab knows by heart. In this chapter we’ll see where the formula comes from, so that you never have to memorize it.\nThe solute is the thing that is dissolved (salt, sugar, a drug), and the solvent is the liquid it is dissolved in (usually water). Look at the picture below. On the left we have a small volume with some particles of solute. We pour water in, and we get the volume on the right. The same particles are now spread over a larger volume, so the solution is less concentrated.\nSame particles, more volume: c_2 &lt; c_1 and V_2 &gt; V_1.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#the-idea-adding-water-doesnt-add-solute",
+    "href": "conversion_methods/dilution.en.html#the-idea-adding-water-doesnt-add-solute",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "",
+    "text": "When we dilute a solution, we add solvent, but the amount of solute doesn’t change.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#from-the-idea-to-the-formula",
+    "href": "conversion_methods/dilution.en.html#from-the-idea-to-the-formula",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.2 from the idea to the formula",
+    "text": "10.2 from the idea to the formula\nFrom concentration and density, we know that the molar concentration is the amount of solute divided by the volume of the solution:\n\nc = \\frac{n}{V}\n\nIf we multiply both sides by V, we get the amount of solute in a solution of concentration c and volume V:\n\nn = c V\n\nThe same is true for any other kind of concentration. With a mass concentration (say, g/L), the same product cV gives the mass of the solute.\nNow we use the idea from before. The amount of solute in the concentrated solution (which we call c_1 and V_1) is the same as the amount of solute in the diluted solution (c_2 and V_2):\n\n\\underbrace{c_1 V_1}_{\\text{solute before}} = \\underbrace{c_2 V_2}_{\\text{solute after}}\n\nThat’s it. This is the dilution equation.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#a-first-example",
+    "href": "conversion_methods/dilution.en.html#a-first-example",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.3 a first example",
+    "text": "10.3 a first example\n\nWe have a stock solution of salt with a concentration of 5 \\text{ mol/L}. How can we prepare 200 \\text{ mL} of a solution with a concentration of 0.15 \\text{ mol/L}?\n\n\nStarting point: what we want to make, c_2 = 0.15 \\text{ mol/L} and V_2 = 200 \\text{ mL}.\nGoal: the volume of stock solution we need, V_1.\nConversion information: c_1 = 5 \\text{ mol/L}, and the dilution equation.\n\nWe isolate the unknown:\n\nV_1 = \\frac{c_2 V_2}{c_1}\n= \\frac{0.15 \\ccancel{gray}{mol/L} \\cdot 200 \\text{ mL}}{5 \\ccancel{gray}{mol/L}}\n= \\boxed{6 \\text{ mL}}\n\nWe pipette 6 mL of stock, and add water until the total volume is 200 mL. So, the amount of water we add is 200 - 6 = 194 \\text{ mL}.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#two-things-to-watch-out-for",
+    "href": "conversion_methods/dilution.en.html#two-things-to-watch-out-for",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.4 two things to watch out for",
+    "text": "10.4 two things to watch out for\n1. V_2 is the final volume, not the volume of water we add. It’s easy to mix them up. In the example above, we did not add 200 mL of water, but 194 mL. In general, \nV_{\\text{water}} = V_2 - V_1\n This assumes that volumes just add up, which is a very good approximation for dilute water solutions, but it is not exactly true for every liquid. When we mix ethanol and water, the final volume is a bit smaller than the sum!\n2. The units don’t matter, as long as they match. Look at the equation again: c_1 and c_2 appear on opposite sides, and so do V_1 and V_2. That means that we can use any unit for the concentration, as long as it is the same in both, and any unit for the volume, as long as it is the same in both. There is no need to convert anything to liters!\n\nA drug solution has a concentration of 50 \\text{ mg/mL}. We take 20\\,\\mu\\text{L} of it and add water until the volume is 2 \\text{ mL}. What is the new concentration?\n\nHere the volumes come in different units, \\mu\\text{L} and \\text{mL}, so we need to choose one of them and convert the other. Let’s choose \\mu\\text{L}, since 2 \\text{ mL} = 2000\\,\\mu\\text{L}:\n\nc_2 = \\frac{c_1 V_1}{V_2} = \\frac{50 \\text{ mg/mL} \\cdot 20 \\ccancel{gray}{$\\mu$L}}{2000 \\ccancel{gray}{$\\mu$L}} = \\boxed{0.5 \\text{ mg/mL}}\n\nThe concentration is still in mg/mL, because that’s the unit we used for c_1.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#the-dilution-factor",
+    "href": "conversion_methods/dilution.en.html#the-dilution-factor",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.5 the dilution factor",
+    "text": "10.5 the dilution factor\nThe ratio between the initial and final concentration is called the dilution factor. From the dilution equation:\n\n\\frac{c_1}{c_2} = \\frac{V_2}{V_1}\n\nIn the last example, the dilution factor is 50/0.5 = 100. We say that we diluted the drug “a hundred fold”, or that we made a “1:100 dilution”. This tells us that the solution is 100 times less concentrated, and also that the final volume is 100 times bigger than the volume we took from the stock.\nLabs often sell or store stock solutions with a concentration of “10×”, “100×” or “1000×” (“ten X”, “hundred X”, “thousand X”). This means that the stock is that many times more concentrated than the working solution. To use a 1000× stock, we dilute it by a factor of 1000, so we take 1 mL of stock for every liter of final solution.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#its-the-chain-link-method-in-disguise",
+    "href": "conversion_methods/dilution.en.html#its-the-chain-link-method-in-disguise",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.6 it’s the chain-link method in disguise",
+    "text": "10.6 it’s the chain-link method in disguise\nThe dilution equation might look like it’s from a different world than the chain-link method, but it’s not. Let’s solve the first example again with chain-link.\n\nStarting point: 200 mL of the diluted solution.\nGoal: volume of stock solution.\nConversion information: \n0.15 \\text{ mol} \\longleftrightarrow 1 \\text{ L of diluted solution} \\\\\n5 \\text{ mol} \\longleftrightarrow 1 \\text{ L of stock solution} \\\\\n1 \\text{ L} = 10^3 \\text{ mL}\n\n\n\\begin{align*}\n&200 \\ccancel{red}{mL of diluted}\n\\left( \\frac{1 \\ccancel{green}{L of diluted}}{10^3 \\ccancel{red}{mL of diluted}} \\right)\n\\left( \\frac{0.15 \\ccancel{blue}{mol}}{1 \\ccancel{green}{L of diluted}} \\right)\n\\left( \\frac{1 \\ccancel{purple}{L of stock}}{5 \\ccancel{blue}{mol}} \\right)\n\\left( \\frac{10^3 \\text{ mL of stock}}{1 \\ccancel{purple}{L of stock}} \\right) \\\\\n&= \\frac{200 \\cdot 0.15}{5} \\text{ mL of stock} = \\boxed{6 \\text{ mL}}\n\\end{align*}\nIn this version we can see the moles acting as the bridge between the two solutions. They are the quantity that doesn’t change during the dilution, which is why the chain-link method works, and which is where the dilution equation comes from.\nIf you ever forget the dilution equation, or if the problem has an extra twist, you can always go back to chain-link.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
+    ]
+  },
+  {
+    "objectID": "conversion_methods/dilution.en.html#mixing-two-solutions",
+    "href": "conversion_methods/dilution.en.html#mixing-two-solutions",
+    "title": "10  dilution: c_1 V_1 = c_2 V_2",
+    "section": "10.7 mixing two solutions",
+    "text": "10.7 mixing two solutions\nWhat if we don’t add water, but rather mix two solutions of the same solute with different concentrations? The idea is the same, the amount of solute doesn’t change, so we just add the amounts of both solutions:\n\nc_{\\text{final}} V_{\\text{final}} = c_1 V_1 + c_2 V_2\n\\qquad\\Longrightarrow\\qquad\nc_{\\text{final}} = \\frac{c_1 V_1 + c_2 V_2}{V_1 + V_2}\n\n\nWe mix 100 \\text{ mL} of a 0.2 \\text{ mol/L} solution of salt with 300 \\text{ mL} of a 0.6 \\text{ mol/L} solution of the same salt. What is the final concentration?\n\n\nc_{\\text{final}} = \\frac{0.2 \\cdot 100 + 0.6 \\cdot 300}{100 + 300} \\text{ mol/L} = \\frac{200}{400} \\text{ mol/L} = \\boxed{0.5 \\text{ mol/L}}\n\nThe result is a weighted average of the two concentrations. It’s closer to 0.6 \\text{ mol/L} than to 0.2 \\text{ mol/L}, because we used more of the stronger solution. That’s a nice sanity check: the final concentration must always be between the two we started with.",
+    "crumbs": [
+      "conversion methods",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>dilution: $c_1 V_1 = c_2 V_2$</span>"
     ]
   }
 ]

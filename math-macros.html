@@ -1,0 +1,17 @@
+<!-- Shared KaTeX definitions. Keep these before the page's first equation. -->
+<div hidden aria-hidden="true">
+<span class="math inline">\gdef\ccancel#1#2{\ {\color{#1}\cancel{\color{black}\text{#2}}}}</span>
+</div>
+
+<!-- Marker texture for the \ccancel strike (see styles.css): ragged edges plus a faint dry-ink grain. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="marker-texture" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="3" result="edge"/>
+      <feDisplacementMap in="SourceGraphic" in2="edge" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.35" numOctaves="2" seed="8" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.5 0 0 0 2.3" result="mask"/>
+      <feComposite in="rough" in2="mask" operator="in"/>
+    </filter>
+  </defs>
+</svg>

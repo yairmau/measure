@@ -113,7 +113,7 @@ tikz:
 עכשיו אפשר פשוט להכפיל את הקלט ב-1 ולצמצם את היחידות:
 
 $$
-12 \text{ inch} = 12 \cancel{\text{ inch}} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \cancel{\text{ inch}}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
+12 \text{ inch} = 12 \ccancel{gray}{inch} \underbrace{\left( \frac{2.54 \text{ cm}}{1 \ccancel{gray}{inch}} \right)}_{1} = 12\cdot 2.54 \text{ cm} = \boxed{30.48 \text{ cm}}
 $$
 
 איך ידעתי באיזה מגורמי ההמרה להשתמש? רק אחד מהם מאפשר לצמצם את האינץ׳ שבקלט עם האינץ׳ שבמכנה של גורם ההמרה. אילו בחרתי באפשרות השנייה, הייתי מקבל:
@@ -141,7 +141,7 @@ $$
 זה מרגיש קצת שונה מהדוגמה הראשונה. אינץ׳ אחד ו-2.54 סנטימטרים הם שניהם אורכים, והם תמיד שווים זה לזה, כך שחלוקה של אחד בשני אמורה תמיד לתת 1. בתרגיל הזה כתבנו ש-$90\text{ km}=1\text{ h}$, וזה מוזר: אנחנו אומרים שאורך שווה למשך זמן. בהקשר של בעיית הרכבת זה תמיד נכון, ולכן אפשר להמשיך כמו קודם ולפתור את הבעיה:
 
 $$
-0.5 \text{ h} = 0.5 \cancel{\text{ h}} \left(\frac{90\text{ km}}{1\cancel{\text{ h}}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
+0.5 \text{ h} = 0.5 \ccancel{gray}{h} \left(\frac{90\text{ km}}{1\ccancel{gray}{h}}\right) = 0.5\cdot 90 \text{ km} = \boxed{45 \text{ km}}
 $$
 
 שימו לב שאני תמיד כותב את גורמי ההמרה בסוגריים, כדי שיהיה ברור לי ולאחרים מה קורה. אין חובה לעשות זאת, אבל זה עוזר לראות את מבנה החישוב.
@@ -175,8 +175,8 @@ $$
 \begin{align*}
 4.47\, \frac{\text{USD}}{\text{gallon}}
 &=
-4.47\, \frac{\cancel{\text{USD}}}{\bcancel{\text{gallon}}}
-\left(\frac{3.04 \text{ NIS}}{1 \cancel{\text{ USD}}} \right)
+4.47\, \frac{\ccancel{gray}{USD}}{\bcancel{\text{gallon}}}
+\left(\frac{3.04 \text{ NIS}}{1 \ccancel{gray}{USD}} \right)
 \left(\frac{1 \bcancel{\text{ gallon}}}{3.79 \text{ liter}}\right) \\
 &= \frac{4.47 \cdot 3.04}{3.79} \frac{\text{NIS}}{\text{liter}} \\
 &= \boxed{3.59 \, \frac{\text{NIS}}{\text{liter}}}
@@ -246,37 +246,37 @@ $$
 
 \begin{align*}
 &8400 \text{ m}^2= \\
-&8400 {\color{red}\cancel{\text{ m}^2}}
-\left(\frac{1 \text{ ha}}{10^4 \color{red}\cancel{\text{ m}^2}}\right)=
+&8400 {\color{red}\ccancel{gray}{m$^2$}}
+\left(\frac{1 \text{ ha}}{10^4 \color{red}\ccancel{gray}{m$^2$}}\right)=
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \color{red}\cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \text{ ton}}{1 \color{red}\cancel{\text{ ha}}} \right)=
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \color{red}\ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \text{ ton}}{1 \color{red}\ccancel{gray}{ha}} \right)=
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \color{red}\cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \text{ kg}}{1 \color{red}\cancel{\text{ ton}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \color{red}\ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \text{ kg}}{1 \color{red}\ccancel{gray}{ton}} \right) =
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \color{red}\cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \text{ lbs}}{1 \color{red}\cancel{\text{ kg}}} \right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \color{red}\ccancel{gray}{kg}}{1 \ccancel{gray}{ton}} \right)\left(\frac{2.2 \text{ lbs}}{1 \color{red}\ccancel{gray}{kg}} \right)  =
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \color{red}\cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \text{ bu}}{60 \color{red}\cancel{\text{ lbs}}}\right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{ton}} \right)\left(\frac{2.2 \color{red}\ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \text{ bu}}{60 \color{red}\ccancel{gray}{lbs}}\right)  =
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \color{red}\cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \text{ USD}}{1 \color{red}\cancel{\text{ bu}}} \right)  =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{ton}} \right)\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \color{red}\ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right) \left(\frac{7.27 \text{ USD}}{1 \color{red}\ccancel{gray}{bu}} \right)  =
 \\
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \color{red}\cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \color{red}\cancel{\text{ USD}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{ton}} \right)\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right) \left(\frac{7.27 \color{red}\ccancel{gray}{USD}}{1 \ccancel{gray}{bu}} \right) \left(\frac{1 \text{ EUR}}{1.15 \color{red}\ccancel{gray}{USD}} \right) =
 \\
 & \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
 \\
@@ -287,10 +287,10 @@ $$
 
 
 \begin{align*}
-&8400 \cancel{\text{ m}^2}
-\left(\frac{1 \cancel{\text{ ha}}}{10^4 \cancel{\text{ m}^2}}\right)
-\left(\frac{4.94 \cancel{\text{ ton}}}{1 \cancel{\text{ ha}}} \right)
-\left(\frac{10^3 \cancel{\text{ kg}}}{1 \cancel{\text{ ton}}} \right)\left(\frac{2.2 \cancel{\text{ lbs}}}{1 \cancel{\text{ kg}}} \right)\left(\frac{1 \cancel{\text{ bu}}}{60 \cancel{\text{ lbs}}}\right) \left(\frac{7.27 \cancel{\text{ USD}}}{1 \cancel{\text{ bu}}} \right) \left(\frac{1 \text{ EUR}}{1.15 \cancel{\text{ USD}}} \right) =
+&8400 \ccancel{gray}{m$^2$}
+\left(\frac{1 \ccancel{gray}{ha}}{10^4 \ccancel{gray}{m$^2$}}\right)
+\left(\frac{4.94 \ccancel{gray}{ton}}{1 \ccancel{gray}{ha}} \right)
+\left(\frac{10^3 \ccancel{gray}{kg}}{1 \ccancel{gray}{ton}} \right)\left(\frac{2.2 \ccancel{gray}{lbs}}{1 \ccancel{gray}{kg}} \right)\left(\frac{1 \ccancel{gray}{bu}}{60 \ccancel{gray}{lbs}}\right) \left(\frac{7.27 \ccancel{gray}{USD}}{1 \ccancel{gray}{bu}} \right) \left(\frac{1 \text{ EUR}}{1.15 \ccancel{gray}{USD}} \right) =
 \\
 & \frac{8400\cdot 4.94 \cdot 10^3 \cdot 2.2 \cdot 7.27}{10^4 \cdot 60 \cdot 1.15} \text{ EUR}=
 \\
